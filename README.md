@@ -1,6 +1,9 @@
 
-# common-design-wordpress
-Wordpress starter theme with the Common Design
+
+# Common Design Wordpress Starter Theme
+This is currently in development stay tuned. 
+*********************
+Tonik Readme information to follow:
 
 
 > The `develop` branch tracks boilerplate development and it's not a stable code. If you want a stable version, use the [`master`](//github.com/tonik/wordpress-theme-boilerplate/tree/master) branch or one of the latest [releases](//github.com/tonik/wordpress-theme-boilerplate/releases).
