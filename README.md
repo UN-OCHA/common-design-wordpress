@@ -1,4 +1,7 @@
-# Tonik — Wordpress Theme Boilerplate
+
+# common-design-wordpress
+Wordpress starter theme with the Common Design
+
 
 > The `develop` branch tracks boilerplate development and it's not a stable code. If you want a stable version, use the [`master`](//github.com/tonik/wordpress-theme-boilerplate/tree/master) branch or one of the latest [releases](//github.com/tonik/wordpress-theme-boilerplate/releases).
 
@@ -101,3 +104,6 @@ Great that you are considering supporting the project. You have a lot of ways to
 ## License
 
 The Tonik WordPress Theme Boilerplate is licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+
+
