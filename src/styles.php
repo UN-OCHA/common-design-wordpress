@@ -23,3 +23,8 @@ if ( ! function_exists( 'common_design_register_styles' ) ) {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'common_design_register_styles' );
+
+
+
+
+

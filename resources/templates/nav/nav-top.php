@@ -9,7 +9,7 @@
 <nav>
 	<?php
 		wp_nav_menu( array(
-			'theme_location' => 'top',
+			'theme_location' => 'common_design_top',
 		) );
 	?>
 </nav>

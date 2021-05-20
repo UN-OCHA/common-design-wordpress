@@ -13,61 +13,25 @@
 
 <header class="cd-header">
 
-	
-
-
-
-	
 
 	<!-- blue upper header -->
      <div class="cd-global-header">
   		<div class="cd-container cd-global-header__inner">
-  			  <div class="region region-header-top cd-global-header__actions" id="cd-global-header__actions">
-			      <nav role="navigation" id="block-useraccountmenu" aria-labelledby="block-useraccountmenu-menu" class="block block-menu navigation menu--account cd-global-header__user-menu">
-			        <h2 id="block-useraccountmenu-menu">User account menu</h2>
-			        <ul class="menu">
-			           <li class="menu-item">
-			              <a href="/user/login/hid" id="cd-user-menu-item-0-1"><svg class="cd-icon cd-icon--user" aria-hidden="true" focusable="false" width="16" height="16">
-			                <use xlink:href="#cd-icon--user"></use>
-			                </svg><span>Log in</span>
-			              </a>        
-			          </li>
-			        </ul>
-			     </nav>
-
+  			<div class="region region-header-top cd-global-header__actions" id="cd-global-header__actions">
 			    <nav role="navigation" id="block-helpmenu" aria-labelledby="block-helpmenu-menu" class="block block-menu navigation menu--help cd-global-header__user-menu">
-			    <h2 id="block-helpmenu-menu">Help menu</h2>
-			        <ul class="menu">
-			          <li class="menu-item menu-item--expanded">
-			            <button type="button" id="cd-help-menu-0-1-toggler" class="cd-help-menu__btn" data-cd-toggler="" aria-expanded="false" aria-haspopup="true" aria-controls="cd-help-menu-0-1"><svg width="16" height="16" aria-hidden="true" focusable="false" class="cd-icon cd-icon--help cd-help-menu__logo"><use xlink:href="#cd-icon--help"></use></svg><span class="visually-hidden cd-help-menu__btn-label">Help menu</span><svg width="16" height="16" aria-hidden="true" focusable="false" class="cd-icon cd-icon--arrow-down cd-help-menu__icon"><use xlink:href="#cd-icon--arrow-down"></use></svg></button>
-			            <ul data-cd-toggable="Help menu" data-cd-icon="arrow-down" data-cd-component="cd-help-menu" id="cd-help-menu-0-1" data-cd-logo="help" data-cd-logo-only="" class="menu cd-global-header__dropdown cd-user-menu__dropdown" data-cd-hidden="true" data-cd-processed="true">
-			                <li class="menu-item">
-			                  <a href="/node/1" id="cd-help-menu-item-1-1"><span>Menu item one</span></a> 
-			                </li>
-			                <li class="menu-item">
-			                  <a href="/node/2" id="cd-help-menu-item-1-2"><span>Menu item two</span></a>
-			                </li>
-			            </ul>
-			          </li>
-			        </ul>
+			  		<!-- help nav can go here -->
 			    </nav>
 
 			      <div class="language-switcher-language-url block block--language block--language-blocklanguage-interface block--languageswitcher cd-global-header__language-switcher" id="block-languageswitcher" role="navigation">
-			          <button type="button" id="cd-language-toggler" class="cd-language-switcher__btn" data-cd-toggler="" aria-expanded="false" aria-haspopup="true" aria-controls="cd-language"><span class="cd-language-switcher__btn-label">en</span><svg width="16" height="16" aria-hidden="true" focusable="false" class="cd-icon cd-icon--arrow-down cd-language-switcher__icon"><use xlink:href="#cd-icon--arrow-down"></use></svg></button>
-			          <div class="cd-language-switcher cd-dropdown" id="cd-language" aria-labelledby="cd-language-switcher" data-cd-toggable="en" data-cd-icon="arrow-down" data-cd-component="cd-language-switcher" data-cd-hidden="true" data-cd-processed="true">
-			            <h2 id="cd-language-switcher">Language switcher</h2>
-			            <ul class="links cd-global-header__dropdown cd-user-menu__dropdown"><li hreflang="en" data-drupal-link-system-path="<front>" class="en is-active"><a href="/" class="language-link is-active" hreflang="en" data-drupal-link-system-path="<front>">English</a></li><li hreflang="fr" data-drupal-link-system-path="<front>" class="fr"><a href="/fr" class="language-link" hreflang="fr" data-drupal-link-system-path="<front>">Français</a></li><li hreflang="es" data-drupal-link-system-path="<front>" class="es"><a href="/es" class="language-link" hreflang="es" data-drupal-link-system-path="<front>">Español</a></li><li hreflang="ar" data-drupal-link-system-path="<front>" class="ar"><a href="/ar" class="language-link" hreflang="ar" data-drupal-link-system-path="<front>">Arabic</a></li></ul>
-			          </div>
+			         <!-- language changer can go here -->
 			      </div>
-			  </div>
+			</div>
 
 			  <section id="cd-ocha-services" class="cd-ocha" cd-data-hidden="true">
 			     <button type="button" id="cd-ocha-dropdown-toggler" class="cd-ocha__btn" data-cd-toggler="" aria-expanded="false" aria-haspopup="true" aria-controls="cd-ocha-dropdown"><svg width="16" height="16" aria-hidden="true" focusable="false" class="cd-icon cd-icon--ocha-logo cd-ocha__logo"><use xlink:href="#cd-icon--ocha-logo"></use></svg><span class="cd-ocha__btn-label">OCHA Services</span>
 			     	<svg width="16" height="16" aria-hidden="true" focusable="false" class="cd-icon cd-icon--arrow-down cd-ocha__icon">
 			     		<use xlink:href="#cd-icon--arrow-down">
-			     			<!-- Connect svg element to new file? 
-			     			<?php get_template_icon( 'resources/templates/nav/nav', 'top' ); ?>
-			     			-->
+			     			
 			     		</use>
 			     	</svg>
 			     </button>
@@ -109,10 +73,7 @@
 			    </div>
 			  </section>
 			</div>
-  		</div>
 	</div>
-
-
 
 <!-- white lower header -->
 	<div class="cd-site-header">
@@ -125,12 +86,7 @@
 	  					<!-- <img src="/themes/contrib/common_design/img/logos/ocha-lockup-blue.svg" alt="Common Design Demo" aria-label="Home" width="100%" height="60px"> -->
 
 	  						<!-- question : do I need to wrap the custom logo php in img? Also I don't know why if I don't use </img> it shows the last php angle bracket -->
-
-
 					</a>
-
-
-					<svg viewBox="0 0 48 48" id="cd-icon--arrow-down" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><path d="M48 14a4 4 0 01-1.17 2.83l-20 20a4 4 0 01-5.66 0l-20-20a4 4 0 015.66-5.66L24 28.34l17.17-17.17A4 4 0 0148 14z"></path></svg>
 	  			</div>
 
 

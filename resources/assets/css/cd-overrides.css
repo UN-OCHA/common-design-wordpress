@@ -1,1 +1,6 @@
 /* common-design-overrides */
+
+
+.cd-mandate__logo {
+	background: url("../images/logos/ocha-lockup.svg") 0 center no-repeat;
+}
