@@ -8,7 +8,7 @@
  * By default we enabled most common for you.
  */
 
-if ( ! function_exists( 'tonik_add_theme_supports' ) ) {
+if ( ! function_exists( 'common_design_add_theme_supports' ) ) {
 	/**
 	 * Adds a recommended theme supports.
 	 *
@@ -17,13 +17,15 @@ if ( ! function_exists( 'tonik_add_theme_supports' ) ) {
 	 *
 	 * @return void
 	 */
-	function tonik_add_theme_supports() {
+	function common_design_add_theme_supports() {
 		/**
 		 * Add support for custom logo. Allow for setting
 		 * logo for theme via WordPress customizer.
 		 *
 		 * @see https://developer.wordpress.org/reference/functions/add_theme_support/#custom-logo
 		 */
+
+
 		add_theme_support( 'custom-logo' );
 
 		/**
@@ -43,6 +45,16 @@ if ( ! function_exists( 'tonik_add_theme_supports' ) ) {
 		 * @see https://developer.wordpress.org/reference/functions/add_theme_support/#post-thumbnails
 		 */
 		add_theme_support( 'post-thumbnails' );
+/**
+		 * Enable support for Post Thumbnails on posts and pages. Note that you
+		 * can optionally pass a second argument, $args, with an array of
+		 * the Post Types for which you want to enable this feature.
+		 *
+		 * @see https://developer.wordpress.org/reference/functions/add_theme_support/#post-thumbnails
+		 */
+
+		
+
 
 		/**
 		 * Switch default core markup for search forms, comment forms, comment
@@ -61,9 +73,9 @@ if ( ! function_exists( 'tonik_add_theme_supports' ) ) {
 		);
 	}
 }
-add_action( 'after_setup_theme', 'tonik_add_theme_supports' );
+add_action( 'after_setup_theme', 'common_design_add_theme_supports' );
 
-if ( ! function_exists( 'tonik_load_textdomain' ) ) {
+if ( ! function_exists( 'common_design_load_textdomain' ) ) {
 	/**
 	 * Loads theme's textdomain language files.
 	 *
@@ -73,8 +85,8 @@ if ( ! function_exists( 'tonik_load_textdomain' ) ) {
 	 *
 	 * @return void
 	 */
-	function tonik_load_textdomain() {
-		load_theme_textdomain( 'tonik', get_template_directory() . '/resources/languages' );
+	function common_design_load_textdomain() {
+		load_theme_textdomain( 'common_design', get_template_directory() . '/resources/languages' );
 	}
 }
-add_action( 'after_setup_theme', 'tonik_load_textdomain' );
+add_action( 'after_setup_theme', 'common_design_load_textdomain' );

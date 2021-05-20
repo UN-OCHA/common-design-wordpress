@@ -7,7 +7,7 @@
  * allow users to easily create and manage various types of content.
  */
 
-if ( ! function_exists( 'tonik_register_book_post_type' ) ) {
+if ( ! function_exists( 'common_design_register_book_post_type' ) ) {
 	/**
 	 * Registers a `book` custom post type.
 	 *
@@ -16,7 +16,7 @@ if ( ! function_exists( 'tonik_register_book_post_type' ) ) {
 	 *
 	 * @return void
 	 */
-	function tonik_register_book_post_type() {
+	function common_design_register_book_post_type() {
 		register_post_type(
 			'book', array(
 				'public'      => true,
@@ -42,4 +42,4 @@ if ( ! function_exists( 'tonik_register_book_post_type' ) ) {
 		);
 	}
 }
-add_action( 'init', 'tonik_register_book_post_type' );
+add_action( 'init', 'common_design_register_book_post_type' );

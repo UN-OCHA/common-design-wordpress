@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * This is the template that displays all of the <head> section and <header> section.
@@ -20,5 +22,3 @@
 
 
 
-
-?>
