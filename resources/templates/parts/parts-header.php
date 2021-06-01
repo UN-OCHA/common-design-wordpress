@@ -36,7 +36,7 @@
 	    		<!-- blue ocha logo-->
 	  			<div class="region region-header-logo">
 	  			  	<a href="/" title="Home" rel="home" class="cd-site-logo">
-	  			  		 <img width="100%" height="60px" <?php the_Custom_logo(); ?></img>
+	  			  		 <img width="100%" height="60px" <?php the_Custom_logo(); ?> />
 	  					<!-- <img src="/themes/contrib/common_design/img/logos/ocha-lockup-blue.svg" alt="Common Design Demo" aria-label="Home" width="100%" height="60px"> -->
 
 	  						<!-- question : do I need to wrap the custom logo php in img? Also I don't know why if I don't use </img> it shows the last php angle bracket -->
@@ -123,7 +123,8 @@
 					</div>
 
     		</div>
-  		</div>
+  		    </div>
+    </div>
 
 </header>
 
