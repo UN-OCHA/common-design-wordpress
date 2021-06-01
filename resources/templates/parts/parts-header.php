@@ -9,10 +9,7 @@
 	<!-- <?php get_template_part( 'resources/templates/nav/nav', 'top' ); ?>
 	-->
 
-
-
 <header class="cd-header">
-
 
 	<!-- blue upper header -->
      <div class="cd-global-header">
@@ -27,52 +24,9 @@
 			      </div>
 			</div>
 
-			  <section id="cd-ocha-services" class="cd-ocha" cd-data-hidden="true">
-			     <button type="button" id="cd-ocha-dropdown-toggler" class="cd-ocha__btn" data-cd-toggler="" aria-expanded="false" aria-haspopup="true" aria-controls="cd-ocha-dropdown"><svg width="16" height="16" aria-hidden="true" focusable="false" class="cd-icon cd-icon--ocha-logo cd-ocha__logo"><use xlink:href="#cd-icon--ocha-logo"></use></svg><span class="cd-ocha__btn-label">OCHA Services</span>
-			     	<svg width="16" height="16" aria-hidden="true" focusable="false" class="cd-icon cd-icon--arrow-down cd-ocha__icon">
-			     		<use xlink:href="#cd-icon--arrow-down">
-			     			
-			     		</use>
-			     	</svg>
-			     </button>
+		    <?php get_template_part( 'resources/templates/parts/parts', 'ocha-services' ); ?>
 
-			     <div class="cd-global-header__dropdown cd-ocha-dropdown cd-dropdown" id="cd-ocha-dropdown" aria-labelledby="cd-ocha-services-title" data-cd-toggable="OCHA Services" data-cd-icon="arrow-down" data-cd-logo="ocha-logo" data-cd-component="cd-ocha" data-cd-hidden="true" data-cd-processed="true">
-
-			      <div class="cd-ocha-dropdown__inner">
-			        <div class="cd-ocha-dropdown__section">
-			          <p class="cd-ocha-dropdown__heading">Related Platforms</p>
-			          <ul class="cd-ocha-dropdown__list">
-			                      <li class="cd-ocha-dropdown__link"><a href="https://example.com">Customizable</a></li>
-			            <li class="cd-ocha-dropdown__link"><a href="https://example.com">Customizable</a></li>
-			            <li class="cd-ocha-dropdown__link"><a href="https://example.com">Customizable</a></li>
-			            <li class="cd-ocha-dropdown__link"><a href="https://example.com">Customizable</a></li>
-			                    </ul>
-			        </div>
-			        <div class="cd-ocha-dropdown__section">
-			          <p class="cd-ocha-dropdown__heading">Other OCHA Services</p>
-			          <ul class="cd-ocha-dropdown__list">
-			                      <li class="cd-ocha-dropdown__link"><a href="https://fts.unocha.org/">Financial Tracking Service</a></li>
-			            <li class="cd-ocha-dropdown__link"><a href="https://data.humdata.org/">Humanitarian Data Exchange</a></li>
-			            <li class="cd-ocha-dropdown__link"><a href="https://humanitarian.id/">Humanitarian ID</a></li>
-			            <li class="cd-ocha-dropdown__link"><a href="https://humanitarianresponse.info/">Humanitarian Response</a></li>
-			                    </ul>
-			        </div>
-			        <div class="cd-ocha-dropdown__section">
-			          <p class="cd-ocha-dropdown__heading" aria-hidden="true">&nbsp;</p>
-			          <ul class="cd-ocha-dropdown__list">
-			                      <li class="cd-ocha-dropdown__link"><a href="https://interagencystandingcommittee.org">Inter-Agency Standing Committee</a></li>
-			            <li class="cd-ocha-dropdown__link"><a href="https://unocha.org/">OCHA website</a></li>
-			            <li class="cd-ocha-dropdown__link"><a href="https://reliefweb.int/">ReliefWeb</a></li>
-			            <li class="cd-ocha-dropdown__link"><a href="https://vosocc.unocha.org/">Virtual OSOCC</a></li>
-			                    </ul>
-			        </div>
-			        <div class="cd-ocha-dropdown__section">
-			          <a class="cd-button cd-button--light cd-button--bold cd-button--uppercase cd-ocha-dropdown__see-all" href="https://www.unocha.org/ocha-digital-services" target="_blank" rel="noopener">See all</a>
-			        </div>
-			      </div>
-			    </div>
-			  </section>
-			</div>
+        </div>
 	</div>
 
 <!-- white lower header -->
@@ -157,7 +111,7 @@
 	      								</li>
 									    <li class="menu-item">
 											<a href="/card-list" id="cd-main-menu-item-1-2"><span>Card List</span></a>
-									    </li>    
+									    </li>
 									    <li class="menu-item">
 											<a href="/facets" id="cd-main-menu-item-1-3"><span>List with facets</span></a>
 									    </li>
@@ -169,8 +123,8 @@
 					</div>
 
     		</div>
-  		</div> 
-  
+  		</div>
+
 </header>
 
 
