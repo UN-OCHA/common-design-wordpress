@@ -10,6 +10,7 @@
 	<?php
 		wp_nav_menu( array(
 			'theme_location' => 'common_design_top',
+			'menu_class' => 'wp-menu-item',
 		) );
 	?>
 </nav>

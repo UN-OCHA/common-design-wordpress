@@ -4,3 +4,18 @@
 .cd-mandate__logo {
 	background: url("../images/logos/ocha-lockup.svg") 0 center no-repeat;
 }
+
+
+
+.wp_social_media_menu_icon {
+	list-style-type: none;
+}
+
+
+.wp-menu-item {
+
+list-style-type: none;
+
+}
+
+

@@ -6,13 +6,11 @@
  */
 ?>
 
-	<!-- <?php get_template_part( 'resources/templates/nav/nav', 'top' ); ?>
-	-->
+	
 
 
 
 <header class="cd-header">
-
 
 	<!-- blue upper header -->
      <div class="cd-global-header">
@@ -89,6 +87,9 @@
 					</a>
 	  			</div>
 
+	  	<!-- menu connected for wp found in nav-top.php -->
+	
+
 
 	  			<!-- menu options container-->
 	   			<div class="cd-site-header__actions">
@@ -128,6 +129,7 @@
 							<ul class="menu">
 						    	<li class="menu-item">
 									<a href="/demo" id="cd-main-menu-item-0-1"><span>Common design demo</span></a>
+									<!-- common design menu button -->
 						    	</li>
 	     						<li class="menu-item">
 									<a href="/svg-icon-library" id="cd-main-menu-item-0-2"><span>Icons</span></a>
@@ -170,6 +172,10 @@
 
     		</div>
   		</div> 
+
+  		<?php get_template_part( 'resources/templates/nav/nav', 'top' ); ?>
+
+
   
 </header>
 

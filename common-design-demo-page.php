@@ -1,8 +1,7 @@
 <?php
 /**
- * The most generic template file in hierarchy.
+ *   common design demo page 
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
 ?>
 
@@ -11,6 +10,7 @@
 <main class="box">
 	<?php if ( have_posts() ) : ?>
 		<?php if ( is_home() && is_front_page() ) : ?>
+			<?php get_template_part( 'resources/templates/content/content' ); ?>
 		<?php else : ?>
 			<?php while ( have_posts() ) : ?>
 				<?php the_post(); ?>
