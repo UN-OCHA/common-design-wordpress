@@ -34,6 +34,7 @@ function toggle(toggler, collapse) {
 function collapseAll(exceptions) {
   var elements = document.querySelectorAll('[data-cd-toggler][aria-expanded="true"]');
   exceptions = exceptions || [];
+  var cdDropdown = this;
 
   elements.forEach(function (element) {
     // Elements can be directed to stay open in two ways:
@@ -42,7 +43,7 @@ function collapseAll(exceptions) {
     //
     // If neither apply, then close the element.
     if (!element.hasAttribute('data-cd-toggable-keep') && exceptions.indexOf(element) === -1) {
-      toggle(element, true);
+      cdDropdown.toggle(element, true);
     }
   });
 }
@@ -80,8 +81,8 @@ function getToggableParents(element) {
 function handleToggle(event) {
   var target = event.currentTarget;
   if (target) {
-    collapseAll(getToggableParents(target));
-    toggle(target);
+    this.collapseAll(this.getToggableParents(target));
+    this.toggle(target);
   }
   event.preventDefault();
   event.stopPropagation();
@@ -110,7 +111,7 @@ function handleEscape(event) {
     // Focus the button and hide the content.
     if (target && target.hasAttribute('data-cd-toggler')) {
       target.focus();
-      toggle(target, true);
+      this.toggle(target, true);
     }
   }
 }
@@ -148,7 +149,7 @@ function handleClickAway(event) {
 function handleResize(selector) {
   var elements = document.querySelectorAll('[data-cd-toggable]');
   for (var i = 0, l = elements.length; i < l; i++) {
-    updateToggable(elements[i]);
+    this.updateToggable(elements[i]);
   }
 }
 
@@ -331,15 +332,15 @@ function unsetToggable(element) {
   var toggler = element.previousElementSibling;
   if (toggler && toggler.hasAttribute('data-cd-toggler')) {
     // Remove event handler to avoid leaking.
-    toggler.addEventListener('click', handleToggle);
-    toggler.addEventListener('keydown', handleEscape);
-    element.addEventListener('keydown', handleEscape);
+    toggler.addEventListener('click', this.handleToggle);
+    toggler.addEventListener('keydown', this.handleEscape);
+    element.addEventListener('keydown', this.handleEscape);
 
     // Delete toggling button.
     toggler.parentNode.removeChild(toggler);
 
     // Reset attributes on the toggable element.
-    element.removeEventListener('keydown', handleEscape);
+    element.removeEventListener('keydown', this.handleEscape);
     element.removeAttribute('data-cd-hidden');
   }
 }
@@ -371,14 +372,29 @@ function updateToggable(element) {
  */
 function initializeToggables() {
   // Collapse dropdowns when clicking outside of the toggable target.
-  document.addEventListener('click', handleClickAway);
+  document.addEventListener('click', this.handleClickAway);
 
   // Loop through the toggable elements and set/unset the toggling button
   // depending on the screen size.
-  window.addEventListener('resize', handleResize);
+  window.addEventListener('resize', this.handleResize);
 
   // Initial setup.
-  handleResize();
+  this.handleResize();
+}
+
+
+/**
+ * Update Drupal toggable nested menus.
+ */
+function updateDrupalTogglableMenus(selector) {
+  // If selector wasn't supplied, set the default.
+  selector = typeof selector !== 'undefined' ? selector : '.cd-nav .menu a + .menu';
+
+  // Nested drupal menus are always toggable.
+  var elements = document.querySelectorAll(selector);
+  for (var i = 0, l = elements.length; i < l; i++) {
+    this.setToggable(elements[i]);
+  }
 }
 
 /**
@@ -386,14 +402,17 @@ function initializeToggables() {
  */
 if (document.documentElement.classList.contains('js')) {
 
-  // Collapse popups when clicking outside of the toggable target.
-  document.addEventListener('click', handleClickAway);
+  // Bind the event handlers so that `this` corresponds to the current
+  // object and can be used inside the event handling functions.
+  this.handleClickAway = this.handleClickAway.bind(this);
+  this.handleEscape = this.handleEscape.bind(this);
+  this.handleResize = this.handleResize.bind(this);
+  this.handleToggle = this.handleToggle.bind(this);
 
-  document.addEventListener('click', handleEscape);
-  window.addEventListener('click', handleResize);
-  document.addEventListener('click', handleToggle);
+  // Update nested Drupal menus in the header.
+  this.updateDrupalTogglableMenus();
 
   // Initialize toggable dropdown.
-  initializeToggables();
+  this.initializeToggables();
 
 }
