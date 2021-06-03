@@ -38,7 +38,7 @@ add_action( 'wp_enqueue_scripts', 'common_design_theme_scripts' );
 /**
  * Add "menu-item--expanded" class to parent menu items.
  */
-function add_menu_parent_class( $items ) {
+function cd_add_menu_parent_class( $items ) {
 	$parents = array();
 	foreach ( $items as $item ) {
 		//Check if the item is a parent item
@@ -56,12 +56,12 @@ function add_menu_parent_class( $items ) {
 
 	return $items;
 }
-add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
+add_filter( 'wp_nav_menu_objects', 'cd_add_menu_parent_class' );
 
 /**
  * Add "menu-item--active-trail" class to menu items.
  */
-function active_nav_class($classes, $item){
+function cd_active_nav_class($classes, $item){
 	if( in_array( 'current-menu-item', $classes ) ||
 	    in_array( 'current-menu-ancestor', $classes ) ||
 	    in_array( 'current-menu-parent', $classes ) ||
@@ -74,7 +74,7 @@ function active_nav_class($classes, $item){
 
 	return $classes;
 }
-add_filter('nav_menu_css_class' , 'active_nav_class' , 10 , 2);
+add_filter('nav_menu_css_class' , 'cd_active_nav_class' , 10 , 2);
 
 /**
  * Add "menu" class to sub menu.
@@ -87,7 +87,7 @@ add_filter( 'nav_menu_submenu_css_class', 'cd_nav_menu_submenu_css_class' );
 
 
 /**
- * Add custom attribute and value to a nav menu items anchor.
+ * Add an ID attribute and value to nav menu links.
  */
 add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
 	$atts['id'] = 'cd-main-menu-item-' . $item->ID;
@@ -97,6 +97,8 @@ add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
 
 /**
  * Custom walker class.
+ * This outputs the Main Menu markup needed for the cd-dropdown.js to work when menu items that have children.
+ * It adds ids, classes and custom data attributes to the menu, menu items and menu item links.
  */
 class cd_MainNav_Walker extends Walker_Nav_Menu {
 	private $curItem;
@@ -122,6 +124,7 @@ class cd_MainNav_Walker extends Walker_Nav_Menu {
 		);
 		$class_names = implode( ' ', $classes );
 
+		// Get the ID of the
 //		var_dump($this->curItem );
 		$curItemID = $this->curItem->ID;
 		$curItemTitle = $this->curItem->title;
