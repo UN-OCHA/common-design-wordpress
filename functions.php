@@ -35,8 +35,9 @@ function common_design_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'common_design_theme_stylesheets' );
 add_action( 'wp_enqueue_scripts', 'common_design_theme_scripts' );
 
-
-//Add "menu-item--expanded" class to parent menu items
+/**
+ * Add "menu-item--expanded" class to parent menu items.
+ */
 function add_menu_parent_class( $items ) {
 	$parents = array();
 	foreach ( $items as $item ) {
@@ -57,7 +58,9 @@ function add_menu_parent_class( $items ) {
 }
 add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
 
-//Add "menu-item--active-trail" class to menu items
+/**
+ * Add "menu-item--active-trail" class to menu items.
+ */
 function active_nav_class($classes, $item){
 	if( in_array( 'current-menu-item', $classes ) ||
 	    in_array( 'current-menu-ancestor', $classes ) ||
@@ -73,7 +76,9 @@ function active_nav_class($classes, $item){
 }
 add_filter('nav_menu_css_class' , 'active_nav_class' , 10 , 2);
 
-//Add "menu" class to sub menu
+/**
+ * Add "menu" class to sub menu.
+ */
 function cd_nav_menu_submenu_css_class( $classes ) {
 	$classes[] = 'menu cd-main-menu__dropdown';
 	return $classes;
@@ -84,20 +89,17 @@ add_filter( 'nav_menu_submenu_css_class', 'cd_nav_menu_submenu_css_class' );
 /**
  * Add custom attribute and value to a nav menu items anchor.
  */
-//add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
-//	if ( 12 === $item->ID ) { // change 12 to the ID of your menu item.
-//		$atts['data-cd-toggable'] = $item->title;
-//	}
-//
-//	return $atts;
-//}, 10, 3 );
+add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
+	$atts['id'] = 'cd-main-menu-item-' . $item->ID;
+	return $atts;
+}, 10, 3 );
 
 
 /**
  * Custom walker class.
  */
 class cd_MainNav_Walker extends Walker_Nav_Menu {
-
+	private $curItem;
 	/**
 	 * Starts the list before the elements are added.
 	 *
@@ -114,22 +116,21 @@ class cd_MainNav_Walker extends Walker_Nav_Menu {
 		$classes = array(
 			'menu',
 			'cd-main-menu__dropdown',
-//			( $display_depth % 2  ? 'menu-odd' : 'menu-even' ),
-//			( $display_depth >=2 ? 'sub-sub-menu' : '' ),
-//			'menu-depth-' . $display_depth
+			( $display_depth % 2  ? 'menu-odd' : 'menu-even' ),
+			( $display_depth >=2 ? 'sub-sub-menu' : '' ),
+			'menu-depth-' . $display_depth
 		);
 		$class_names = implode( ' ', $classes );
 
-
+//		var_dump($this->curItem );
+		$curItemID = $this->curItem->ID;
+		$curItemTitle = $this->curItem->title;
 
 		$atts           = array();
-		$atts['data-cd-toggable'] = 'this';
 		$atts['data-cd-icon'] = 'arrow-down';
 		$atts['data-cd-component'] = 'cd-main-menu';
-//		$atts['data-cd-replace'] = 'cd-main-menu';
 
-
-		$attributes = 'data-cd-toggable';
+		$attributes = '';
 		foreach ( $atts as $attr => $value ) {
 			if ( is_scalar( $value ) && '' !== $value && false !== $value ) {
 				$value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
@@ -137,57 +138,57 @@ class cd_MainNav_Walker extends Walker_Nav_Menu {
 			}
 		}
 		// Build HTML for output.
-		$output .= "\n" . $indent . '<ul id="cd-main-menu" class="' . $class_names . '" ' . $attributes . '>' . "\n";
+		$output .= "\n" . $indent . '
+		<ul id="cd-main-menu-' . $depth . '-' . $curItemID . '" 
+			data-cd-replace="cd-main-menu-item-' . $depth . '-' . $curItemID . '"  
+			data-cd-toggable="' . $curItemTitle . '" 
+			class="' . $class_names . '" 
+		' . $attributes . '>' . "\n";
 	}
 
-	/**
-	 * Start the element output.
-	 *
-	 * Adds main/sub-classes to the list items and links.
-	 *
-	 * @param string $output Passed by reference. Used to append additional content.
-	 * @param object $item   Menu item data object.
-	 * @param int    $depth  Depth of menu item. Used for padding.
-	 * @param array  $args   An array of arguments. @see wp_nav_menu()
-	 * @param int    $id     Current item ID.
-	 */
-	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+	function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
 		global $wp_query;
-		$indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
+		$this->curItem = $item;
 
-		// Depth-dependent classes.
-		$depth_classes = array(
-			( $depth == 0 ? 'main-menu-item' : 'sub-menu-item' ),
-			( $depth >=2 ? 'sub-sub-menu-item' : '' ),
-			( $depth % 2 ? 'menu-item-odd' : 'menu-item-even' ),
-			'menu-item-depth-' . $depth
-		);
-		$depth_class_names = esc_attr( implode( ' ', $depth_classes ) );
+		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
-		// Passed classes.
+		$class_names = $value = '';
+
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-		$class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
+		$classes[] = 'menu-item-' . $item->ID;
 
-		// Build HTML.
-		$output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="' . $class_names . '">';
+		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+		$class_names = ' class="' . esc_attr( $class_names ) . '"';
 
-		// Link attributes.
+		$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
+		$id = strlen( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
+
+		$output .= $indent . '<li' . $id . $value . $class_names .'>';
+
 		$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-		$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
 		$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
 		$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
 		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-		$attributes .= ' class="menu-link ' . ( $depth > 0 ? 'sub-menu-link' : 'main-menu-link' ) . '"';
+		$attributes .= ' id="cd-main-menu-item-' . $depth .'-' . $item->ID .'"';
 
-		// Build HTML output and pass through the proper filter.
-		$item_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
-			$args->before,
-			$attributes,
-			$args->link_before,
-			apply_filters( 'the_title', $item->title, $item->ID ),
-			$args->link_after,
-			$args->after
-		);
+		$item_output = $args->before;
+		$item_output .= '<a'. $attributes .'>';
+		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+		$item_output .= '</a>';
+		$item_output .= $args->after;
+
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+	}
+
+	/**
+	 * @see Walker::end_el()
+	 * @since 3.0.0
+	 *
+	 * @param string $output Passed by reference. Used to append additional content.
+	 * @param object $item Page data object. Not used.
+	 * @param int $depth Depth of page. Not Used.
+	 */
+	function end_el( &$output, $item, $depth = 0, $args = null ) {
+		$output .= "</li>\n";
 	}
 }
