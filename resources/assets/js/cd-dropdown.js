@@ -384,16 +384,17 @@ function initializeToggables() {
 
 
 /**
- * Update Drupal toggable nested menus.
+ * Update Wordpress toggable nested menus.
  */
-function updateDrupalTogglableMenus(selector) {
+function updateWordpressTogglableMenus(selector) {
   // If selector wasn't supplied, set the default.
-  selector = typeof selector !== 'undefined' ? selector : '.cd-nav .menu a + .menu';
+  selector = typeof selector !== 'undefined' ? selector : '.menu cd-main-menu__dropdown';
 
-  // Nested drupal menus are always toggable.
+  // Nested Wordpress menus are always toggable.
   var elements = document.querySelectorAll(selector);
   for (var i = 0, l = elements.length; i < l; i++) {
     this.setToggable(elements[i]);
+    console.log(elements[i]);
   }
 }
 
@@ -409,10 +410,10 @@ if (document.documentElement.classList.contains('js')) {
   this.handleResize = this.handleResize.bind(this);
   this.handleToggle = this.handleToggle.bind(this);
 
-  // Update nested Drupal menus in the header.
-  this.updateDrupalTogglableMenus();
-
   // Initialize toggable dropdown.
   this.initializeToggables();
+
+  // Update nested Wordpress menus in the header.
+  this.updateWordpressTogglableMenus();
 
 }
