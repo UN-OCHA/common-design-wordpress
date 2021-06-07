@@ -388,13 +388,12 @@ function initializeToggables() {
  */
 function updateWordpressTogglableMenus(selector) {
   // If selector wasn't supplied, set the default.
-  selector = typeof selector !== 'undefined' ? selector : '.menu cd-main-menu__dropdown';
+  selector = typeof selector !== 'undefined' ? selector : '.menu.cd-main-menu__dropdown';
 
   // Nested Wordpress menus are always toggable.
   var elements = document.querySelectorAll(selector);
   for (var i = 0, l = elements.length; i < l; i++) {
     this.setToggable(elements[i]);
-    console.log(elements[i]);
   }
 }
 
