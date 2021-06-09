@@ -6,10 +6,7 @@
  */
 ?>
 
-<!-- 
-  Link to nav bottom file
-  <?php get_template_part( 'resources/templates/nav/nav', 'bottom' ); ?> 
--->
+
 
  
 
@@ -18,20 +15,18 @@
           
     	<div class="cd-footer__section cd-footer__section--menu">
     	    <div class="region region-footer-navigation">
-    	    	<!-- <?php get_template_part( 'resources/templates/nav/nav', 'bottom' ); ?>-->
     	    	<nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer">
     	  			 <h2 id="block-footer-menu">Footer</h2>
-    	         <ul>
-    		          <li>
-    		        		    <a href="https://www.un.org/en/about-us/privacy-notice">Privacy</a>
-    		          </li>
-    	          	<li>
-    	       				    <a href="https://www.un.org/en/about-us/terms-of-use">Terms of use</a>
-    	             </li>
-    	         </ul>
+    	        
+
+                  <?php get_template_part( 'resources/templates/nav/nav', 'bottom' ); ?>
+           
+
     			  </nav>
+
     		  </div>
     	</div>
+
       
  
 

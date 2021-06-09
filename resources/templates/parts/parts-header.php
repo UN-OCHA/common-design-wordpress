@@ -40,7 +40,6 @@
 
                     <div class="cd-site-header__nav-holder">
                         <?php get_template_part( 'resources/templates/nav/nav', 'top' ); ?>
-
                     </div>
 
     		</div>
