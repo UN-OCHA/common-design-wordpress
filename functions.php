@@ -195,3 +195,31 @@ class cd_MainNav_Walker extends Walker_Nav_Menu {
 		$output .= "</li>\n";
 	}
 }
+
+function cd_get_language_attributes( $doctype = 'html' ) {
+	$attributes = array();
+
+	if ( function_exists( 'is_rtl' ) && is_rtl() ) {
+		$attributes[] = 'dir="rtl"';
+	} else {
+		$attributes[] = 'dir="ltr"';
+	}
+
+	$output = implode( ' ', $attributes );
+
+	/**
+	 * Filters the language attributes for display in the html tag.
+	 *
+	 * @since 2.5.0
+	 * @since 4.3.0 Added the `$doctype` parameter.
+	 *
+	 * @param string $output A space-separated list of language attributes.
+	 * @param string $doctype The type of html document (xhtml|html).
+	 */
+	return apply_filters( 'cd_language_attributes', $output, $doctype );
+}
+
+function cd_language_attributes( $doctype = 'html' ) {
+	echo cd_get_language_attributes( $doctype );
+}
+add_filter( 'language_attributes', 'cd_language_attributes' );
