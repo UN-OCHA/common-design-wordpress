@@ -15,14 +15,10 @@
           
     	<div class="cd-footer__section cd-footer__section--menu">
     	    <div class="region region-footer-navigation">
-    	    	<nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer">
-    	  			 <h2 id="block-footer-menu">Footer</h2>
+    	    	
     	        
-
                   <?php get_template_part( 'resources/templates/nav/nav', 'bottom' ); ?>
            
-
-    			  </nav>
 
     		  </div>
     	</div>
