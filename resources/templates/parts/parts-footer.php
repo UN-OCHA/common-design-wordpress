@@ -15,11 +15,7 @@
           
     	<div class="cd-footer__section cd-footer__section--menu">
     	    <div class="region region-footer-navigation">
-    	    	
-    	        
-                  <?php get_template_part( 'resources/templates/nav/nav', 'bottom' ); ?>
-           
-
+              <?php get_template_part( 'resources/templates/nav/nav', 'bottom' ); ?>
     		  </div>
     	</div>
 
