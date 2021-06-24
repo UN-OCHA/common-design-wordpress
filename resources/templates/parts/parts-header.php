@@ -33,7 +33,11 @@
 
 	  			<div class="region region-header-logo">
 	  			  	 <?php the_Custom_logo(); ?>
+	  			  	 <a href="/" title="Home" rel="home" class="cd-site-logo"></a>
 	  			</div>
+
+
+
 
 	   			<div class="cd-site-header__actions">
 
