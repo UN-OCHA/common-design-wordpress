@@ -6,11 +6,7 @@
  */
 ?>
 
-
-
 <header class="cd-header">
-
-	<!-- blue upper header -->
      <div class="cd-global-header">
   		<div class="cd-container cd-global-header__inner">
   			<div class="region region-header-top cd-global-header__actions" id="cd-global-header__actions">
@@ -29,25 +25,20 @@
 	</div>
 
 	<div class="cd-site-header">
-	  		<div class="cd-container cd-site-header__inner">
+        <div class="cd-container cd-site-header__inner">
 
-	  			<div class="region region-header-logo">
-	  			  	 <?php the_Custom_logo(); ?>
-	  			  	 <a href="/" title="Home" rel="home" class="cd-site-logo"></a>
-	  			</div>
+            <div class="region region-header-logo">
+                 <?php the_Custom_logo(); ?>
+            </div>
 
+            <div class="cd-site-header__actions">
 
+                <div class="cd-site-header__nav-holder">
+                    <?php get_template_part( 'resources/templates/nav/nav', 'top' ); ?>
+                </div>
 
-
-	   			<div class="cd-site-header__actions">
-
-
-                    <div class="cd-site-header__nav-holder">
-                        <?php get_template_part( 'resources/templates/nav/nav', 'top' ); ?>
-                    </div>
-
-    		</div>
-  		</div>
+            </div>
+        </div>
     </div>
 
 </header>
