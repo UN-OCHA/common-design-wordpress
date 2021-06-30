@@ -1,34 +1,36 @@
 <?php
-/* 
-Template Name: Content Template
-Template Post Type: post, page
- */ ?>
+/**
+ * Template Name: Content Page
+ * Full width layout, to be used with Gutenburg blocks.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ */
+?>
 
 <?php get_header(); ?>
 
+<div class="cd-layout-highlighted cd-container">
+</div>
 
-<?php while ( have_posts() ) : ?>
-		<!-- following common design article layout -->
-		<main role="main" id="main-content" class="cd-container">
-		    <div class="cd-layout-content-wrapper">
-		        <div class="cd-layout-content">
-		            <div class="region region-content">
-						<article role="article" class="node node--type-landing node--promoted node--view-mode-full cd-article">
-							<h1 class="cd-page-title"><?php the_title(); ?></h1>
+<main role="main" id="main-content" class="cd-container">
 
+    <h1 class="cd-page-title"><?php the_title(); ?></h1>
 
-							<div>
-								<div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
-									<p><?php the_content(); ?></p>
-								</div>
-							</div>
-						</article>
-					</div>
-		        </div>
-		    </div>
-		</main>
-<?php endwhile; ?>
+    <div class="cd-layout-content-wrapper">
+        <div class="cd-layout-content">
+			<?php if ( have_posts() ) : ?>
+				<?php if ( is_home() && is_front_page() ) : ?>
+					<?php get_template_part( 'resources/templates/content/content' ); ?>
+				<?php else : ?>
+					<?php while ( have_posts() ) : ?>
+						<?php the_post(); ?>
 
-
+						<?php get_template_part( 'resources/templates/content/content', get_post_type() ); ?>
+					<?php endwhile; ?>
+				<?php endif; ?>
+			<?php endif; ?>
+        </div>
+    </div>
+</main>
 
 <?php get_footer(); ?>
