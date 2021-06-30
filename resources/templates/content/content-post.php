@@ -6,6 +6,6 @@
  */
 ?>
 
-<article>
+<article class="content-post">
 	<?php get_template_part( 'resources/templates/common/common', 'article' ); ?>
 </article>
