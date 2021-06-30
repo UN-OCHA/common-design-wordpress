@@ -6,10 +6,18 @@
  */
 ?>
 
-<nav>
+<nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer">
+	<h2 id="block-footer-menu">Footer</h2>
 	<?php
 		wp_nav_menu( array(
-			'theme_location' => 'bottom',
+		'theme_location' => 'bottom',
+		'container'     => 'ul',
 		) );
 	?>
 </nav>
+
+
+
+
+             
+               

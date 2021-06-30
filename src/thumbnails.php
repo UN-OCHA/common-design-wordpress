@@ -7,7 +7,7 @@
  * sizes for using as for thumbnails.
  */
 
-if ( ! function_exists( 'tonik_register_thumbnails' ) ) {
+if ( ! function_exists( 'common_design_register_thumbnails' ) ) {
 	/**
 	 * Registers theme's additional thumbnail sizes.
 	 *
@@ -16,8 +16,8 @@ if ( ! function_exists( 'tonik_register_thumbnails' ) ) {
 	 *
 	 * @return void
 	 */
-	function tonik_register_thumbnails() {
+	function common_design_register_thumbnails() {
 		add_image_size( 'custom-thumbnail', 800, 600, true );
 	}
 }
-add_action( 'after_setup_theme', 'tonik_register_thumbnails' );
+add_action( 'after_setup_theme', 'common_design_register_thumbnails' );

@@ -8,7 +8,7 @@
  * shiped with various third-parity plugins.
  */
 
-if ( ! function_exists( 'tonik_register_scripts' ) ) {
+if ( ! function_exists( 'common_design_register_scripts' ) ) {
 	/**
 	 * Registers theme's JavaScript scripts.
 	 *
@@ -17,8 +17,8 @@ if ( ! function_exists( 'tonik_register_scripts' ) ) {
 	 *
 	 * @return void
 	 */
-	function tonik_register_scripts() {
+	function common_design_register_scripts() {
 		wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/public/js/main.js', array( 'jquery' ), null, true );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'tonik_register_scripts' );
+add_action( 'wp_enqueue_scripts', 'common_design_register_scripts' );

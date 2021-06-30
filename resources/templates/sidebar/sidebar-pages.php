@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="pages"></div>
+<div class="pages">
 	<?php
 		wp_list_pages( array(
 			'title_li' => '',

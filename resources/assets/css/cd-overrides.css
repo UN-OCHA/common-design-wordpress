@@ -1,3 +1,33 @@
-body {
-	background-color: red;
+/* common-design-overrides */
+
+
+.cd-mandate__logo {
+	background: url("../images/logos/ocha-lockup.svg") 0 center no-repeat;
 }
+
+
+
+.wp_social_media_menu_icon {
+	list-style-type: none;
+}
+
+
+.wp-menu-item {
+
+list-style-type: none;
+
+}
+
+
+
+
+
+/* Mobile logo can be linked here */
+@media (max-width: 767px) {
+    .cd-site-logo {
+        background: url(../images/logos/ocha-logo-blue.svg) center no-repeat;
+        background:linear-gradient(transparent, transparent), url(../images/logos/ocha-logo-blue.svg) center no-repeat
+    }
+}
+
+
