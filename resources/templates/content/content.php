@@ -11,7 +11,7 @@
 		<?php the_post(); ?>
 
 		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-			<?php get_template_part( 'resources/templates/common/common', 'article' ); ?>
+			<?php get_template_part( 'resources/templates/common/common', 'article--teaser' ); ?>
 		</a>
 	<?php endwhile; ?>
 </section>
