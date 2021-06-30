@@ -11,7 +11,7 @@
     <div class="cd-layout-highlighted cd-container">
     </div>
 
-    <main role="main" id="main-content" class="cd-container cd-layout-with-region-sidebar-first cd-layout-with-sidebar-first">
+    <main role="main" id="main-content" class="cd-container cd-layout-with-sidebar-first">
 
         <h1 class="cd-page-title"><?php the_title(); ?></h1>
 
