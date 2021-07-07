@@ -14,13 +14,12 @@
 
 <main role="main" id="main-content" class="cd-container">
 
-	<?php if ( !have_posts() ) : ?>
-        <h1 class="cd-page-title"><?php the_title(); ?></h1>
-	<?php endif; ?>
+    <h1 class="cd-page-title visually-hidden">
+        <?php echo get_bloginfo('name'); ?>
+    </h1>
 
     <div class="cd-layout-content-wrapper">
         <div class="cd-layout-content">
-
 	        <?php if ( have_posts() ) : ?>
 		        <?php if ( is_home() && is_front_page() ) : ?>
 			        <?php get_template_part( 'resources/templates/content/content' ); ?>
