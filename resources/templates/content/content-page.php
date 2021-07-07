@@ -9,3 +9,5 @@
 <article class="content-page cd-article">
 	<?php get_template_part( 'resources/templates/common/common', 'article' ); ?>
 </article>
+
+

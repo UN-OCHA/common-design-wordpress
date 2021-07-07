@@ -281,7 +281,52 @@ function change_logo_class( $html ) {
 
 
 
+function which_template_is_loaded() {
+//	if ( is_super_admin() ) {
+		global $template;
+		print_r( $template );
+//	}
+}
+
+add_action( 'wp_footer', 'which_template_is_loaded' );
 
 
 
+/**
+widgets 
+ */
+add_theme_support('widgets');
 
+/**
+register side bars 
+ */
+function my_sidebars()
+{
+	register_sidebar(
+		array(
+			'name' => 'Sidebar First',
+			'id' => 'sidebar-first',
+			'before-title' => '<h4 class= "widget-title">',
+			'after_title' => '<h4>'
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name' => 'Sidebar Second',
+			'id' => 'sidebar-second',
+			'before-title' => '<h4 class= "widget-title">',
+			'after_title' => '<h4>'
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name' => 'Sidebar Both',
+			'id' => 'sidebar-both',
+			'before-title' => '<h4 class= "widget-title">',
+			'after_title' => '<h4>'
+		)
+	);
+}
+add_action('widgets_init', 'my_sidebars');
