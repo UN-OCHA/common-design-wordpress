@@ -4,10 +4,18 @@
  */
 ?>
 
-<header>
-	<h2><?php the_title(); ?></h2>
+<article class="cd-article cd-teaser">
+    <header>
+        <h2>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                <?php the_title(); ?>
+            </a>
+        </h2>
 
-	<?php the_post_thumbnail(); ?>
-</header>
+        <?php the_post_thumbnail(); ?>
+    </header>
 
-<div><?php the_content(); ?></div>
+	<?php if ( the_excerpt() ) : ?>
+        <div><?php the_excerpt(); ?></div>
+	<?php endif; ?>
+</article>
