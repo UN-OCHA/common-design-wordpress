@@ -4,18 +4,35 @@
  */
 ?>
 
-<article class="cd-article cd-teaser">
-    <header>
-        <h2>
-            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                <?php the_title(); ?>
-            </a>
-        </h2>
+<article role="article" class="cd-teaser node--view-mode-teaser [ cd-flow cd-bumper ]">
 
-        <?php the_post_thumbnail(); ?>
-    </header>
+    <div class="cd-teaser__image">
+	    <?php the_post_thumbnail(); ?>
+    </div>
 
-	<?php if ( the_excerpt() ) : ?>
-        <div><?php the_excerpt(); ?></div>
-	<?php endif; ?>
+    <div class="cd-teaser__container [ cd-flow ]">
+
+        <header class="cd-teaser__title cd-max-width">
+            <h3>
+                <a href="<?php the_permalink(); ?>" rel="bookmark">
+                    <?php the_title(); ?>
+                </a>
+            </h3>
+        </header>
+
+	    <?php if ( the_excerpt() ) : ?>
+            <div class="cd-teaser__description cd-max-width">
+                <?php the_excerpt(); ?>
+            </div>
+	    <?php endif; ?>
+
+        <a href="<?php the_permalink(); ?>" class="cd-teaser__link cd-read-more">
+            Learn more
+            <svg class="cd-icon cd-icon--arrow-right">
+                <use xlink:href="#cd-icon--arrow-right"></use>
+            </svg>
+        </a>
+
+    </div>
+
 </article>
