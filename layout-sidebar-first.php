@@ -2,7 +2,7 @@
 /**
  * Template Name: Layout Sidebar First
  * Layout with a sidebar before the content area.
- * Template Post Type: post, page
+ *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
 ?>
