@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Content Page
- * Full width layout, to be used with Gutenburg blocks.
+ * Full width layout, to be used with Gutenberg blocks.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
