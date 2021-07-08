@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Front Page
+ * Front Page
  * Full width layout, to be used with Gutenberg blocks.
  * And/or markup manipulate to suit a variety of page layout requirements.
  *
