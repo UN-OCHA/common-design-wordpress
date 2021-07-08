@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Content Page
- * Full width layout, to be used with Gutenberg blocks.
+ * Template Name: Layout Sidebar Both
+ * Layout with a sidebar before and after the content area.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
@@ -12,11 +12,9 @@
 <div class="cd-layout-highlighted cd-container">
 </div>
 
-<main role="main" id="main-content" class="cd-container">
-
-    <h1 class="cd-page-title"><?php the_title(); ?></h1>
-
+<main role="main" id="main-content" class="cd-container cd-layout-with-sidebar-both">
     <div class="cd-layout-content-wrapper">
+	    <?php get_sidebar( 'first'); ?>
         <div class="cd-layout-content">
 			<?php if ( have_posts() ) : ?>
 				<?php if ( is_home() && is_front_page() ) : ?>
@@ -30,6 +28,7 @@
 				<?php endif; ?>
 			<?php endif; ?>
         </div>
+		<?php get_sidebar( 'second'); ?>
     </div>
 </main>
 

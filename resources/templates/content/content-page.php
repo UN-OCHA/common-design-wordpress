@@ -6,6 +6,12 @@
  */
 ?>
 
-<article>
-	<?php get_template_part( 'resources/templates/common/common', 'article' ); ?>
-</article>
+<div class="content-page">
+	<?php if ( is_page() ) : ?>
+		<?php get_template_part( 'resources/templates/common/common', 'article' ); ?>
+	<?php else : ?>
+		<?php get_template_part( 'resources/templates/common/common', 'article--teaser' ); ?>
+	<?php endif; ?>
+</div>
+
+

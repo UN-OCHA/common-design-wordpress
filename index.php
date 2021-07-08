@@ -8,22 +8,31 @@
 
 <?php get_header(); ?>
 
-<main class="box">
-	<?php if ( have_posts() ) : ?>
-		<?php if ( is_home() && is_front_page() ) : ?>
-		<?php else : ?>
-			<?php while ( have_posts() ) : ?>
-				<?php the_post(); ?>
+<div class="cd-layout-highlighted cd-container">
+</div>
 
-			<?php endwhile; ?>
-		<?php endif; ?>
+<main role="main" id="main-content" class="cd-container">
+
+	<?php if ( have_posts() ) : ?>
+        <?php if ( is_category() or is_tag() ) : ?>
+            <h1 class="cd-page-title">
+                <?php echo single_cat_title(); ?>
+            </h1>
+        <?php endif; ?>
 	<?php endif; ?>
 
+    <div class="cd-layout-content">
+        <?php if ( have_posts() ) : ?>
+            <?php if ( is_home() && is_front_page() ) : ?>
+                <?php get_template_part( 'resources/templates/content/content' ); ?>
+            <?php else : ?>
+                <?php while ( have_posts() ) : ?>
+                    <?php the_post(); ?>
+                    <?php get_template_part( 'resources/templates/content/content', get_post_type() ); ?>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        <?php endif; ?>
+    </div>
 </main>
-
-
-
-
-
 
 <?php get_footer(); ?>
