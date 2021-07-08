@@ -1,7 +1,8 @@
 <?php
 /**
  * Template Name: Front Page
- * Full width layout, to be used with Gutenburg blocks.
+ * Full width layout, to be used with Gutenberg blocks.
+ * And/or markup manipulate to suit a variety of page layout requirements.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
@@ -14,13 +15,12 @@
 
 <main role="main" id="main-content" class="cd-container">
 
-	<?php if ( !have_posts() ) : ?>
-        <h1 class="cd-page-title"><?php the_title(); ?></h1>
-	<?php endif; ?>
+    <h1 class="cd-page-title visually-hidden">
+        <?php echo get_bloginfo('name'); ?>
+    </h1>
 
     <div class="cd-layout-content-wrapper">
         <div class="cd-layout-content">
-
 	        <?php if ( have_posts() ) : ?>
 		        <?php if ( is_home() && is_front_page() ) : ?>
 			        <?php get_template_part( 'resources/templates/content/content' ); ?>

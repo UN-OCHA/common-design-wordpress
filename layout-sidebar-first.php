@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Landing Page
- * Full width layout, to be used with Gutenberg blocks.
+ * Template Name: Layout Sidebar First
+ * Layout with a sidebar before the content area.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
@@ -12,11 +12,9 @@
 <div class="cd-layout-highlighted cd-container">
 </div>
 
-<main role="main" id="main-content" class="cd-container">
-
-    <h1 class="cd-page-title"><?php the_title(); ?></h1>
-
+<main role="main" id="main-content" class="cd-container cd-layout-with-sidebar-first">
     <div class="cd-layout-content-wrapper">
+        <?php get_sidebar( 'first'); ?>
         <div class="cd-layout-content">
             <?php if ( have_posts() ) : ?>
                 <?php if ( is_home() && is_front_page() ) : ?>
