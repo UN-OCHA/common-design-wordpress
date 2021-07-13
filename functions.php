@@ -25,6 +25,7 @@ function common_design_theme_stylesheets() {
 	wp_enqueue_style ('common-design-hidden', get_template_directory_uri().'/resources/assets/css/hidden.module.css', array(), null, 'all' );
 	wp_enqueue_style ('common-design-core', get_template_directory_uri().'/resources/assets/css/cd.css', array(), null, 'all' );
 	wp_enqueue_style ('common-design-button', get_template_directory_uri().'/resources/assets/css/cd-button.css', array(), null, 'all' );
+	wp_enqueue_style ('common-design-page-title', get_template_directory_uri().'/resources/assets/css/cd-page-title.css', array(), null, 'all' );
 	wp_enqueue_style ('common-design-overrides', get_template_directory_uri().'/resources/assets/css/cd-overrides.css', array(), null, 'all' );
 	wp_enqueue_style ('implementation-overrides', get_template_directory_uri().'/resources/assets/css/styles.css', array(), null, 'all' );
 }
@@ -300,13 +301,12 @@ add_theme_support('widgets');
 /**
 register side bars
  */
-function my_sidebars()
-{
+function my_sidebars() {
 	register_sidebar(
 		array(
 			'name' => 'Sidebar First',
 			'id' => 'sidebar-first',
-			'before-title' => '<h4 class= "widget-title">',
+			'before-title' => '<h4 class="widget-title">',
 			'after_title' => '<h4>'
 		)
 	);
@@ -315,7 +315,7 @@ function my_sidebars()
 		array(
 			'name' => 'Sidebar Second',
 			'id' => 'sidebar-second',
-			'before-title' => '<h4 class= "widget-title">',
+			'before-title' => '<h4 class="widget-title">',
 			'after_title' => '<h4>'
 		)
 	);
