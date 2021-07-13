@@ -33,7 +33,7 @@
 
             <div class="cd-site-header__actions">
 
-                <!-- comment out this line if there is not search requirement -->
+                <!-- comment out this line if there is no search requirement -->
 	            <?php get_template_part( 'resources/templates/parts/parts', 'search' ); ?>
 
                 <div class="cd-site-header__nav-holder">

@@ -1,6 +1,14 @@
 <?php
-global $wp;
-$current_slug = add_query_arg( array(), $wp->request );
+/**
+ * Search button in header.
+ * Note the conditional $current_slug == 'search'
+ * This means a page with the Permalink URL slug `search` needs to be created for the conditional to work.
+ */
+?>
+
+<?php
+    global $wp;
+    $current_slug = add_query_arg( array(), $wp->request );
 ?>
 
 <?php if ( $current_slug == 'search' ) : ?>
