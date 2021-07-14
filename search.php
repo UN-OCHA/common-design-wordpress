@@ -8,7 +8,7 @@
 
 <?php get_header(); ?>
 
-<main>
+<main role="main" id="main-content" class="cd-container">
 	<?php get_template_part( 'resources/templates/content/content', 'search' ); ?>
 </main>
 
