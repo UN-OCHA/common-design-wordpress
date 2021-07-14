@@ -54,3 +54,6 @@ list-style-type: none;
 .cd-search__btn--active::before {
     background: var(--cd-highlight-red);
 }
+.cd-form .cd-form--inline {
+    margin-bottom: 2rem;
+}
