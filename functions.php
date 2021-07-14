@@ -324,3 +324,25 @@ function my_sidebars() {
 	);
 }
 add_action('widgets_init', 'my_sidebars');
+
+
+/* Disable Gutenburg block types we don't need */
+/* https://rudrastyh.com/gutenberg/remove-default-blocks.html */
+add_filter( 'allowed_block_types', 'common_design_allowed_block_types', 10, 2 );
+
+function common_design_allowed_block_types( $allowed_blocks, $post ) {
+
+	$allowed_blocks = array(
+		'core/image',
+		'core/paragraph',
+		'core/heading',
+		'core/list'
+	);
+
+	if( $post->post_type === 'page' ) {
+		$allowed_blocks[] = 'core/gallery';
+	}
+
+	return $allowed_blocks;
+
+}
