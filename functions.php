@@ -39,6 +39,13 @@ function common_design_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'common_design_theme_stylesheets' );
 add_action( 'wp_enqueue_scripts', 'common_design_theme_scripts' );
 
+/* Add Common Design styles to the Gutenburg blocks on the Edit page */
+function common_design_theme_editor_styles(){
+	add_theme_support( 'editor-styles' );
+	add_editor_style( get_template_directory_uri().'/resources/assets/css/style-editor.css' );
+}
+add_action( 'after_setup_theme', 'common_design_theme_editor_styles' );
+
 /**
  * Add "menu-item--expanded" class to parent menu items.
  */
