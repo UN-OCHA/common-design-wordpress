@@ -6,6 +6,6 @@
  */
 ?>
 
-<section>
+<section class="[ cd-flow ]">
     <?php get_template_part( 'resources/templates/common/common', 'article--teaser' ); ?>
 </section>
