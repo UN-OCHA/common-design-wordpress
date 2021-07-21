@@ -8,7 +8,7 @@
 
 	<?php if ( has_post_thumbnail() ) : ?>
         <div class="cd-teaser__image">
-            <?php the_post_thumbnail(); ?>
+	        <?php the_post_thumbnail( 'thumbnail-teaser' ); ?>
         </div>
 	<?php endif; ?>
 

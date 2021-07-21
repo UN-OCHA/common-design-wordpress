@@ -383,3 +383,12 @@ function common_design_disable_gutenberg_color_settings() {
 	add_theme_support( 'disable-custom-gradients' );
 }
 add_action( 'after_setup_theme', 'common_design_disable_gutenberg_color_settings' );
+
+
+
+
+// Image size for teaser thumbnails
+add_image_size( 'thumbnail-teaser', 384, 288 );
+//add_image_size( 'sidebar-thumb', 120, 120, true ); // Hard Crop Mode
+//add_image_size( 'homepage-thumb', 220, 180 ); // Soft Crop Mode
+//add_image_size( 'singlepost-thumb', 590, 9999 ); // Unlimited Height Mode
