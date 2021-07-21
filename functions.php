@@ -39,6 +39,11 @@ function common_design_theme_stylesheets() {
 function common_design_theme_scripts() {
 	wp_enqueue_script( 'script', get_template_directory_uri() . '/resources/assets/js/cd-dropdown.js', array(), null, true );
 }
+
+add_action('enqueue_block_editor_assets', function() {
+	wp_enqueue_script('common-design-gutenberg-filters', get_template_directory_uri() . '/resources/assets/js/gutenberg-filters.js', ['wp-edit-post']);
+});
+
 add_action( 'wp_enqueue_scripts', 'common_design_theme_stylesheets' );
 add_action( 'wp_enqueue_scripts', 'common_design_theme_scripts' );
 
@@ -334,3 +339,47 @@ function my_sidebars() {
 	);
 }
 add_action('widgets_init', 'my_sidebars');
+
+
+/* Disable Gutenberg block types we don't need */
+/* https://rudrastyh.com/gutenberg/remove-default-blocks.html */
+add_filter( 'allowed_block_types', 'common_design_allowed_block_types', 10, 2 );
+
+function common_design_allowed_block_types( $allowed_blocks, $post ) {
+
+	$allowed_blocks = array(
+		'core/buttons',
+		'core/image',
+		'core/paragraph',
+		'core/heading',
+		'core/list'
+	);
+
+	if( $post->post_type === 'page' ) {
+		$allowed_blocks[] = 'core/gallery';
+	}
+
+	return $allowed_blocks;
+
+}
+
+function common_design_disable_gutenberg_typography_settings() {
+	add_theme_support( 'editor-font-sizes' );
+	add_theme_support( 'disable-custom-font-sizes' );
+}
+add_action( 'after_setup_theme', 'common_design_disable_gutenberg_typography_settings' );
+
+function common_design_disable_drop_cap_editor_settings(array $editor_settings): array {
+	$editor_settings['__experimentalFeatures']['defaults']['typography']['dropCap'] = false;
+	return $editor_settings;
+}
+add_filter('block_editor_settings', 'common_design_disable_drop_cap_editor_settings');
+
+function common_design_disable_gutenberg_color_settings() {
+	add_theme_support( 'disable-custom-colors' );
+	add_theme_support( 'disable-custom-colors' );
+	add_theme_support( 'editor-color-palette' );
+	add_theme_support( 'editor-gradient-presets', [] );
+	add_theme_support( 'disable-custom-gradients' );
+}
+add_action( 'after_setup_theme', 'common_design_disable_gutenberg_color_settings' );
