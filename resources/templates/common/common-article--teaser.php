@@ -6,9 +6,11 @@
 
 <article role="article" class="cd-teaser [ cd-flow cd-bumper ]">
 
-    <div class="cd-teaser__image">
-	    <?php the_post_thumbnail(); ?>
-    </div>
+	<?php if ( has_post_thumbnail() ) : ?>
+        <div class="cd-teaser__image">
+            <?php the_post_thumbnail(); ?>
+        </div>
+	<?php endif; ?>
 
     <div class="cd-teaser__container [ cd-flow ]">
 
@@ -20,11 +22,9 @@
             </h3>
         </div>
 
-	    <?php if ( the_excerpt() ) : ?>
-            <div class="cd-teaser__description cd-max-width">
-                <?php the_excerpt(); ?>
-            </div>
-	    <?php endif; ?>
+        <div class="cd-teaser__description cd-max-width">
+            <?php the_excerpt(); ?>
+        </div>
 
         <a href="<?php the_permalink(); ?>" class="cd-teaser__link cd-read-more">
             Learn more

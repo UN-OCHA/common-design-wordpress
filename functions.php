@@ -24,7 +24,14 @@ function common_design_theme_stylesheets() {
 	wp_enqueue_style ('common-design-normalize', get_template_directory_uri().'/resources/assets/css/normalize.css', array(), null, 'all' );
 	wp_enqueue_style ('common-design-hidden', get_template_directory_uri().'/resources/assets/css/hidden.module.css', array(), null, 'all' );
 	wp_enqueue_style ('common-design-core', get_template_directory_uri().'/resources/assets/css/cd.css', array(), null, 'all' );
-	wp_enqueue_style ('common-design-button', get_template_directory_uri().'/resources/assets/css/cd-button.css', array(), null, 'all' );
+	wp_enqueue_style ('common-design-flow', get_template_directory_uri().'/resources/assets/css/cd-flow/cd-flow.css', array(), null, 'all' );
+	wp_enqueue_style ('common-design-utilities', get_template_directory_uri().'/resources/assets/css/cd-utilities/cd-utilities.css', array(), null, 'all' );
+	wp_enqueue_style ('common-design-article', get_template_directory_uri().'/resources/assets/css/cd-article/cd-article.css', array(), null, 'all' );
+	wp_enqueue_style ('common-design-button', get_template_directory_uri().'/resources/assets/css/cd-button/cd-button.css', array(), null, 'all' );
+	wp_enqueue_style ('common-design-form', get_template_directory_uri().'/resources/assets/css/cd-form/cd-form.css', array(), null, 'all' );
+	wp_enqueue_style ('common-design-page-title', get_template_directory_uri().'/resources/assets/css/cd-page-title/cd-page-title.css', array(), null, 'all' );
+	wp_enqueue_style ('common-design-teaser', get_template_directory_uri().'/resources/assets/css/cd-teaser/cd-teaser.css', array(), null, 'all' );
+	wp_enqueue_style ('common-design-typography', get_template_directory_uri().'/resources/assets/css/cd-typography/cd-typography.css', array(), null, 'all' );
 	wp_enqueue_style ('common-design-overrides', get_template_directory_uri().'/resources/assets/css/cd-overrides.css', array(), null, 'all' );
 	wp_enqueue_style ('implementation-overrides', get_template_directory_uri().'/resources/assets/css/styles.css', array(), null, 'all' );
 }
@@ -34,6 +41,13 @@ function common_design_theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'common_design_theme_stylesheets' );
 add_action( 'wp_enqueue_scripts', 'common_design_theme_scripts' );
+
+/* Add Common Design styles to the Gutenburg blocks on the Edit page */
+function common_design_theme_editor_styles(){
+	add_theme_support( 'editor-styles' );
+	add_editor_style( get_template_directory_uri().'/resources/assets/css/style-editor.css' );
+}
+add_action( 'after_setup_theme', 'common_design_theme_editor_styles' );
 
 /**
  * Add "menu-item--expanded" class to parent menu items.
@@ -300,13 +314,12 @@ add_theme_support('widgets');
 /**
 register side bars
  */
-function my_sidebars()
-{
+function my_sidebars() {
 	register_sidebar(
 		array(
 			'name' => 'Sidebar First',
 			'id' => 'sidebar-first',
-			'before-title' => '<h4 class= "widget-title">',
+			'before-title' => '<h4 class="widget-title">',
 			'after_title' => '<h4>'
 		)
 	);
@@ -315,7 +328,7 @@ function my_sidebars()
 		array(
 			'name' => 'Sidebar Second',
 			'id' => 'sidebar-second',
-			'before-title' => '<h4 class= "widget-title">',
+			'before-title' => '<h4 class="widget-title">',
 			'after_title' => '<h4>'
 		)
 	);
