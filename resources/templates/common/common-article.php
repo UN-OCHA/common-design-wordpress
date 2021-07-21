@@ -5,6 +5,19 @@
 ?>
 
 <article class="cd-article">
+
+    <?php
+    /**
+    * Debug: Display Post Blocks
+    *
+    */
+    function cd_display_post_blocks() {
+    global $post;
+    print_r( esc_html( $post->post_content ) );
+    }
+    add_action( 'wp_footer', 'cd_display_post_blocks' );
+    ?>
+
     <header>
         <h1 class="cd-page-title"><?php the_title(); ?></h1>
 
