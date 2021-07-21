@@ -1,15 +1,47 @@
 {
   "version": 1,
   "settings": {
+    "border": {
+      "customColor": false,
+      "customRadius": false,
+      "customStyle": false,
+      "customWidth": false
+    },
+    "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "duotone": [],
+      "gradients": [],
+      "link": false,
+      "palette": []
+    },
+    "custom": {},
+    "layout": {},
+    "spacing": {},
+    "typography": {
+      "customFontSize": false,
+      "customFontStyle": false,
+      "customFontWeight": false,
+      "customLineHeight": false,
+      "customTextDecorations": false,
+      "customTextTransforms": false,
+      "dropCap": false,
+      "fontFamilies": [],
+      "fontSizes": []
+    },
     "blocks": {
+      "core/paragraph": {
+        "border": {},
+        "color": {},
+        "custom": {},
+        "layout": {},
+        "spacing": {},
+        "typography": {}
+      },
       "core/button": {
         "border": {
           "customRadius": false
-        }
-      },
-      "core/paragraph": {
-        "typography": {
-          "dropCap": false
         }
       }
     }
