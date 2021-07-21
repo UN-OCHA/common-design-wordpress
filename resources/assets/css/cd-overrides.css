@@ -26,6 +26,8 @@
 /* css for gutenberg button  */
 
 /* button 01  */
+.is-style-outline > .wp-block-button__link, 
+.wp-block-button__link.is-style-outline,
 .wp-block-button__link {
 	width: auto;
 	  padding: 0.5rem 1rem;
@@ -45,6 +47,15 @@
 	  margin: 0.25rem;
 }
 
+.is-style-outline > .wp-block-button__link:not(.has-text-color),
+.wp-block-button__link.is-style-outline:not(.has-text-color),
+.is-style-outline .wp-block-button__link {
+color: var(--cd-primary-color);
+border-color: var(--cd-primary-color);
+background-color: var(--cd-white);
+fill: currentColor;
+}
+
 .wp-block-button__link:hover,
 .wp-block-button__link:focus {
  	color: var(--cd-white);
@@ -52,11 +63,13 @@
 }
 
 /* button hover for outlined in WP backend */
-.is-style-outline:hover,
-.is-style-outline:focus {
+.is-style-outline .wp-block-button__link:hover,
+.is-style-outline .wp-block-button__link:focus {
  	color: var(--cd-white);
-	background-color: var(--cd-primary-color--light);
+	border-color: var(--cd-primary-color--dark);
+	background-color: var(--cd-primary-color);
 }
+
 
 /* css for gutenberg bullet list  */
 /* would it be better to add a class to the gutenberg element? It seems there are not classes for the li and ul  */
