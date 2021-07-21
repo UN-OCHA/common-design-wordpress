@@ -369,12 +369,6 @@ function common_design_disable_gutenberg_typography_settings() {
 }
 add_action( 'after_setup_theme', 'common_design_disable_gutenberg_typography_settings' );
 
-function common_design_disable_drop_cap_editor_settings(array $editor_settings): array {
-	$editor_settings['__experimentalFeatures']['defaults']['typography']['dropCap'] = false;
-	return $editor_settings;
-}
-add_filter('block_editor_settings', 'common_design_disable_drop_cap_editor_settings');
-
 function common_design_disable_gutenberg_color_settings() {
 	add_theme_support( 'disable-custom-colors' );
 	add_theme_support( 'disable-custom-colors' );
