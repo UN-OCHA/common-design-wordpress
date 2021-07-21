@@ -5,21 +5,13 @@
 	background: url("../images/logos/ocha-lockup.svg") 0 center no-repeat;
 }
 
-
-
 .wp_social_media_menu_icon {
 	list-style-type: none;
 }
 
-
 .wp-menu-item {
-
-list-style-type: none;
-
+	list-style-type: none;
 }
-
-
-
 
 
 /* Mobile logo can be linked here */
@@ -29,5 +21,130 @@ list-style-type: none;
         background:linear-gradient(transparent, transparent), url(../images/logos/ocha-logo-blue.svg) center no-repeat
     }
 }
+
+
+/* css for gutenberg button  */
+
+/* button 01  */
+.wp-block-button__link {
+	width: auto;
+	  padding: 0.5rem 1rem;
+	  transition:
+	  background-color 0.6s ease-out,
+	    color 0.6s ease-out;
+	  text-align: center;
+	  color: var(--cd-white);
+	  cursor: pointer;
+	  border: 2px solid transparent;
+	  border-radius: 3px;
+	  background-color: var(--cd-primary-color);
+	  box-shadow: none;
+	  font-size: 1rem;
+	  line-height: 1.15;
+	  -webkit-appearance: none;
+	  margin: 0.25rem;
+}
+
+.wp-block-button__link:hover,
+.wp-block-button__link:focus {
+ 	color: var(--cd-white);
+	background-color: var(--cd-primary-color--light);
+}
+
+/* button hover for outlined in WP backend */
+.is-style-outline:hover,
+.is-style-outline:focus {
+ 	color: var(--cd-white);
+	background-color: var(--cd-primary-color--light);
+}
+
+/* css for gutenberg bullet list  */
+/* would it be better to add a class to the gutenberg element? It seems there are not classes for the li and ul  */
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+}
+
+ul{
+margin: 0 0 1rem;
+padding: 0;
+list-style: none;
+}
+
+.cd-bullet-list {
+margin: 0 0 1rem;
+padding: 0;
+list-style: none;
+}
+
+
+/* css for gutenberg titles */
+/* also might need specific class?
+cd-page-title cd-article__page-title */
+.h2 {
+	margin-top: 0;
+	margin-bottom: 2rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid var(--cd-blue-grey);
+}
+
+/* css for gutenberg table */
+/* cd-table */
+.wp-block-table {
+width: 100%;
+margin: 0 auto 3rem;
+border-collapse: collapse;
+}
+
+/* do we need classes for  */
+td, th {
+padding: 0;
+}
+
+td, th {
+display: table-cell;
+vertical-align: inherit;
+}
+
+/* table_caption */
+figcaption {
+	margin-top: 0.5rem;
+	caption-side: bottom;
+	text-align: left;
+}
+
+/* css for gutenberg separators */
+/* hr in cd css  */
+.wp-block-separator {
+ max-width: var(--cd-max-content-width);
+ margin: 3.5rem auto;
+ border: none;
+ border-top: 2px solid var(--cd-grey--light);
+}
+
+/* css for gutenberg image */
+.wp-image {
+
+}
+
+/* css for gutenberg gallery */
+.wp-block-gallery {
+
+}
+
+/*  gallery item */
+.blocks-gallery-item {
+  
+}
+
+
+
+
+
+
+
+
+
+
 
 
