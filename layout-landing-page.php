@@ -9,9 +9,6 @@
 
 <?php get_header(); ?>
 
-<div class="cd-layout-highlighted cd-container">
-</div>
-
 <main role="main" id="main-content" class="cd-container">
 
     <div class="cd-layout-content-wrapper">
