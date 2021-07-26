@@ -47,10 +47,10 @@
 .is-style-outline > .wp-block-button__link:not(.has-text-color),
 .wp-block-button__link.is-style-outline:not(.has-text-color),
 .is-style-outline .wp-block-button__link {
-color: var(--cd-primary-color);
-border-color: var(--cd-primary-color);
-background-color: var(--cd-white);
-fill: currentColor;
+	color: var(--cd-primary-color);
+	border-color: var(--cd-primary-color);
+	background-color: var(--cd-white);
+	fill: currentColor;
 }
 
 .wp-block-button__link:hover,
