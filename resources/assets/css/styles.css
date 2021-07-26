@@ -1,9 +1,6 @@
+/* Implementation overrides - custom styles go here. */
 
-/* implementation-overrides */
-
-
-
-/* Mobile logo can be added here */
+/* Mobile logo */
 @media (max-width: 767px) {
     .cd-site-logo {
         background: url(../images/logos/ocha-logo-blue.svg) center no-repeat;
@@ -11,19 +8,11 @@
     }
 }
 
-
-
-
-/* Header Color
-the hex code of the brand can be applied here  */
 .cd-global-header{
 	background: var(--cd-ocha-blue);
 	background-image: linear-gradient(-180deg,var(--cd-ocha-blue) 57%,var(--cd-blue--dark) 97%);
 }
 
-
-
-/* Footer Color */
 .cd-footer {
 	background: var(--cd-ocha-blue);
 }
