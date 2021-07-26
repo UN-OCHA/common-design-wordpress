@@ -14,8 +14,6 @@
 
 <main role="main" id="main-content" class="cd-container">
 
-    <h1 class="cd-page-title"><?php the_title(); ?></h1>
-
     <div class="cd-layout-content-wrapper">
         <div class="cd-layout-content">
             <?php if ( have_posts() ) : ?>
