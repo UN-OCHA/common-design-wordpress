@@ -18,7 +18,7 @@ if ( ! function_exists( 'common_design_register_scripts' ) ) {
 	 * @return void
 	 */
 	function common_design_register_scripts() {
-		wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/public/js/main.js', array( 'jquery' ), null, true );
+		wp_enqueue_script( 'script', get_template_directory_uri() . '/resources/assets/js/cd-dropdown.js', array(), null, true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'common_design_register_scripts' );
