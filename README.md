@@ -16,7 +16,7 @@ Rules specific to the implementation, like changing the OCHA brand blue, should 
 ## Page layouts
 There are multiple page templates
 - **Default template** (full width, to be used with Gutenberg blocks in the content area)
-- **Landing Page** (full width, available for customisation)
+- **Landing Page** (full width with Feature image)
 - **Sidebar First** (sidebar widget displays first, followed by content area)
 - **Sidebar Second** (sidebar widget displays second, preceded by content area)
 - **Sidebar Both** (both sidebars are present and content area is narrow)
@@ -26,9 +26,12 @@ sidebar page templates.
 
 The default layout uses `index.php` template. This is a full width layout suitable for blocks in the content area.
 
-The Landing page layout is identical to the Default template, but exists in case another page template is required and should be customised.
+The Landing page layout displays the Feature image using the `cd-hero` component. This template should be customised to suit.
 
 There is also a `front-page.php` file which is used automatically when the homepage setting is set to display a static page. Any customisation to the markup for the homepage should be done in this file. Currently, the Page Title is set to be visual hidden on the homepage.
+
+## Article templates
+Post and pages can be displayed as teasers or full pages, depending on the context. The teasers display the Featured image as a thumbnail. The full page doesn't display the Featured image. This can be added in the content as a Gutenberg block.
 
 ## Page Assembly
 We recommend installing Gutenberg to avail of the content blocks for creating interesting content pages. To reduce the complexity many Gutenberg blocks are not available. Look for `function common_design_allowed_block_types` in `functions.php`

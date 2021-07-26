@@ -10,7 +10,7 @@
 <?php get_header(); ?>
 
 <?php if ( has_post_thumbnail() ) : ?>
-    <div class="cd-hero cd-hero--style-one">
+    <div class="cd-hero cd-hero--style-one cd-bleed">
         <?php the_post_thumbnail( 'hero-image', array('class' => 'cd-hero__image') ); ?>
         <div class="cd-hero__container">
             <div class="cd-hero__title">
