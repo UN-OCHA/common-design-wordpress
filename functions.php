@@ -13,12 +13,12 @@ require_once 'src/scripts.php';
 
 require_once 'src/navs.php';
 require_once 'src/supports.php';
-require_once 'src/post-types.php';
 require_once 'src/thumbnails.php';
 
 add_action('enqueue_block_editor_assets', function() {
 	wp_enqueue_script('common-design-gutenberg-filters', get_template_directory_uri() . '/resources/assets/js/gutenberg-filters.js', ['wp-edit-post']);
 });
+
 
 /* Add Common Design styles to the Gutenburg blocks on the Edit page */
 function common_design_theme_editor_styles(){
@@ -148,7 +148,9 @@ function common_design_allowed_block_types( $allowed_blocks, $post ) {
 		'core/image',
 		'core/paragraph',
 		'core/heading',
-		'core/list'
+		'core/list',
+		'core/page-list',
+		'core/latest-posts'
 	);
 
 	if( $post->post_type === 'page' ) {
