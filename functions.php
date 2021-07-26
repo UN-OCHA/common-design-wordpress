@@ -150,7 +150,11 @@ function common_design_allowed_block_types( $allowed_blocks, $post ) {
 		'core/heading',
 		'core/list',
 		'core/page-list',
-		'core/latest-posts'
+		'core/latest-posts',
+		'core/table',
+		'core/media-text',
+		'core/separator',
+		'core/columns'
 	);
 
 	if( $post->post_type === 'page' ) {
