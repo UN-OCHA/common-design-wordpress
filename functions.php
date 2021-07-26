@@ -23,11 +23,11 @@ require_once 'src/thumbnails.php';
 function common_design_theme_stylesheets() {
 	wp_enqueue_style ('common-design-normalize', get_template_directory_uri().'/resources/assets/css/normalize.css', array(), null, 'all' );
 	wp_enqueue_style ('common-design-hidden', get_template_directory_uri().'/resources/assets/css/hidden.module.css', array(), null, 'all' );
-	wp_enqueue_style ('common-design-core', get_template_directory_uri().'/resources/assets/css/cd.css', array(), null, 'all' );
+	wp_enqueue_style ('common-design-button', get_template_directory_uri().'/resources/assets/css/cd-button/cd-button.css', array(), null, 'all' );
 	wp_enqueue_style ('common-design-flow', get_template_directory_uri().'/resources/assets/css/cd-flow/cd-flow.css', array(), null, 'all' );
 	wp_enqueue_style ('common-design-utilities', get_template_directory_uri().'/resources/assets/css/cd-utilities/cd-utilities.css', array(), null, 'all' );
+	wp_enqueue_style ('common-design-core', get_template_directory_uri().'/resources/assets/css/cd.css', array(), null, 'all' );
 	wp_enqueue_style ('common-design-article', get_template_directory_uri().'/resources/assets/css/cd-article/cd-article.css', array(), null, 'all' );
-	wp_enqueue_style ('common-design-button', get_template_directory_uri().'/resources/assets/css/cd-button/cd-button.css', array(), null, 'all' );
 	wp_enqueue_style ('common-design-form', get_template_directory_uri().'/resources/assets/css/cd-form/cd-form.css', array(), null, 'all' );
 	wp_enqueue_style ('common-design-page-title', get_template_directory_uri().'/resources/assets/css/cd-page-title/cd-page-title.css', array(), null, 'all' );
 	wp_enqueue_style ('common-design-teaser', get_template_directory_uri().'/resources/assets/css/cd-teaser/cd-teaser.css', array(), null, 'all' );
