@@ -63,6 +63,14 @@
     --cd-primary-color--lighter: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) + 39%));
 }
 
+body,
+.editor-styles-wrapper {
+    color: var(--cd-grey--dark);
+    font-family: var(--cd-font--roboto);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
 /* button 01  */
 .is-style-outline > .wp-block-button__link,
 .wp-block-button__link.is-style-outline,
