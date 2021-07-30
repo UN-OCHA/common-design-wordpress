@@ -1,6 +1,5 @@
 /* common-design-overrides */
 
-
 .cd-mandate__logo {
 	background: url("../images/logos/ocha-lockup.svg") 0 center no-repeat;
 }
@@ -13,7 +12,6 @@
 	list-style-type: none;
 }
 
-
 /* Mobile logo can be linked here */
 @media (max-width: 767px) {
     .cd-site-logo {
@@ -22,11 +20,10 @@
     }
 }
 
+/* Gutenberg blocks */
 
-/* css for gutenberg button  */
-
-/* button 01  */
-.is-style-outline > .wp-block-button__link, 
+/* Buttons */
+.is-style-outline > .wp-block-button__link,
 .wp-block-button__link.is-style-outline,
 .wp-block-button__link {
 	width: auto;
@@ -50,10 +47,10 @@
 .is-style-outline > .wp-block-button__link:not(.has-text-color),
 .wp-block-button__link.is-style-outline:not(.has-text-color),
 .is-style-outline .wp-block-button__link {
-color: var(--cd-primary-color);
-border-color: var(--cd-primary-color);
-background-color: var(--cd-white);
-fill: currentColor;
+	color: var(--cd-primary-color);
+	border-color: var(--cd-primary-color);
+	background-color: var(--cd-white);
+	fill: currentColor;
 }
 
 .wp-block-button__link:hover,
@@ -62,7 +59,6 @@ fill: currentColor;
 	background-color: var(--cd-primary-color--light);
 }
 
-/* button hover for outlined in WP backend */
 .is-style-outline .wp-block-button__link:hover,
 .is-style-outline .wp-block-button__link:focus {
  	color: var(--cd-white);
@@ -70,28 +66,27 @@ fill: currentColor;
 	background-color: var(--cd-primary-color);
 }
 
-
-/* css for gutenberg bullet list  */
+/* Bullet list  */
 /* would it be better to add a class to the gutenberg element? It seems there are not classes for the li and ul  */
 li {
-display: list-item;
-text-align: -webkit-match-parent;
+	display: list-item;
+	text-align: -webkit-match-parent;
 }
 
-ul{
-margin: 0 0 1rem;
-padding: 0;
-list-style: none;
+ul {
+	margin: 0 0 1rem;
+	padding: 0;
+	list-style: none;
 }
 
 .cd-bullet-list {
-margin: 0 0 1rem;
-padding: 0;
-list-style: none;
+	margin: 0 0 1rem;
+	padding: 0;
+	list-style: none;
 }
 
 
-/* css for gutenberg titles */
+/* Titles */
 /* also might need specific class?
 cd-page-title cd-article__page-title */
 .h2 {
@@ -104,19 +99,19 @@ cd-page-title cd-article__page-title */
 /* css for gutenberg table 
 /* cd-table */
 .wp-block-table {
-width: 100%;
-margin: 0 auto 3rem;
-border-collapse: collapse;
+	width: 100%;
+	margin: 0 auto 3rem;
+	border-collapse: collapse;
 }
 
 /* do we need classes for  */
 td, th {
-padding: 0;
+	padding: 0;
 }
 
 td, th {
-display: table-cell;
-vertical-align: inherit;
+	display: table-cell;
+	vertical-align: inherit;
 }
 
 /* table_caption */
@@ -129,10 +124,10 @@ figcaption {
 /* css for gutenberg separators */
 /* hr in cd css  */
 .wp-block-separator {
- max-width: var(--cd-max-content-width);
- margin: 3.5rem auto;
- border: none;
- border-top: 2px solid var(--cd-grey--light);
+	max-width: var(--cd-max-content-width);
+	margin: 3.5rem auto;
+	border: none;
+	border-top: 2px solid var(--cd-grey--light);
 }
 
 /* css for gutenberg image */
@@ -147,8 +142,13 @@ figcaption {
 .wp-block-gallery .columns-3 .is-cropped {
 }
 
+<<<<<<< HEAD
 
 .wp-gallery-item {
+=======
+/*  gallery item */
+.blocks-gallery-item {
+>>>>>>> 6441f8c24ed32e8fd3459078997d360fc80e4e67
 
 }
 

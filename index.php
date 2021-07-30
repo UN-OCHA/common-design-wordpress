@@ -8,9 +8,6 @@
 
 <?php get_header(); ?>
 
-<div class="cd-layout-highlighted cd-container">
-</div>
-
 <main role="main" id="main-content" class="cd-container">
 
 	<?php if ( have_posts() ) : ?>

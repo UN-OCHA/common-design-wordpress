@@ -18,10 +18,6 @@ wp.domReady( () => {
             {
                 name: 'outline',
                 label: 'Outline',
-            },
-            {
-                name: 'small',
-                label: 'Small',
             }
         ]
     );
@@ -46,4 +42,13 @@ wp.domReady( () => {
             }
         ]
     );
+
+    wp.blocks.unregisterBlockStyle(
+        'core/separator',
+        ['dots', 'wide' ]
+    );
+
+    wp.blocks.unregisterBlockStyle('core/table', 'stripes');
+
 } );
+
