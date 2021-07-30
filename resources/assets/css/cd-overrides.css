@@ -101,7 +101,7 @@ cd-page-title cd-article__page-title */
 	border-bottom: 1px solid var(--cd-blue-grey);
 }
 
-/* css for gutenberg table */
+/* css for gutenberg table 
 /* cd-table */
 .wp-block-table {
 width: 100%;
@@ -140,15 +140,19 @@ figcaption {
 
 }
 
-/* css for gutenberg gallery */
-.wp-block-gallery {
+
+/* css for gutenberg gallery
+ */
+
+.wp-block-gallery .columns-3 .is-cropped {
+}
+
+
+.wp-gallery-item {
 
 }
 
-/*  gallery item */
-.blocks-gallery-item {
-  
-}
+
 
 /* Search button in header */
 .cd-search__btn {
