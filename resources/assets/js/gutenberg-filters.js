@@ -18,10 +18,6 @@ wp.domReady( () => {
             {
                 name: 'outline',
                 label: 'Outline',
-            },
-            {
-                name: 'small',
-                label: 'Small',
             }
         ]
     );
