@@ -362,3 +362,30 @@ function common_design_allowed_block_types( $allowed_blocks, $post ) {
 	return $allowed_blocks;
 
 }
+
+function common_design_disable_gutenberg_typography_settings() {
+	add_theme_support( 'editor-font-sizes' );
+	add_theme_support( 'disable-custom-font-sizes' );
+}
+add_action( 'after_setup_theme', 'common_design_disable_gutenberg_typography_settings' );
+
+function common_design_disable_drop_cap_editor_settings(array $editor_settings): array {
+	$editor_settings['__experimentalFeatures']['defaults']['typography']['dropCap'] = false;
+	return $editor_settings;
+}
+add_filter('block_editor_settings', 'common_design_disable_drop_cap_editor_settings');
+
+function common_design_disable_gutenberg_color_settings() {
+	add_theme_support( 'disable-custom-colors' );
+	add_theme_support( 'disable-custom-colors' );
+	add_theme_support( 'editor-color-palette' );
+	add_theme_support( 'editor-gradient-presets', [] );
+	add_theme_support( 'disable-custom-gradients' );
+}
+add_action( 'after_setup_theme', 'common_design_disable_gutenberg_color_settings' );
+
+// Image size for teaser thumbnails
+add_image_size( 'thumbnail-teaser', 600, 450 );
+//add_image_size( 'sidebar-thumb', 120, 120, true ); // Hard Crop Mode
+//add_image_size( 'homepage-thumb', 220, 180 ); // Soft Crop Mode
+//add_image_size( 'singlepost-thumb', 590, 9999 ); // Unlimited Height Mode
