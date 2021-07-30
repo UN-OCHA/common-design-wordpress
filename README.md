@@ -16,7 +16,7 @@ Rules specific to the implementation, like changing the OCHA brand blue, should 
 ## Page layouts
 There are multiple page templates
 - **Default template** (full width, to be used with Gutenberg blocks in the content area)
-- **Landing Page** (full width with Feature image)
+- **Landing Page** (full width with Feature image as hero)
 - **Sidebar First** (sidebar widget displays first, followed by content area)
 - **Sidebar Second** (sidebar widget displays second, preceded by content area)
 - **Sidebar Both** (both sidebars are present and content area is narrow)
