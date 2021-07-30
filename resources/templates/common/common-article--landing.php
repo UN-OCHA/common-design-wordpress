@@ -5,10 +5,7 @@
 ?>
 
 <article class="cd-article">
-    <header>
-        <h1 class="cd-page-title"><?php the_title(); ?></h1>
-    </header>
 
-    <?php the_content(); ?>
+	<?php the_content(); ?>
 
 </article>

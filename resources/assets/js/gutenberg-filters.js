@@ -42,4 +42,13 @@ wp.domReady( () => {
             }
         ]
     );
+
+    wp.blocks.unregisterBlockStyle(
+        'core/separator',
+        ['dots', 'wide' ]
+    );
+
+    wp.blocks.unregisterBlockStyle('core/table', 'stripes');
+
 } );
+

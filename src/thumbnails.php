@@ -21,3 +21,15 @@ if ( ! function_exists( 'common_design_register_thumbnails' ) ) {
 	}
 }
 add_action( 'after_setup_theme', 'common_design_register_thumbnails' );
+
+
+
+
+// Image size for teaser thumbnails
+add_image_size( 'thumbnail-teaser', 600, 450 );
+//add_image_size( 'sidebar-thumb', 120, 120, true ); // Hard Crop Mode
+//add_image_size( 'singlepost-thumb', 590, 9999 ); // Unlimited Height Mode
+
+
+// Hero image
+add_image_size( 'hero-image', 1920, 687 );
