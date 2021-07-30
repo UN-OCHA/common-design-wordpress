@@ -383,3 +383,36 @@ function common_design_disable_gutenberg_color_settings() {
 	add_theme_support( 'disable-custom-gradients' );
 }
 add_action( 'after_setup_theme', 'common_design_disable_gutenberg_color_settings' );
+
+
+
+/**
+one way to add divs to headings and paragraphs  
+ */
+function wrap_heading_paragraph_in_block($block_content, $block)
+{
+  if ($block['blockName'] === 'core/heading') {
+    $content = '<div class="wp-block-heading">';
+    $content .= $block_content;
+    $content .= '</div>';
+    return $content;
+  }
+
+  if ($block['blockName'] === 'core/paragraph') {
+    $content = '<div class="wp-block-paragraph">';
+    $content .= $block_content;
+    $content .= '</div>';
+    return $content;
+  }
+  return $block_content;
+
+  if ($block['blockName'] === 'core/ul') {
+    $content = '<div class="wp-block-list">';
+    $content .= $block_content;
+    $content .= '</div>';
+    return $content;
+  }
+}
+
+add_filter('render_block', 'wrap_heading_paragraph_in_block', 10, 2);
+
