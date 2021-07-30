@@ -384,9 +384,6 @@ function common_design_disable_gutenberg_color_settings() {
 }
 add_action( 'after_setup_theme', 'common_design_disable_gutenberg_color_settings' );
 
-
-
-
 // Image size for teaser thumbnails
 add_image_size( 'thumbnail-teaser', 600, 450 );
 //add_image_size( 'sidebar-thumb', 120, 120, true ); // Hard Crop Mode
