@@ -24,7 +24,9 @@
 				<?php endif; ?>
 			<?php endif; ?>
         </div>
-		<?php get_sidebar( 'second'); ?>
+	    <?php if ( is_active_sidebar( 'sidebar-second' ) ) : ?>
+            <?php get_sidebar( 'second'); ?>
+        <?php endif ?>
     </div>
 </main>
 
