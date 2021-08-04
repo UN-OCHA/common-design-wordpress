@@ -39,7 +39,7 @@ We recommend installing Gutenberg to avail of the content blocks for creating in
 To adhere to the Common Design, the Gutenberg block style settings are disabled, and CD styles are applied to the Gutenberg blocks.
 
 ## Editor styles
-There is a stylesheet `style-editor.css` which contains duplicate rules for the Gutenberg blocks and CD components and some rules from `cd.css` to ensure the Content Editors see the styles as they will appear on published pages, while editing content.
+There is a stylesheet `style-editor.css` which contains duplicate rules with some adjustments to the selectors, for the Gutenberg blocks and CD components and some rules from `cd.css` to ensure the Content Editors see the styles as they will appear on published pages, while editing content.
 
 ## Installation
 WordPress themes live in the `wp-content/themes` folder. Upload the theme as a zip via the Wordpress UI and activate.

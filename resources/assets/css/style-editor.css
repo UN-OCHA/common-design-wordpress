@@ -1,3 +1,7 @@
+/* Common Design component styles for the Editor form */
+/* Style and selector adjustments so CD component styles work
+ with Wordpress and Gutenberg blocks */
+
 :root {
     /* Color palette */
     /* OCHA blue is one colour ramp darker than brand blue */
@@ -71,7 +75,7 @@ body,
     line-height: 1.5;
 }
 
-/* button 01  */
+/* cd-button https://github.com/UN-OCHA/common_design/tree/main/components/cd-button */
 .is-style-outline > .wp-block-button__link,
 .wp-block-button__link.is-style-outline,
 .wp-block-button__link {
@@ -113,4 +117,75 @@ body,
     color: var(--cd-white);
     border-color: var(--cd-primary-color--dark);
     background-color: var(--cd-primary-color);
+}
+
+
+/* cd-bullet-list https://github.com/UN-OCHA/common_design/blob/main/components/cd-bullet-list */
+ul.block-editor-block-list__block {
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+ul.block-editor-block-list__block li {
+    background-repeat: no-repeat;
+    background-size: 0.5rem 0.5rem;
+}
+
+ul.block-editor-block-list__block li {
+    padding: 0.25rem 0 0.25rem 1.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%5C %3Cpath fill='%23ff4d59' d='M14,48a4,4,0,0,1-2.83-6.83L28.34,24,11.17,6.83a4,4,0,0,1,5.66-5.66l20,20a4,4,0,0,1,0,5.66l-20,20A4,4,0,0,1,14,48Z'/%3E%5C %3C/svg%3E");
+    background-position: 0 0.75rem;
+}
+
+/* cd-table https://github.com/UN-OCHA/common_design/blob/main/components/cd-table */
+.wp-block-table table {
+    width: 100%;
+    margin: 0 auto 3rem;
+    border-collapse: collapse;
+}
+
+.wp-block-table table + figcaption {
+    margin-top: -2.5rem;
+    caption-side: bottom;
+    text-align: left;
+    padding: 0.25rem 0.5rem;
+    background: var(--cd-blue-grey);
+}
+
+.wp-block-table table th,
+.wp-block-table table td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.wp-block-table table th {
+    color: var(--cd-ocha-blue);
+    border-bottom: 1px solid white;
+    background: var(--cd-blue-grey);
+}
+
+.wp-block-table table a {
+    word-break: break-word;
+}
+
+.wp-block-table table tfoot {
+    font-weight: bold;
+}
+
+/* Table striping */
+.wp-block-table table tr:nth-child(odd) {
+    background: white;
+}
+
+.wp-block-table table tr:nth-child(even) {
+    background: var(--cd-grey--light);
+}
+
+/* Horizontal rule https://github.com/UN-OCHA/common_design/blob/main/components/cd-typography/cd-typography.css */
+.wp-block-separator {
+    max-width: var(--cd-max-content-width);
+    margin: 3.5rem auto;
+    border: none;
+    border-top: 2px solid var(--cd-grey--light);
 }

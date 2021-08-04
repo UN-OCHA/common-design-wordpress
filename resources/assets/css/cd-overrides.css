@@ -1,9 +1,12 @@
-/* common-design-overrides */
+/* Common Design overrides */
+/* Style and selector adjustments so CD Header and Footer, and component styles work with Wordpress and Gutenberg blocks */
 
+/* OCHA logo in footer */
 .cd-mandate__logo {
 	background: url("../images/logos/ocha-lockup.svg") 0 center no-repeat;
 }
 
+/* Social Media menu */
 .wp_social_media_menu_icon {
 	list-style-type: none;
 }
@@ -12,7 +15,7 @@
 	list-style-type: none;
 }
 
-/* Mobile logo can be linked here */
+/* Mobile logo */
 @media (max-width: 767px) {
     .cd-site-logo {
         background: url(../images/logos/ocha-logo-blue.svg) center no-repeat;
@@ -20,9 +23,49 @@
     }
 }
 
-/* Gutenberg blocks */
+/* Search component in header */
+.cd-search__btn {
+	text-decoration: none;
+	position: relative;
+}
 
-/* Buttons */
+.cd-search__btn::before {
+	position: absolute;
+	right: -1px;
+	bottom: -6px;
+	left: -1px;
+	width: calc(100% + 2px);
+	height: 6px;
+	content: "";
+	transition: background .3s ease;
+	background: transparent;
+}
+
+.cd-search__btn--active {
+	color: var(--cd-highlight-red);
+}
+
+.cd-search__btn--active svg {
+	fill: var(--cd-highlight-red);
+}
+
+.cd-search__btn:hover {
+	background: var(--cd-blue-grey);
+}
+
+.cd-search__btn--active::before {
+	background: var(--cd-highlight-red);
+}
+
+/* CD form elements */
+.cd-form .cd-form--inline {
+	margin-bottom: 2rem;
+}
+
+/* Gutenberg blocks */
+/* Common Design component rules adjusted for WP as we have not added the selectors to the markup but are instead using the selectors and markup that WP outputs. */
+
+/* cd-button https://github.com/UN-OCHA/common_design/tree/main/components/cd-button */
 .is-style-outline > .wp-block-button__link,
 .wp-block-button__link.is-style-outline,
 .wp-block-button__link {
@@ -66,63 +109,85 @@
 	background-color: var(--cd-primary-color);
 }
 
-/* Bullet list  */
-/* would it be better to add a class to the gutenberg element? It seems there are not classes for the li and ul  */
-li {
-	display: list-item;
-	text-align: -webkit-match-parent;
-}
-
-ul {
+/* cd-bullet-list https://github.com/UN-OCHA/common_design/blob/main/components/cd-bullet-list */
+.cd-article ul {
 	margin: 0 0 1rem;
 	padding: 0;
 	list-style: none;
 }
 
-.cd-bullet-list {
-	margin: 0 0 1rem;
-	padding: 0;
-	list-style: none;
+.cd-article ul li {
+	background-repeat: no-repeat;
+	background-size: 0.5rem 0.5rem;
 }
 
-
-/* Titles */
-/* also might need specific class?
-cd-page-title cd-article__page-title */
-.h2 {
-	margin-top: 0;
-	margin-bottom: 2rem;
-	padding-bottom: 1rem;
-	border-bottom: 1px solid var(--cd-blue-grey);
+/* https://yoksel.github.io/url-encoder/ */
+[dir="ltr"] .cd-article ul li {
+	padding: 0.25rem 0 0.25rem 1.5rem;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%5C %3Cpath fill='%23ff4d59' d='M14,48a4,4,0,0,1-2.83-6.83L28.34,24,11.17,6.83a4,4,0,0,1,5.66-5.66l20,20a4,4,0,0,1,0,5.66l-20,20A4,4,0,0,1,14,48Z'/%3E%5C %3C/svg%3E");
+	background-position: 0 0.75rem;
 }
 
-/* css for gutenberg table */
-/* cd-table */
-.wp-block-table {
+[dir="rtl"] .cd-article ul li {
+	padding: 0.25rem 1.5rem 0.25rem 0;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23ff4d59' d='M34,48a4,4,0,0,1-2.83-1.17l-20-20a4,4,0,0,1,0-5.66l20-20a4,4,0,0,1,5.66,5.66L19.66,24,36.83,41.17A4,4,0,0,1,34,48Z'/%3E%3C/svg%3E");
+	background-position: 100% 0.75rem;
+}
+
+/* cd-table https://github.com/UN-OCHA/common_design/blob/main/components/cd-table */
+.cd-article table {
 	width: 100%;
 	margin: 0 auto 3rem;
 	border-collapse: collapse;
 }
 
-/* do we need classes for  */
-td, th {
-	padding: 0;
-}
-
-td, th {
-	display: table-cell;
-	vertical-align: inherit;
-}
-
-/* table_caption */
-figcaption {
-	margin-top: 0.5rem;
+.cd-article table + figcaption {
+	margin-top: -2.5rem;
 	caption-side: bottom;
+	text-align: left;
+	padding: 0.25rem 0.5rem;
+	background: var(--cd-blue-grey);
+}
+
+[dir="rtl"] .cd-article table + figcaption {
+	text-align: right;
+}
+
+.cd-article table th,
+.cd-article table td {
+	padding: 0.5rem;
 	text-align: left;
 }
 
-/* css for gutenberg separators */
-/* hr in cd css  */
+[dir="rtl"] .cd-article table th,
+[dir="rtl"] .cd-article table td {
+	text-align: right;
+}
+
+.cd-article table th {
+	color: var(--cd-ocha-blue);
+	border-bottom: 1px solid white;
+	background: var(--cd-blue-grey);
+}
+
+.cd-article table a {
+	word-break: break-word;
+}
+
+.cd-article table tfoot {
+	font-weight: bold;
+}
+
+/* Table striping */
+.cd-article table tr:nth-child(odd) {
+	background: white;
+}
+
+.cd-article table tr:nth-child(even) {
+	background: var(--cd-grey--light);
+}
+
+/* Horizontal rule https://github.com/UN-OCHA/common_design/blob/main/components/cd-typography/cd-typography.css */
 .wp-block-separator {
 	max-width: var(--cd-max-content-width);
 	margin: 3.5rem auto;
@@ -130,50 +195,5 @@ figcaption {
 	border-top: 2px solid var(--cd-grey--light);
 }
 
-/* css for gutenberg image */
-.wp-image {
 
-}
-
-/* css for gutenberg gallery */
-.wp-block-gallery {
-
-}
-
-/*  gallery item */
-.blocks-gallery-item {
-
-}
-
-/* Search button in header */
-.cd-search__btn {
-    text-decoration: none;
-    position: relative;
-}
-.cd-search__btn::before {
-    position: absolute;
-    right: -1px;
-    bottom: -6px;
-    left: -1px;
-    width: calc(100% + 2px);
-    height: 6px;
-    content: "";
-    transition: background .3s ease;
-    background: transparent;
-}
-.cd-search__btn--active {
-    color: var(--cd-highlight-red);
-}
-.cd-search__btn--active svg {
-    fill: var(--cd-highlight-red);
-}
-.cd-search__btn:hover {
-    background: var(--cd-blue-grey);
-}
-.cd-search__btn--active::before {
-    background: var(--cd-highlight-red);
-}
-.cd-form .cd-form--inline {
-    margin-bottom: 2rem;
-}
 
