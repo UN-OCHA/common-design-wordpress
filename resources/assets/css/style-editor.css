@@ -67,12 +67,23 @@
     --cd-primary-color--lighter: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) + 39%));
 }
 
+/* Headings from cd.css */
+h1{color:var(--cd-default-text-color);font-size:var(--cd-font-size--2xmedium);font-weight:700}@media(min-width: 1024px){h1{font-size:var(--cd-font-size--2xlarge)}}ol,dl{margin-bottom:1rem}@media(min-width: 768px){ol,dl{margin-bottom:1.5rem}}h2{font-size:var(--cd-font-size--2xbase)}@media(min-width: 1024px){h2{font-size:var(--cd-font-size--2xmedium)}}h3{font-size:var(--cd-font-size--large)}@media(min-width: 1024px){h3{font-size:var(--cd-font-size--2xbase)}}h4{font-size:var(--cd-font-size--medium)}@media(min-width: 1024px){h4{font-size:var(--cd-font-size--large)}}h5{font-size:var(--cd-font-size--base)}@media(min-width: 1024px){h5{font-size:var(--cd-font-size--medium)}}h6{font-size:1rem}@media(min-width: 1024px){h6{font-size:var(--cd-font-size--base)}}a{color:var(--cd-blue--dark)}a:hover,a:focus{text-decoration:none;color:var(--cd-ocha-blue);}
+
+
 body,
 .editor-styles-wrapper {
     color: var(--cd-grey--dark);
     font-family: var(--cd-font--roboto);
     font-size: 1rem;
     line-height: 1.5;
+}
+
+@media(min-width: 1024px){
+    body,
+    .editor-styles-wrapper {
+        font-size: var(--cd-font-size--base);
+    }
 }
 
 /* cd-button https://github.com/UN-OCHA/common_design/tree/main/components/cd-button */
@@ -121,20 +132,17 @@ body,
 
 
 /* cd-bullet-list https://github.com/UN-OCHA/common_design/blob/main/components/cd-bullet-list */
-ul.block-editor-block-list__block {
+.wp-block-page-list {
     margin: 0 0 1rem;
     padding: 0;
     list-style: none;
 }
 
-ul.block-editor-block-list__block li {
-    background-repeat: no-repeat;
-    background-size: 0.5rem 0.5rem;
-}
-
-ul.block-editor-block-list__block li {
+.wp-block-page-list li {
     padding: 0.25rem 0 0.25rem 1.5rem;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%5C %3Cpath fill='%23ff4d59' d='M14,48a4,4,0,0,1-2.83-6.83L28.34,24,11.17,6.83a4,4,0,0,1,5.66-5.66l20,20a4,4,0,0,1,0,5.66l-20,20A4,4,0,0,1,14,48Z'/%3E%5C %3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 0.5rem 0.5rem;
     background-position: 0 0.75rem;
 }
 
@@ -188,4 +196,44 @@ ul.block-editor-block-list__block li {
     margin: 3.5rem auto;
     border: none;
     border-top: 2px solid var(--cd-grey--light);
+}
+
+
+/* Latest Posts Gutenberg block styles */
+.wp-block-latest-posts__list li:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.wp-block-latest-posts__list li {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--cd-blue-grey);
+    max-width: var(--cd-max-content-width);
+}
+
+.wp-block-latest-posts__list a {
+    font-weight: 700;
+}
+
+.wp-block-latest-posts__list.has-dates a,
+.wp-block-latest-posts__list.has-author a {
+    display: block;
+}
+
+.wp-block-latest-posts__post-author,
+.wp-block-latest-posts__post-date {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+/* Grid layout option */
+.wp-block-latest-posts__list.is-grid li {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    max-width: var(--cd-max-content-width);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--cd-blue-grey);
+    background-color: var(--cd-white);
 }
