@@ -25,6 +25,7 @@ if ( ! function_exists( 'common_design_register_styles' ) ) {
 		wp_enqueue_style ('common-design-utilities', get_template_directory_uri().'/resources/assets/css/cd-utilities/cd-utilities.css', array(), null, 'all' );
 		wp_enqueue_style ('common-design-core', get_template_directory_uri().'/resources/assets/css/cd.css', array(), null, 'all' );
 		wp_enqueue_style ('common-design-article', get_template_directory_uri().'/resources/assets/css/cd-article/cd-article.css', array(), null, 'all' );
+		wp_enqueue_style ('common-design-banner', get_template_directory_uri().'/resources/assets/css/cd-banner/cd-banner.css', array(), null, 'all' );
 		wp_enqueue_style ('common-design-form', get_template_directory_uri().'/resources/assets/css/cd-form/cd-form.css', array(), null, 'all' );
 		wp_enqueue_style ('common-design-hero', get_template_directory_uri().'/resources/assets/css/cd-hero/cd-hero.css', array(), null, 'all' );
 		wp_enqueue_style ('common-design-hero--style-one', get_template_directory_uri().'/resources/assets/css/cd-hero/cd-hero--style-one.css', array(), null, 'all' );
