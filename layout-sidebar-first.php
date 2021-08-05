@@ -11,7 +11,9 @@
 
 <main role="main" id="main-content" class="cd-container cd-layout-with-sidebar-first">
     <div class="cd-layout-content-wrapper">
-        <?php get_sidebar( 'first'); ?>
+	    <?php if ( is_active_sidebar( 'sidebar-first' ) ) : ?>
+            <?php get_sidebar( 'first'); ?>
+        <?php endif; ?>
         <div class="cd-layout-content">
             <?php if ( have_posts() ) : ?>
                 <?php if ( is_home() && is_front_page() ) : ?>

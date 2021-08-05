@@ -16,6 +16,8 @@
             <div class="cd-hero__title">
 	            <?php the_title(); ?>
             </div>
+
+            <div class="cd-hero__description"></div>
         </div>
     </div>
 <?php endif; ?>

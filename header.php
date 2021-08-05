@@ -16,6 +16,9 @@
         <script>document.documentElement.className = document.addEventListener ? "js" : "no-js";</script>
     </head>
     <body <?php body_class(); ?>>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+        Skip to main content
+    </a>
         <div class="cd-layout-container">
 	        <?php get_template_part( 'resources/templates/parts/parts', 'header' ); ?>
 

@@ -31,5 +31,7 @@ add_image_size( 'thumbnail-teaser', 600, 450 );
 //add_image_size( 'singlepost-thumb', 590, 9999 ); // Unlimited Height Mode
 
 
+// Banner image
+add_image_size( 'banner-image', 1280, 400, true );
 // Hero image
 add_image_size( 'hero-image', 1920, 687 );
