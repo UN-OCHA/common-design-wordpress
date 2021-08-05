@@ -29,7 +29,9 @@ function common_design_allowed_block_types( $allowed_blocks, $post ) {
 		'core/table',
 		'core/media-text',
 		'core/separator',
-		'core/columns'
+		'core/columns',
+		'core/file',
+		'core/embed'
 	);
 
 	if( $post->post_type === 'page' ) {
