@@ -16,6 +16,9 @@ require_once 'src/supports.php';
 require_once 'src/thumbnails.php';
 require_once 'src/widgets.php';
 
+/* Enable for template debugging */
+//require_once 'src/debug.php';
+
 
 function cd_get_language_attributes( $doctype = 'html' ) {
 	$attributes = array();
