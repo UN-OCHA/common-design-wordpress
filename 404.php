@@ -14,12 +14,14 @@
 	    <?php echo esc_html( 'Page not found' ); ?>
     </h1>
 
-    <div class="cd-layout-content">
-        <h2>
-            <a href="<?php echo esc_attr( home_url() ); ?>">
-                <?php echo esc_html( 'Homepage' ); ?>
-            </a>
-        </h2>
+    <div class="cd-layout-content-wrapper">
+        <div class="cd-layout-content">
+            <h2>
+                <a href="<?php echo esc_attr( home_url() ); ?>">
+                    <?php echo esc_html( 'Homepage' ); ?>
+                </a>
+            </h2>
+        </div>
     </div>
 
 </main>
