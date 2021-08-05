@@ -50,5 +50,14 @@ wp.domReady( () => {
 
     wp.blocks.unregisterBlockStyle('core/table', 'stripes');
 
-} );
-
+    /* Core embeds https://newbedev.com/how-to-remove-the-core-embed-blocks-in-wordpress-5-6 */
+    const allowedEmbedBlocks = [
+        'twitter',
+        'youtube',
+    ];
+    wp.blocks.getBlockVariations('core/embed').forEach(function (blockVariation) {
+        if (-1 === allowedEmbedBlocks.indexOf(blockVariation.name)) {
+            wp.blocks.unregisterBlockVariation('core/embed', blockVariation.name);
+        }
+    });
+});
