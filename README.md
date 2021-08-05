@@ -57,6 +57,20 @@ There is a stylesheet `style-editor.css` which contains duplicate rules with som
 Gutenberg blocks and CD components and some rules from `cd.css` to ensure the Content Editors see the styles as they
 will appear on published pages, while editing content.
 
+## Releases
+We use [npm-version](https://docs.npmjs.com/cli/version) and [semantic versioning](https://semver.org/). 
+Refer to the `package.json` or the github [Releases](https://github.com/UN-OCHA/common-design-wordpress/releases) page
+for the latest version. 
+
+Refer to the `CHANGELOG.md` for update details.
+
+## Linting
+This project uses some stylelint for CSS linting and the configuration is copied from Drupal 8 core `.stylelintrc.json`.
+- Run `nvm use` to use the correct Node version.
+- Run `npm i` to install the Node packages.
+- Run `npm run stylelint` to see the linting errors
+- Run `npm run stylelint-fix` to automatically fix the errors.
+
 ## Installation
 WordPress themes live in the `wp-content/themes` folder. Upload the theme as a zip via the Wordpress UI and activate.
 
