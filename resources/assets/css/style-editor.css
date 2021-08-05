@@ -3,94 +3,127 @@
  with Wordpress and Gutenberg blocks */
 
 :root {
-    /* Color palette */
-    /* OCHA blue is one colour ramp darker than brand blue */
-    --cd-ocha-blue: #1f69b3;
-    /* Dark blue is two colour ramps darker than brand blue */
-    --cd-blue--dark: #144372;
-    /* Bright blue is one colour ramp lighter than brand blue */
-    --cd-blue--bright: #82b5e9;
-    --cd-blue--light: #d4e5f7;
-    --cd-highlight-red: #e56a54;
-    --cd-contrast-red: #e00000;
-    --cd-white: #fff;
-    --cd-grey--light: #f2f2f2;
-    --cd-grey--mid: #595959;
-    --cd-grey--dark: #4a4a4a;
-    --cd-default-text-color: var(--cd-grey--dark);
-    --cd-black: #000;
-    --cd-blue-grey: #e6ecf1;
-    --cd-blue-grey--dark: #d3dde5;
-    --cd-blue-grey--light: #ebf0f4;
+  /* Color palette */
+  /* OCHA blue is one colour ramp darker than brand blue */
+  --cd-ocha-blue: #1f69b3;
+  /* Dark blue is two colour ramps darker than brand blue */
+  --cd-blue--dark: #144372;
+  /* Bright blue is one colour ramp lighter than brand blue */
+  --cd-blue--bright: #82b5e9;
+  --cd-blue--light: #d4e5f7;
+  --cd-highlight-red: #e56a54;
+  --cd-contrast-red: #e00000;
+  --cd-white: #fff;
+  --cd-grey--light: #f2f2f2;
+  --cd-grey--mid: #595959;
+  --cd-grey--dark: #4a4a4a;
+  --cd-default-text-color: var(--cd-grey--dark);
+  --cd-black: #000;
+  --cd-blue-grey: #e6ecf1;
+  --cd-blue-grey--dark: #d3dde5;
+  --cd-blue-grey--light: #ebf0f4;
+  --cd-rgb-ocha-blue: 2, 108, 182;
+  --cd-rgb-grey--mid: 89, 89, 89;
+  --cd-rgb-grey--dark: 74, 74, 74;
+  --cd-rgb-highlight-red: 229, 106, 84;
+  --cd-rgb-blue-grey--dark: 211, 221, 229;
 
-    --cd-rgb-ocha-blue: 2, 108, 182;
-    --cd-rgb-grey--mid: 89, 89, 89;
-    --cd-rgb-grey--dark: 74, 74, 74;
-    --cd-rgb-highlight-red: 229, 106, 84;
-    --cd-rgb-blue-grey--dark: 211, 221, 229;
+  /* Measurements */
+  --cd-max-content-width: 820px;
 
-    /* Measurements */
-    --cd-max-content-width: 820px;
+  /* Vertical Rhythm */
+  --cd-flow-space: 1rem;
+  --cd-bumper-space: 1rem;
+  --cd-red: #cd3a1f;
+  --cd-red--light: #f8d8d3;
+  --cd-orange: #db7b18;
+  --cd-orange--light: #fae6d1;
+  --cd-yellow: #d5de26;
+  --cd-yellow--light: #f7f8d3;
+  --cd-green: #7fb92f;
+  --cd-green--light: #e8f5d6;
 
-    /* Vertical Rhythm */
-    --cd-flow-space: 1rem;
-    --cd-bumper-space: 1rem;
+  /* Fonts sizes in REMs */
+  --cd-font-size--tiny: 0.75rem;      /* 12px */
+  --cd-font-size--small: 0.875rem;    /* 14px */
+  --cd-font-size--base: 1.125rem;     /* 18px */
+  --cd-font-size--medium: 1.375rem;   /* 22px */
+  --cd-font-size--large: 1.625rem;    /* 26px */
+  --cd-font-size--2xbase: 1.875rem;   /* 30px */
+  --cd-font-size--2xmedium: 2.375rem; /* 38px */
+  --cd-font-size--2xlarge: 2.875rem;  /* 46px */
 
-    --cd-red: #cd3a1f;
-    --cd-red--light: #f8d8d3;
-    --cd-orange: #db7b18;
-    --cd-orange--light: #fae6d1;
-    --cd-yellow: #d5de26;
-    --cd-yellow--light: #f7f8d3;
-    --cd-green: #7fb92f;
-    --cd-green--light: #e8f5d6;
+  /* Fonts */
+  --cd-font: helvetica, arial, sans-serif;
+  --cd-font--system: system-ui;
+  --cd-font--roboto: "Roboto", helvetica, arial, sans-serif;
 
-    /* Fonts sizes in REMs */
-    --cd-font-size--tiny: 0.75rem;      /* 12px */
-    --cd-font-size--small: 0.875rem;    /* 14px */
-    --cd-font-size--base: 1.125rem;     /* 18px */
-    --cd-font-size--medium: 1.375rem;   /* 22px */
-    --cd-font-size--large: 1.625rem;    /* 26px */
-    --cd-font-size--2xbase: 1.875rem;   /* 30px */
-    --cd-font-size--2xmedium: 2.375rem; /* 38px */
-    --cd-font-size--2xlarge: 2.875rem;  /* 46px */
-
-    /* Fonts */
-    --cd-font: helvetica, arial, sans-serif;
-    --cd-font--system: system-ui;
-    --cd-font--roboto: "Roboto", helvetica, arial, sans-serif;
-
-    /* CD buttons */
-    --cd-primary-color-h: 210;
-    --cd-primary-color-s: 70%;
-    --cd-primary-color-l: 41%;
-    --cd-primary-color: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), var(--cd-primary-color-l));
-    /* lighten */
-    --cd-primary-color--light: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) + 30%));
-    /* darken */
-    --cd-primary-color--dark: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) - 26%));
-    /* For cd-button--light */
-    /* Change the lightness. Other values remain the same */
-    --cd-primary-color--lighter: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) + 39%));
+  /* CD buttons */
+  --cd-primary-color-h: 210;
+  --cd-primary-color-s: 70%;
+  --cd-primary-color-l: 41%;
+  --cd-primary-color: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), var(--cd-primary-color-l));
+  /* lighten */
+  --cd-primary-color--light: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) + 30%));
+  /* darken */
+  --cd-primary-color--dark: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) - 26%));
+  /* For cd-button--light */
+  /* Change the lightness. Other values remain the same */
+  --cd-primary-color--lighter: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) + 39%));
 }
 
 /* Headings from cd.css */
-h1{color:var(--cd-default-text-color);font-size:var(--cd-font-size--2xmedium);font-weight:700}@media(min-width: 1024px){h1{font-size:var(--cd-font-size--2xlarge)}}ol,dl{margin-bottom:1rem}@media(min-width: 768px){ol,dl{margin-bottom:1.5rem}}h2{font-size:var(--cd-font-size--2xbase)}@media(min-width: 1024px){h2{font-size:var(--cd-font-size--2xmedium)}}h3{font-size:var(--cd-font-size--large)}@media(min-width: 1024px){h3{font-size:var(--cd-font-size--2xbase)}}h4{font-size:var(--cd-font-size--medium)}@media(min-width: 1024px){h4{font-size:var(--cd-font-size--large)}}h5{font-size:var(--cd-font-size--base)}@media(min-width: 1024px){h5{font-size:var(--cd-font-size--medium)}}h6{font-size:1rem}@media(min-width: 1024px){h6{font-size:var(--cd-font-size--base)}}a{color:var(--cd-blue--dark)}a:hover,a:focus{text-decoration:none;color:var(--cd-ocha-blue);}
+h1 {
+  color: var(--cd-default-text-color);
+  font-size: var(--cd-font-size--2xmedium);
+  font-weight: 700;
+}
 
+@media (min-width: 1024px) {
+  h1 { font-size: var(--cd-font-size--2xlarge); }
+}
+ol,
+dl { margin-bottom: 1rem; }
+
+@media (min-width: 768px) {
+  ol,
+  dl { margin-bottom: 1.5rem; }
+}
+h2 { font-size: var(--cd-font-size--2xbase); }
+
+@media (min-width: 1024px) { h2 { font-size: var(--cd-font-size--2xmedium); } }
+h3 { font-size: var(--cd-font-size--large); }
+
+@media (min-width: 1024px) { h3 { font-size: var(--cd-font-size--2xbase); } }
+h4 { font-size: var(--cd-font-size--medium); }
+
+@media (min-width: 1024px) { h4 { font-size: var(--cd-font-size--large); } }
+h5 { font-size: var(--cd-font-size--base); }
+
+@media (min-width: 1024px) { h5 { font-size: var(--cd-font-size--medium); } }
+h6 { font-size: 1rem; }
+
+@media (min-width: 1024px) { h6 { font-size: var(--cd-font-size--base); } }
+a { color: var(--cd-blue--dark); }
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: var(--cd-ocha-blue);
+}
 
 body,
 .editor-styles-wrapper {
-    color: var(--cd-grey--dark);
-    font-family: var(--cd-font--roboto);
-    font-size: 1rem;
-    line-height: 1.5;
+  color: var(--cd-grey--dark);
+  font-family: var(--cd-font--roboto);
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-@media(min-width: 1024px){
-    body,
-    .editor-styles-wrapper {
-        font-size: var(--cd-font-size--base);
-    }
+@media (min-width: 1024px) {
+  body,
+  .editor-styles-wrapper {
+    font-size: var(--cd-font-size--base);
+  }
 }
 
 h1,
@@ -100,19 +133,19 @@ h4,
 h5,
 h6,
 p {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 p:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* Reset lists in the main content area and aside element. */
 .cd-layout-content-wrapper ul,
 .cd-layout-content-wrapper li {
-    margin: 0 0 1rem;
-    padding: 0;
-    list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
 }
 
 /* cd-button https://github.com/UN-OCHA/common_design/tree/main/components/cd-button */
@@ -120,184 +153,184 @@ p:last-child {
 .wp-block-button__link.is-style-outline,
 .wp-block-button__link,
 .wp-block-file__button {
-    width: auto;
-    padding: 0.5rem 1rem;
-    transition:
-        background-color 0.6s ease-out,
-        color 0.6s ease-out;
-    text-align: center;
-    color: var(--cd-white);
-    cursor: pointer;
-    border: 2px solid transparent;
-    border-radius: 3px;
-    background-color: var(--cd-primary-color);
-    box-shadow: none;
-    font-size: 1rem;
-    line-height: 1.15;
-    -webkit-appearance: none;
-    margin: 0.25rem;
+  width: auto;
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition:
+    background-color 0.6s ease-out,
+    color 0.6s ease-out;
+  text-align: center;
+  color: var(--cd-white);
+  border: 2px solid transparent;
+  border-radius: 3px;
+  background-color: var(--cd-primary-color);
+  box-shadow: none;
+  font-size: 1rem;
+  line-height: 1.15;
+  -webkit-appearance: none;
 }
 
 .is-style-outline > .wp-block-button__link:not(.has-text-color),
 .wp-block-button__link.is-style-outline:not(.has-text-color),
 .is-style-outline .wp-block-button__link {
-    color: var(--cd-primary-color);
-    border-color: var(--cd-primary-color);
-    background-color: var(--cd-white);
-    fill: currentColor;
+  color: var(--cd-primary-color);
+  border-color: var(--cd-primary-color);
+  background-color: var(--cd-white);
+  fill: currentColor;
 }
 
 .wp-block-button__link:hover,
 .wp-block-button__link:focus,
 .wp-block-file .wp-block-file__button:focus {
-    color: var(--cd-white);
-    background-color: var(--cd-primary-color--light);
+  color: var(--cd-white);
+  background-color: var(--cd-primary-color--light);
 }
 
 .is-style-outline .wp-block-button__link:hover,
 .is-style-outline .wp-block-button__link:focus {
-    color: var(--cd-white);
-    border-color: var(--cd-primary-color--dark);
-    background-color: var(--cd-primary-color);
+  color: var(--cd-white);
+  border-color: var(--cd-primary-color--dark);
+  background-color: var(--cd-primary-color);
 }
 
 /* File block Download button */
 .wp-block-file .wp-block-file__button {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
-    font-weight: 400;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
 }
 
 .wp-block-file * + .wp-block-file__button {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 /* cd-bullet-list https://github.com/UN-OCHA/common_design/blob/main/components/cd-bullet-list */
 .wp-block-page-list {
-    margin: 0 0 1rem;
-    padding: 0;
-    list-style: none;
-    max-width: var(--cd-max-content-width);
+  max-width: var(--cd-max-content-width);
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
 }
 
 .wp-block-page-list li {
-    padding: 0.25rem 0 0.25rem 1.5rem;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%5C %3Cpath fill='%23ff4d59' d='M14,48a4,4,0,0,1-2.83-6.83L28.34,24,11.17,6.83a4,4,0,0,1,5.66-5.66l20,20a4,4,0,0,1,0,5.66l-20,20A4,4,0,0,1,14,48Z'/%3E%5C %3C/svg%3E");
-    background-repeat: no-repeat;
-    background-size: 0.5rem 0.5rem;
-    background-position: 0 0.75rem;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%5C %3Cpath fill='%23ff4d59' d='M14,48a4,4,0,0,1-2.83-6.83L28.34,24,11.17,6.83a4,4,0,0,1,5.66-5.66l20,20a4,4,0,0,1,0,5.66l-20,20A4,4,0,0,1,14,48Z'/%3E%5C %3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 0.75rem;
+  background-size: 0.5rem 0.5rem;
 }
 
 /* cd-table https://github.com/UN-OCHA/common_design/blob/main/components/cd-table */
 .wp-block-table table {
-    width: 100%;
-    margin: 0 auto 3rem;
-    border-collapse: collapse;
+  width: 100%;
+  margin: 0 auto 3rem;
+  border-collapse: collapse;
 }
 
 .wp-block-table table + figcaption {
-    margin-top: -2.5rem;
-    caption-side: bottom;
-    text-align: left;
-    padding: 0.25rem 0.5rem;
-    background: var(--cd-blue-grey);
+  margin-top: -2.5rem;
+  padding: 0.25rem 0.5rem;
+  caption-side: bottom;
+  text-align: left;
+  background: var(--cd-blue-grey);
 }
 
 .wp-block-table table th,
 .wp-block-table table td {
-    padding: 0.5rem;
-    text-align: left;
+  padding: 0.5rem;
+  text-align: left;
 }
 
 .wp-block-table table th {
-    color: var(--cd-ocha-blue);
-    border-bottom: 1px solid white;
-    background: var(--cd-blue-grey);
+  color: var(--cd-ocha-blue);
+  border-bottom: 1px solid white;
+  background: var(--cd-blue-grey);
 }
 
 .wp-block-table table a {
-    word-break: break-word;
+  word-break: break-word;
 }
 
 .wp-block-table table tfoot {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* Table striping */
 .wp-block-table table tr:nth-child(odd) {
-    background: white;
+  background: white;
 }
 
 .wp-block-table table tr:nth-child(even) {
-    background: var(--cd-grey--light);
+  background: var(--cd-grey--light);
 }
 
 /* Horizontal rule https://github.com/UN-OCHA/common_design/blob/main/components/cd-typography/cd-typography.css */
 .wp-block-separator {
-    max-width: var(--cd-max-content-width);
-    margin: 3.5rem auto;
-    border: none;
-    border-top: 2px solid var(--cd-grey--light);
+  max-width: var(--cd-max-content-width);
+  margin: 3.5rem auto;
+  border: none;
+  border-top: 2px solid var(--cd-grey--light);
 }
 
 /* Latest Posts Gutenberg block styles */
 .wp-block-latest-posts__list li:after {
-    content: "";
-    display: table;
-    clear: both;
+  display: table;
+  clear: both;
+  content: "";
 }
 .wp-block-latest-posts__list li {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--cd-blue-grey);
-    max-width: var(--cd-max-content-width);
+  max-width: var(--cd-max-content-width);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--cd-blue-grey);
 }
 
 .wp-block-latest-posts__list a {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .wp-block-latest-posts__list.has-dates a,
 .wp-block-latest-posts__list.has-author a {
-    display: block;
+  display: block;
 }
 
 .wp-block-latest-posts__post-author,
 .wp-block-latest-posts__post-date {
-    display: inline-block;
-    margin-right: 0.5rem;
+  display: inline-block;
+  margin-right: 0.5rem;
 }
 
 /* Grid layout option */
 /* cd-card https://github.com/UN-OCHA/common_design/blob/main/components/cd-card */
 .wp-block-latest-posts__list.is-grid li {
-    margin-bottom: 1rem;
-    padding: 1rem;
-    max-width: var(--cd-max-content-width);
-    display: flex;
-    flex-direction: column;
-    border: 2px solid var(--cd-blue-grey);
-    background-color: var(--cd-white);
+  display: flex;
+  flex-direction: column;
+  max-width: var(--cd-max-content-width);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 2px solid var(--cd-blue-grey);
+  background-color: var(--cd-white);
 }
 
 /* cd-banner */
 .cd-banner {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* Gallery block */
 .blocks-gallery-item figcaption a {
-    font-size: 1rem;
-    line-height: 1.5;
-    font-weight: 700;
-    color: var(--cd-white);
-    text-decoration: none;
+  text-decoration: none;
+  color: var(--cd-white);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
 }
 
-@media(min-width: 1024px){
-    .blocks-gallery-item figcaption a  {
-        font-size: var(--cd-font-size--base);
-    }
+@media (min-width: 1024px) {
+  .blocks-gallery-item figcaption a {
+    font-size: var(--cd-font-size--base);
+  }
 }
 
 /* Gutenberg block vertical rhythm */
@@ -312,5 +345,5 @@ ul.wp-block-latest-posts__list,
 .wp-block-columns,
 li.widget_block,
 .widget_block {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
