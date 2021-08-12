@@ -341,3 +341,8 @@ li.widget_block,
 .widget_block {
   margin-bottom: 2rem;
 }
+
+/* cd-teaser */
+.cd-teaser__link {
+  display: block;
+}
