@@ -31,6 +31,8 @@ function common_design_allowed_block_types( $allowed_blocks, $post ) {
 		'core/separator',
 		'core/columns',
 		'core/file',
+		'core/quote',
+		'core/pullquote',
 		'core/embed'
 	);
 
