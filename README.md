@@ -57,6 +57,17 @@ There is a stylesheet `style-editor.css` which contains duplicate rules with som
 Gutenberg blocks and CD components and some rules from `cd.css` to ensure the Content Editors see the styles as they
 will appear on published pages, while editing content.
 
+## Common Header and Footer optional elements
+The Common Design Header and Footer contains some elements that may not be relevant to everyone. For ease, we have
+removed these. If desired, they can be included.
+### OCHA Services Menu
+Uncomment the include statement in `resources/templates/parts/parts-ocha-services.php` to include the first section 
+"Related Platforms". Update the link text and `href` in `resources/templates/parts/parts-related-platforms.php`.
+### Social Media
+Uncomment the include statement in `resources/templates/parts/parts-footer.php` to include the social
+media block. Update the link `href` in `resources/templates/parts/parts-social-media.php`.
+Comment out or delete the markup for the icons that are not needed.
+
 ## Releases
 We use [npm-version](https://docs.npmjs.com/cli/version) and [semantic versioning](https://semver.org/). 
 Refer to the `package.json` or the github [Releases](https://github.com/UN-OCHA/common-design-wordpress/releases) page
