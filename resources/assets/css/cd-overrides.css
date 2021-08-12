@@ -336,3 +336,8 @@ li.widget_block,
 .cd-teaser__link {
   display: block;
 }
+
+/* Pull quote Gutenberg block */
+.wp-block-pullquote.is-style-solid-color {
+  background: var(--cd-blue-grey);
+}
