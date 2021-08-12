@@ -19,7 +19,7 @@
 	<?php endif; ?>
 
     <div class="cd-layout-content-wrapper">
-        <div class="cd-layout-content">
+        <div class="cd-layout-content [ cd-flow ]">
 			<?php if ( have_posts() ) : ?>
 				<?php if ( is_home() && is_front_page() ) : ?>
 					<?php get_template_part( 'resources/templates/content/content' ); ?>
