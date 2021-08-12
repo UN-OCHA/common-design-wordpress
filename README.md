@@ -60,10 +60,10 @@ will appear on published pages, while editing content.
 ## Common Header and Footer optional elements
 The Common Design Header and Footer contains some elements that may not be relevant to everyone. For ease, we have
 removed these. If desired, they can be included.
-### OCHA Services Menu
+### OCHA Services menu
 Uncomment the include statement in `resources/templates/parts/parts-ocha-services.php` to include the first section 
 "Related Platforms". Update the link text and `href` in `resources/templates/parts/parts-related-platforms.php`.
-### Social Media
+### Social media icons
 Uncomment the include statement in `resources/templates/parts/parts-footer.php` to include the social
 media block. Update the link `href` in `resources/templates/parts/parts-social-media.php`.
 Comment out or delete the markup for the icons that are not needed.
