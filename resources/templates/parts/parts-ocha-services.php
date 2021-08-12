@@ -21,13 +21,7 @@
 
 		<div class="cd-ocha-dropdown__inner">
 			<div class="cd-ocha-dropdown__section">
-				<p class="cd-ocha-dropdown__heading">Related Platforms</p>
-				<ul class="cd-ocha-dropdown__list">
-					<li class="cd-ocha-dropdown__link"><a href="https://example.com">Customizable</a></li>
-					<li class="cd-ocha-dropdown__link"><a href="https://example.com">Customizable</a></li>
-					<li class="cd-ocha-dropdown__link"><a href="https://example.com">Customizable</a></li>
-					<li class="cd-ocha-dropdown__link"><a href="https://example.com">Customizable</a></li>
-				</ul>
+				<?php //get_template_part( 'resources/templates/parts/parts', 'related-platforms' ); ?>
 			</div>
 			<div class="cd-ocha-dropdown__section">
 				<p class="cd-ocha-dropdown__heading">Other OCHA Services</p>
