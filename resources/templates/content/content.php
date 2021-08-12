@@ -6,9 +6,7 @@
  */
 ?>
 
-<section class="[ cd-flow ]">
-	<?php while ( have_posts() ) : ?>
-		<?php the_post(); ?>
-			<?php get_template_part( 'resources/templates/common/common', 'article--teaser' ); ?>
-	<?php endwhile; ?>
-</section>
+<?php while ( have_posts() ) : ?>
+    <?php the_post(); ?>
+        <?php get_template_part( 'resources/templates/common/common', 'article--teaser' ); ?>
+<?php endwhile; ?>

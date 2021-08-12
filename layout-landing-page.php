@@ -25,7 +25,7 @@
 <main role="main" id="main-content" class="cd-container">
 
     <div class="cd-layout-content-wrapper">
-        <div class="cd-layout-content">
+        <div class="cd-layout-content [ cd-flow ]">
 	        <?php get_template_part( 'resources/templates/common/common', 'article--landing' ); ?>
         </div>
     </div>

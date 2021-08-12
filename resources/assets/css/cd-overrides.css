@@ -17,16 +17,6 @@
   float: right;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-top: 0;
-}
-
 p:last-child {
   margin-bottom: 0;
 }
@@ -340,4 +330,9 @@ ul.wp-block-latest-posts__list,
 li.widget_block,
 .widget_block {
   margin-bottom: 2rem;
+}
+
+/* cd-teaser */
+.cd-teaser__link {
+  display: block;
 }
