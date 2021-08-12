@@ -16,6 +16,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Added
+- Blockquote and pullquote Gutenberg blocks [CD-317](https://humanitarian.atlassian.net/browse/CD-317)
+### Fixed
+- Vertical rhythm improvements [CD-316](https://humanitarian.atlassian.net/browse/CD-316)
+### Changed
+- Remove Related Platforms from OCHA Services menu by default. [CD-319](https://humanitarian.atlassian.net/browse/CD-319)
+- Remove Social media icons from footer by default. [CD-321](https://humanitarian.atlassian.net/browse/CD-321)
 
 
 ---
