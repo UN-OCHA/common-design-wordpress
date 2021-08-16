@@ -59,7 +59,7 @@ will appear on published pages, while editing content.
 
 ## Common Header and Footer optional elements
 The Common Design Header and Footer contains some elements that may not be relevant to everyone. 
-For ease, we have set defaults and/or removed elements. If desired, they can be included and customized.
+For ease, we have set defaults and/or removed elements. If desired, these can be included and customized.
 ### Mobile logo
 There are 2 different logo files used depending on viewport size. The logo that displays on wider screens can be set via
 the Wordpress UI, but the mobile logo is set as a background image in CSS. If this image is not replaced, the [default OCHA
@@ -69,6 +69,8 @@ To replace the default mobile logo with a custom logo:
 1. Add the SVG mobile logo file to `resources/assets/images/logos/`.
 2. Change the file name of the logo file in `resources/assets/css/styles.css` for the `.cd-site-logo` rule.
 3. Create a zip of the theme with these new changes and upload.
+### Search
+Comment out the include statement in `resources/templates/parts/parts-header.php` if search is not required.
 ### OCHA Services menu
 Uncomment the include statement in `resources/templates/parts/parts-ocha-services.php` to include the first section 
 "Related Platforms". Update the link text and `href` in `resources/templates/parts/parts-related-platforms.php`.
