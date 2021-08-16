@@ -22,6 +22,11 @@
                 <div class="cd-hero__description"></div>
             </div>
         </div>
+		<?php if ( get_post(get_post_thumbnail_id())->post_excerpt ) : ?>
+            <div class="cd-caption">
+				<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+            </div>
+		<?php endif; ?>
     <?php endif; ?>
 <?php endif; ?>
 
