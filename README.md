@@ -60,7 +60,7 @@ will appear on published pages, while editing content.
 ## Common Header and Footer optional elements
 The Common Design Header and Footer contains some elements that may not be relevant to everyone. 
 For ease, we have set defaults and/or removed elements. If desired, they can be included and customized.
-## Mobile logo
+### Mobile logo
 There are 2 different logo files used depending on viewport size. The logo that displays on wider screens can be set via
 the Wordpress UI, but the mobile logo is set as a background image in CSS. If this image is not replaced, the [default OCHA
 logo](https://github.com/UN-OCHA/common-design-wordpress/blob/main/resources/assets/images/logos/ocha-logo-blue.svg) is
