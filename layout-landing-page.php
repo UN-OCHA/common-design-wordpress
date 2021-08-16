@@ -14,16 +14,19 @@
         <?php the_post_thumbnail( 'hero-image', array('class' => 'cd-hero__image') ); ?>
         <div class="cd-hero__container">
             <div class="cd-hero__title">
-	            <?php the_title(); ?>
+	            <h1><?php the_title(); ?></h1>
             </div>
-
             <div class="cd-hero__description"></div>
         </div>
     </div>
+	<?php if ( get_post(get_post_thumbnail_id())->post_excerpt ) : ?>
+        <div class="cd-caption">
+			<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+        </div>
+	<?php endif; ?>
 <?php endif; ?>
 
 <main role="main" id="main-content" class="cd-container">
-
     <div class="cd-layout-content-wrapper">
         <div class="cd-layout-content [ cd-flow ]">
 	        <?php get_template_part( 'resources/templates/common/common', 'article--landing' ); ?>

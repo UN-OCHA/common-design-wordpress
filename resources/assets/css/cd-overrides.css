@@ -17,6 +17,11 @@
   float: right;
 }
 
+p:first-child,
+header + p:first-of-type {
+  margin-top: 0;
+}
+
 p:last-child {
   margin-bottom: 0;
 }
@@ -279,8 +284,17 @@ ul.wp-block-page-list li {
   background-color: var(--cd-white);
 }
 
+/* cd-caption */
+.cd-caption {
+  width: 100%;
+}
+
 /* cd-banner */
 .cd-banner {
+  margin-bottom: 2rem;
+}
+.cd-banner + .cd-caption {
+  margin-top: -2rem;
   margin-bottom: 2rem;
 }
 /* Stretch to fit available space */
