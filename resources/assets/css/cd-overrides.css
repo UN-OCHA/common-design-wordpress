@@ -279,6 +279,11 @@ ul.wp-block-page-list li {
   background-color: var(--cd-white);
 }
 
+/* cd-caption */
+.cd-caption {
+  width: 100%;
+}
+
 /* cd-banner */
 .cd-banner {
   margin-bottom: 2rem;
@@ -290,11 +295,6 @@ ul.wp-block-page-list li {
 /* Stretch to fit available space */
 .cd-banner__image {
   object-fit: cover;
-}
-
-/* cd-caption */
-.cd-caption {
-  width: 100%;
 }
 
 /* Youtube embed */
