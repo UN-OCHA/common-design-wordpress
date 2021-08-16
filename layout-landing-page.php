@@ -14,7 +14,7 @@
         <?php the_post_thumbnail( 'hero-image', array('class' => 'cd-hero__image') ); ?>
         <div class="cd-hero__container">
             <div class="cd-hero__title">
-	            <?php the_title(); ?>
+	            <h1><?php the_title(); ?></h1>
             </div>
             <div class="cd-hero__description"></div>
         </div>
