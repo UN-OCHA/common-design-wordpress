@@ -283,6 +283,10 @@ ul.wp-block-page-list li {
 .cd-banner {
   margin-bottom: 2rem;
 }
+/* Stretch to fit available space */
+.cd-banner__image {
+  object-fit: cover;
+}
 
 /* Youtube embed */
 .is-type-video .wp-block-embed__wrapper {
