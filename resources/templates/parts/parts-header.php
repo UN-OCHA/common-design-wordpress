@@ -10,12 +10,7 @@
      <div class="cd-global-header">
   		<div class="cd-container cd-global-header__inner">
   			<div class="region region-header-top cd-global-header__actions" id="cd-global-header__actions">
-			    <nav role="navigation" id="block-helpmenu" aria-labelledby="block-helpmenu-menu" class="block block-menu navigation menu--help cd-global-header__user-menu">
-			  		<!-- help nav can go here -->
-			    </nav>
-			      <!--<div class="cd-global-header__language-switcher" role="navigation">-->
-			         <!-- language changer can go here -->
-			      <!--</div>-->
+             <!-- language changer can go here -->
 			</div>
 
 		    <?php get_template_part( 'resources/templates/parts/parts', 'ocha-services' ); ?>
@@ -32,7 +27,7 @@
 
             <div class="cd-site-header__actions">
 
-                <!-- comment out this line if there is no search requirement -->
+                <!-- Comment out this include if there is no search requirement -->
 	            <?php get_template_part( 'resources/templates/parts/parts', 'search' ); ?>
 
                 <div class="cd-site-header__nav-holder">
