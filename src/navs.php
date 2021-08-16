@@ -27,23 +27,6 @@ if ( ! function_exists( 'common_design_register_navigations' ) ) {
 }
 add_action( 'after_setup_theme', 'common_design_register_navigations' );
 
-if ( ! function_exists( 'common_design_theme_setup' ) ) :
-/**
-
- */
-function common_design_theme_setup() {
-
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'social-menu' => esc_html__( 'Social Menu', 'social-menu' ),
-	) );
-
-}
-endif;
-add_action( 'after_setup_theme', 'common_design_theme_setup' );
-
-
-
 /**
  * Add "menu-item--expanded" class to parent menu items.
  */

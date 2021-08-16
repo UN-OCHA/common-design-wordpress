@@ -17,6 +17,11 @@
   float: right;
 }
 
+p:first-child,
+header + p:first-of-type {
+  margin-top: 0;
+}
+
 p:last-child {
   margin-bottom: 0;
 }
@@ -39,7 +44,6 @@ p:last-child {
 @media (max-width: 767px) {
   .cd-site-logo {
     background: url(../images/logos/ocha-logo-blue.svg) center no-repeat;
-    background: linear-gradient(transparent, transparent), url(../images/logos/ocha-logo-blue.svg) center no-repeat;
   }
 }
 
@@ -280,9 +284,22 @@ ul.wp-block-page-list li {
   background-color: var(--cd-white);
 }
 
+/* cd-caption */
+.cd-caption {
+  width: 100%;
+}
+
 /* cd-banner */
 .cd-banner {
   margin-bottom: 2rem;
+}
+.cd-banner + .cd-caption {
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}
+/* Stretch to fit available space */
+.cd-banner__image {
+  object-fit: cover;
 }
 
 /* Youtube embed */

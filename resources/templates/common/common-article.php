@@ -18,10 +18,15 @@
 
     <?php if ( !is_page_template('layout-landing-page.php')) : ?>
         <?php if ( has_post_thumbnail() ) : ?>
-        <div class="cd-banner">
-            <?php the_post_thumbnail( 'banner-image', array('class' => 'cd-banner__image') ); ?>
-        </div>
-        <?php endif; ?>
+            <div class="cd-banner">
+                <?php the_post_thumbnail( 'banner-image', array('class' => 'cd-banner__image') ); ?>
+            </div>
+            <?php if ( get_post(get_post_thumbnail_id())->post_excerpt ) : ?>
+                <div class="cd-caption">
+                    <?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+                </div>
+            <?php endif; ?>
+	    <?php endif; ?>
     <?php endif; ?>
 
     <?php the_content(); ?>
