@@ -32,9 +32,11 @@
 
 <main role="main" id="main-content" class="cd-container">
 
-    <h1 class="cd-page-title visually-hidden">
-        <?php echo get_bloginfo('name'); ?>
-    </h1>
+	<?php if ( !is_page_template('layout-landing-page.php')) : ?>
+        <h1 class="cd-page-title visually-hidden">
+            <?php echo get_bloginfo('name'); ?>
+        </h1>
+	<?php endif; ?>
 
     <div class="cd-layout-content-wrapper">
         <div class="cd-layout-content [ cd-flow ]">
