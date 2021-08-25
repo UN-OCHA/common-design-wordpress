@@ -20,6 +20,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [v1.1.1](https://github.com/UN-OCHA/common-design-wordpress/releases/tag/v1.1.1) - 2021-08-25
+### Fixed
+- Provide template for Attachment to prevent infinite loop [CD-330](https://humanitarian.atlassian.net/browse/CD-330)
+
+---
+
 ## [v1.1.0](https://github.com/UN-OCHA/common-design-wordpress/releases/tag/v1.1.0) - 2021-08-16
 ### Added
 - Blockquote and pullquote Gutenberg blocks [CD-317](https://humanitarian.atlassian.net/browse/CD-317)
