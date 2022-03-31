@@ -26,6 +26,11 @@ p:last-child {
   margin-bottom: 0;
 }
 
+/* Make sure long URLs wrap */
+a {
+  word-break: break-word;
+}
+
 /* OCHA logo in footer */
 .cd-mandate__logo {
   background: url("../images/logos/ocha-lockup.svg") 0 center no-repeat;
