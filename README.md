@@ -7,11 +7,11 @@ This theme contains the markup and styles for the Common Design (CD) Header and 
 
 ## Styles
 
-The main CD styles are generated from the [Drupal theme](https://github.com/UN-OCHA/common_design) and copied to `cd.css`. There is also `normalize.css` which provide style resets. See [https://web.brand.unocha.org](https://web.brand.unocha.org) for the Drupal demo.
+The main CD styles plus the base-theme's `brand.css` are generated from the [Drupal theme](https://github.com/UN-OCHA/common_design) and combined inside `cd.css`. There is also `normalize.css` to match the base-theme's latest Drupal core version to provide style resets. See [https://web.brand.unocha.org](https://web.brand.unocha.org) for the Drupal demo.
 
 Any rules to adjust the core `cd.css` styles for Wordpress are placed in `cd-overrides.css`, including styles for Gutenberg blocks.
 
-Rules specific to the implementation, like changing the OCHA brand blue, should be added to `styles.css`.
+Rules specific to the implementation, like changing the OCHA brand blue, should be added to `resources/assets/css/styles.css`. You should start the site-specific customizations by copying the contents of `common_design_subtheme/css/brand.css`.
 
 
 ## Page layouts
