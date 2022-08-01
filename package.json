@@ -10,8 +10,8 @@
     "stylelint-fix": "stylelint 'resources/assets/css/**/*.css' --fix"
   },
   "engines": {
-    "node": "^12.21.0",
-    "npm": "^7.6.1"
+    "node": "^16.13.2",
+    "npm": "^8.1.2"
   },
   "devDependencies": {
     "stylelint": "^13.12.0",
