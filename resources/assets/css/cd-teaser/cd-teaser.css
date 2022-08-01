@@ -1,6 +1,10 @@
+/**
+ * CD Teaser
+ */
+
 .cd-teaser {
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--cd-blue-grey);
+  border-bottom: 1px solid var(--brand-grey);
 }
 
 .cd-teaser__image {
