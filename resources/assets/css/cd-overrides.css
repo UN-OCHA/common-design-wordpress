@@ -110,7 +110,7 @@ a {
   color: var(--cd-white);
   border: 2px solid transparent;
   border-radius: 3px;
-  background-color: var(--cd-primary-color);
+  background-color: var(--brand-primary);
   box-shadow: none;
   font-size: 1rem;
   line-height: 1.15;
@@ -120,8 +120,8 @@ a {
 .is-style-outline > .wp-block-button__link:not(.has-text-color),
 .wp-block-button__link.is-style-outline:not(.has-text-color),
 .is-style-outline .wp-block-button__link {
-  color: var(--cd-primary-color);
-  border-color: var(--cd-primary-color);
+  color: var(--brand-primary);
+  border-color: var(--brand-primary);
   background-color: var(--cd-white);
   fill: currentColor;
 }
@@ -130,14 +130,14 @@ a {
 .wp-block-button__link:focus,
 .wp-block-file .wp-block-file__button:focus {
   color: var(--cd-white);
-  background-color: var(--cd-primary-color--light);
+  background-color: var(--brand-primary--light);
 }
 
 .is-style-outline .wp-block-button__link:hover,
 .is-style-outline .wp-block-button__link:focus {
   color: var(--cd-white);
-  border-color: var(--cd-primary-color--dark);
-  background-color: var(--cd-primary-color);
+  border-color: var(--brand-primary--dark);
+  background-color: var(--brand-primary);
 }
 
 /* File block Download button */

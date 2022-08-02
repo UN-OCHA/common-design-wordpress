@@ -1,19 +1,21 @@
 {
   "name": "common-design-wordpress",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "OCHA Common Design base theme for Wordpress",
   "repository": "git@github.com:UN-OCHA/common-design-wordpress.git",
   "author": "UN OCHA",
   "license": "GPL-2.0",
   "scripts": {
+    "release": "standard-version",
     "stylelint": "stylelint 'resources/assets/css/**/*.css'",
     "stylelint-fix": "stylelint 'resources/assets/css/**/*.css' --fix"
   },
   "engines": {
-    "node": "^12.21.0",
-    "npm": "^7.6.1"
+    "node": "^16.13.2",
+    "npm": "^8.1.2"
   },
   "devDependencies": {
+    "standard-version": "^9.3.2",
     "stylelint": "^13.12.0",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-no-browser-hacks": "^1.2.1",
@@ -21,5 +23,11 @@
     "trim": ">=0.0.3",
     "trim-newlines": ">=3.0.1",
     "yargs-parser": "^18.1.3"
+  },
+  "//": "skip creation of git tags, which we manage on GitHub.",
+  "standard-version": {
+    "skip": {
+      "tag": true
+    }
   }
 }

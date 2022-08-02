@@ -1,24 +1,27 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-<pre>
-`Added` for new features.
-`Changed` for changes in existing functionality.
-`Deprecated` for soon-to-be removed features.
-`Removed` for now removed features.
-`Fixed` for any bug fixes.
-`Security` in case of vulnerabilities.
-</pre>
----
+## [2.0.0](https://github.com/UN-OCHA/common-design-wordpress/compare/v1.1.1...v2.0.0) (2022-08-01)
 
 
-## [Unreleased]
+### ⚠ BREAKING CHANGES
+
+* **security:** New minimum supported node.js versions: node.js 16.13.2 LTS and npm 8.1.2 which all development environments (local, pre-prod, prod) must support if they want to use the optional components in the theme, such as Sass compilation. None of them are required for the basic WP theme to function.
+
+### Features
+
+* add standard-version to common-design-wordpress ([bcd1190](https://github.com/UN-OCHA/common-design-wordpress/commit/bcd1190b80c4ee8b808183c7232f798f3fbc7cc9))
+* upgrade to CD v7.2.1 ([a367d7e](https://github.com/UN-OCHA/common-design-wordpress/commit/a367d7e59ed52ac2ca0291dc690e02467497d7c6))
 
 
----
+### Bug Fixes
+
+* **security:** update minimum supported node.js version ([d5549d9](https://github.com/UN-OCHA/common-design-wordpress/commit/d5549d9ef1519f53b22349c829cf821e6809c9ca))
+* upgrade all CD components to v7.2.1 ([3bb8e00](https://github.com/UN-OCHA/common-design-wordpress/commit/3bb8e00543b41d42e4c28e18bd846f79acd97faf))
+
+# Changelog
+
 
 ## [v1.1.1](https://github.com/UN-OCHA/common-design-wordpress/releases/tag/v1.1.1) - 2021-08-25
 ### Fixed
