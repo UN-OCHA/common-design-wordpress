@@ -5,7 +5,7 @@
 ?>
 
 <div class="cd-footer__section cd-footer__section--social">
-  <a href="###" class="cd-footer-social__link">
+  <a href="https://www.facebook.com/UNOCHA" class="cd-footer-social__link">
     <span class="visually-hidden">Facebook</span>
     <svg class="cd-icon cd-icon--facebook" aria-hidden="true" focusable="false" width="32" height="32">
       <use xlink:href="#cd-icon--sm-fb-def"></use>
@@ -14,7 +14,7 @@
       <use xlink:href="#cd-icon--sm-fb-full"></use>
     </svg>
   </a>
-  <a href="###" class="cd-footer-social__link">
+  <a href="https://twitter.com/unocha" class="cd-footer-social__link">
     <span class="visually-hidden">Twitter</span>
     <svg class="cd-icon cd-icon--twitter" aria-hidden="true" focusable="false" width="32" height="32">
       <use xlink:href="#cd-icon--sm-tt-def"></use>
@@ -23,7 +23,7 @@
       <use xlink:href="#cd-icon--sm-tt-full"></use>
     </svg>
   </a>
-  <a href="###" class="cd-footer-social__link">
+  <a href="https://www.youtube.com/user/ochafilms" class="cd-footer-social__link">
     <span class="visually-hidden">YouTube</span>
     <svg class="cd-icon cd-icon--youtube" aria-hidden="true" focusable="false" width="32" height="32">
       <use xlink:href="#cd-icon--sm-yt-def"></use>
@@ -32,7 +32,7 @@
       <use xlink:href="#cd-icon--sm-yt-full"></use>
     </svg>
   </a>
-  <a href="###" class="cd-footer-social__link">
+  <a href="https://www.linkedin.com/company/united-nations-ocha" class="cd-footer-social__link">
     <span class="visually-hidden">LinkedIn</span>
     <svg class="cd-icon cd-icon--linkedin" aria-hidden="true" focusable="false" width="32" height="32">
       <use xlink:href="#cd-icon--sm-ln-def"></use>
@@ -41,7 +41,7 @@
       <use xlink:href="#cd-icon--sm-ln-full"></use>
     </svg>
   </a>
-  <a href="###" class="cd-footer-social__link">
+  <a href="https://www.instagram.com/un_ocha/" class="cd-footer-social__link">
 
     <span class="visually-hidden">Instagram</span>
     <svg class="cd-icon cd-icon--instagram" aria-hidden="true" focusable="false" width="32" height="32">
@@ -51,7 +51,7 @@
       <use xlink:href="#cd-icon--sm-ig-full"></use>
     </svg>
   </a>
-  <a href="###" class="cd-footer-social__link">
+  <a href="https://github.com/UN-OCHA/" class="cd-footer-social__link">
     <span class="visually-hidden">Github</span>
     <svg class="cd-icon cd-icon--github" aria-hidden="true" focusable="false" width="32" height="32">
       <use xlink:href="#cd-icon--sm-gh-def"></use>
