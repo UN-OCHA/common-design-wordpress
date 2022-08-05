@@ -279,13 +279,13 @@ ul.wp-block-page-list li {
 
 /* Grid layout option */
 /* cd-card https://github.com/UN-OCHA/common_design/blob/main/components/cd-card */
-.wp-block-latest-posts__list.is-grid li {
+.wp-block-latest-posts__list.is-grid > li {
   display: flex;
   flex-direction: column;
   max-width: var(--cd-max-content-width);
   margin-bottom: 1rem;
   padding: 1rem;
-  border: 2px solid var(--cd-blue-grey);
+  border: 2px solid var(--brand-grey);
   background-color: var(--cd-white);
 }
 
