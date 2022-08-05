@@ -1,6 +1,7 @@
 <?php
 /**
- * <article> common component that display basic information about post in loop. You can manage other commons components in this folder.
+ * <article> common component that display basic information about post in loop.
+ * You can manage other common components in this folder.
  */
 ?>
 

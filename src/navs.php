@@ -117,7 +117,7 @@ class cd_MainNav_Walker extends Walker_Nav_Menu {
 		$class_names = implode( ' ', $classes );
 
 		// Get the ID of the
-//		var_dump($this->curItem );
+    // var_dump($this->curItem );
 		$curItemID = $this->curItem->ID;
 		$curItemTitle = $this->curItem->title;
 
