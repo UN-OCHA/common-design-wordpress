@@ -14,8 +14,9 @@
   --brand-logo-width: 186px;
 }
 
-
-/* Mobile logo */
+/**
+ * Mobile logo
+ */
 @media (max-width: 767px) {
   .cd-site-logo {
     background: url(../images/logos/ocha-logo-blue.svg) center no-repeat;

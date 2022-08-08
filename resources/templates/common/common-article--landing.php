@@ -5,7 +5,5 @@
 ?>
 
 <article class="cd-article">
-
-	<?php the_content(); ?>
-
+  <?php the_content(); ?>
 </article>

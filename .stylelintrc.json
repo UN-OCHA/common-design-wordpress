@@ -436,6 +436,6 @@
     "selector-pseudo-element-colon-notation": null,
     "shorthand-property-no-redundant-values": null,
     "string-quotes": "double",
-    "unit-whitelist": ["deg", "em", "ex", "ms", "rem", "%", "s", "px", "vw", "vh"]
+    "unit-allowed-list": ["ch", "deg", "em", "ex", "ms", "rem", "%", "s", "px", "vw", "vh"]
   }
 }

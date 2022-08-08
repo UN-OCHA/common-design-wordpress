@@ -7,9 +7,9 @@
 ?>
 
 <!--<div class="content-post">-->
-	<?php if ( is_single() ) : ?>
-		<?php get_template_part( 'resources/templates/common/common', 'article' ); ?>
-	<?php else : ?>
-        <?php get_template_part( 'resources/templates/common/common', 'article--teaser' ); ?>
-	<?php endif; ?>
+  <?php if ( is_single() ) : ?>
+    <?php get_template_part( 'resources/templates/common/common', 'article' ); ?>
+  <?php else : ?>
+    <?php get_template_part( 'resources/templates/common/common', 'article--teaser' ); ?>
+  <?php endif; ?>
 <!--</div>-->
