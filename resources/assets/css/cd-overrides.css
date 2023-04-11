@@ -419,3 +419,16 @@ li.widget_block,
     margin-inline-end: 32px;
   }
 }
+
+
+/**
+ * CD Sidebar / CD Content: Compact
+ */
+.cd-content--compact h2 {
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-bottom: 0 none;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.3;
+}
