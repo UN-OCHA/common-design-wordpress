@@ -363,3 +363,26 @@ li.widget_block,
 .wp-block-pullquote.is-style-solid-color {
   background: var(--cd-blue-grey);
 }
+
+
+/**
+ * CD Nav
+ *
+ * @TODO: fold all of this back into CD (mostly reverting to pre-8 rules).
+ */
+.cd-nav__menu--level-1 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cd-nav__menu-item--level-1 button,
+.cd-nav__menu-item--level-1 a {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.cd-nav__menu-item--level-2 button,
+.cd-nav__menu-item--level-2 a {
+  text-transform: initial;
+}
