@@ -31,11 +31,6 @@ a {
   word-break: break-word;
 }
 
-/* OCHA logo in footer */
-.cd-mandate__logo {
-  background: url("../images/logos/ocha-lockup.svg") 0 center no-repeat;
-}
-
 /* Social Media menu */
 .wp_social_media_menu_icon {
   list-style-type: none;
