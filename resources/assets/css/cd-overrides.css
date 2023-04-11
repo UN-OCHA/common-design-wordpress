@@ -400,6 +400,29 @@ li.widget_block,
   height: 48px;
   align-items: center;
 }
+
 .cd-nav button[aria-expanded] .cd-icon--arrow-down {
   margin-top: 0;
+}
+
+/**
+ * CD Footer Menu
+ */
+.cd-footer-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .cd-footer-menu li {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cd-footer-menu li {
+    margin: 0;
+    margin-inline-end: 32px;
+  }
 }

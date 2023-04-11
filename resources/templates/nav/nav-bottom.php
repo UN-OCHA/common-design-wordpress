@@ -8,12 +8,12 @@
 ?>
 
 <nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer">
-  <h2 id="block-footer-menu">Footer</h2>
+  <h2 id="block-footer-menu" class="visually-hidden">Footer</h2>
   <?php
     wp_nav_menu([
-      'theme_location'  => 'bottom',
-      'container'       => 'ul',
-      'container_class' => 'cd-footer-menu',
+      'theme_location' => 'bottom',
+      'container' => 'ul',
+      'menu_class' => 'cd-footer-menu',
     ]);
   ?>
 </nav>
