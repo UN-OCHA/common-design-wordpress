@@ -18,7 +18,7 @@
   <h2 id="block-mainnavigation-menu" class="visually-hidden">Main navigation</h2>
   <?php
     wp_nav_menu( array(
-      'container'     => 'ul',
+      'container' => 'ul',
       'theme_location' => 'top',
       'depth' => '2',
       'menu_class' => 'menu cd-nav__menu--level-1',

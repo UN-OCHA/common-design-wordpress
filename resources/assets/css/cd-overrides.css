@@ -386,3 +386,25 @@ li.widget_block,
 .cd-nav__menu-item--level-2 a {
   text-transform: initial;
 }
+
+@media (min-width: 1024px) {
+  .cd-nav ul ul {
+    position: absolute;
+    z-index: var(--cd-z-dropdown);
+    top: calc(var(--cd-site-header-height) + 6px);
+    min-width: 200px;
+    max-width: 300px;
+    margin: 0;
+    padding: 20px 0;
+    box-shadow: 0 1px 8px rgba(var(--cd-rgb-blue-grey--dark), 0.8);
+    background: var(--cd-white);
+  }
+}
+
+.cd-nav button {
+  height: 48px;
+  align-items: center;
+}
+.cd-nav button[aria-expanded] .cd-icon--arrow-down {
+  margin-top: 0;
+}

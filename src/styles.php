@@ -21,13 +21,24 @@ if ( ! function_exists( 'common_design_register_styles' ) ) {
     wp_enqueue_style ('cd-drupal-normalize', get_template_directory_uri().'/resources/assets/css/vendor/drupal-normalize.css', array(), null, 'all' );
     wp_enqueue_style ('cd-drupal-hidden', get_template_directory_uri().'/resources/assets/css/vendor/drupal-hidden.css', array(), null, 'all' );
 
+    /**
+     * CD core dependencies
+     *
+     * Because of CSS ordering issues inside the CD, we include these before
+     * the CD core files in order to replicate how Drupal orders the files.
+     *
+     * Known issues:
+     *  - The --dropdown var is set to false to create the desktop nav layout,
+     *    but cd-dropdown.css sets it back to true if it comes last.
+     */
+    wp_enqueue_style ('cd-dropdown', get_template_directory_uri().'/resources/assets/css/cd-dropdown/cd-dropdown.css', array(), null, 'all' );
+    wp_enqueue_style ('cd-user-menu', get_template_directory_uri().'/resources/assets/css/cd-user-menu/cd-user-menu.css', array(), null, 'all' );
+
     /* CD core files */
     wp_enqueue_style ('cd-brand', get_template_directory_uri().'/resources/assets/css/brand.css', array(), null, 'all' );
     wp_enqueue_style ('cd-core', get_template_directory_uri().'/resources/assets/css/cd.css', array(), null, 'all' );
 
     /* CD components */
-    wp_enqueue_style ('cd-dropdown', get_template_directory_uri().'/resources/assets/css/cd-dropdown/cd-dropdown.css', array(), null, 'all' );
-    wp_enqueue_style ('cd-user-menu', get_template_directory_uri().'/resources/assets/css/cd-user-menu/cd-user-menu.css', array(), null, 'all' );
     wp_enqueue_style ('cd-button', get_template_directory_uri().'/resources/assets/css/cd-button/cd-button.css', array(), null, 'all' );
     wp_enqueue_style ('cd-flow', get_template_directory_uri().'/resources/assets/css/cd-flow/cd-flow.css', array(), null, 'all' );
     wp_enqueue_style ('cd-utilities', get_template_directory_uri().'/resources/assets/css/cd-utilities/cd-utilities.css', array(), null, 'all' );
