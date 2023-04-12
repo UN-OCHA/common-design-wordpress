@@ -25,7 +25,7 @@
       <?php endif; ?>
     </div>
       <?php if ( is_active_sidebar( 'sidebar-second' ) ) : ?>
-        <?php get_sidebar( 'second'); ?>
+        <?php get_sidebar( 'second' ); ?>
       <?php endif ?>
   </div>
 </main>

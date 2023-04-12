@@ -1,14 +1,6 @@
 /* Common Design overrides */
 /* Style and selector adjustments so CD Header and Footer, and component styles work with Wordpress and Gutenberg blocks */
 
-/* Reset lists in the main content area and aside element. */
-.cd-layout-content-wrapper ul,
-.cd-layout-content-wrapper li {
-  margin: 0 0 1rem;
-  padding: 0;
-  list-style: none;
-}
-
 .alignleft {
   float: left;
 }
@@ -422,7 +414,27 @@ li.widget_block,
 
 
 /**
- * CD Sidebar / CD Content: Compact
+ * CD Sidebar resets
+ */
+ul.cd-gutenberg-blocks {
+  margin: 0;
+  padding: 0;
+}
+
+.cd-gutenberg-blocks > li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Since Gutenberg outputs <li> around each block (really??) we have to reset
+the list style type because browser defaults interpret lists as nested. */
+.cd-gutenberg-blocks ul > li {
+  list-style-type: disc;
+}
+
+/**
+ * CD Sidebar: Compact
  */
 .cd-content--compact h2 {
   letter-spacing: 0.5px;
@@ -431,4 +443,8 @@ li.widget_block,
   font-size: 15px;
   font-weight: bold;
   line-height: 1.3;
+}
+
+.cd-content--compact .cd-gutenberg-blocks ul li {
+  margin-block-start: .25rem;
 }

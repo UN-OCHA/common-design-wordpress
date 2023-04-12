@@ -12,7 +12,7 @@
 <main role="main" id="main-content" class="cd-container cd-layout-two-col cd-layout-with-sidebar-first cd-content--compact">
   <div class="cd-layout-content-wrapper">
     <?php if ( is_active_sidebar( 'sidebar-first' ) ) : ?>
-      <?php get_sidebar( 'first'); ?>
+      <?php get_sidebar( 'first' ); ?>
     <?php endif; ?>
     <div class="cd-layout-content [ cd-flow ]">
       <?php if ( have_posts() ) : ?>

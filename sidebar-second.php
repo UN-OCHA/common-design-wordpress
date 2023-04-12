@@ -7,5 +7,7 @@
 ?>
 
 <aside class="cd-layout-sidebar-second" role="complementary">
-  <?php dynamic_sidebar('Sidebar Second'); ?>
+  <ul class="cd-gutenberg-blocks">
+    <?php dynamic_sidebar( 'Sidebar Second' ); ?>
+  </ul>
 </aside>

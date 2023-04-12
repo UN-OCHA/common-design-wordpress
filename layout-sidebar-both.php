@@ -12,7 +12,7 @@
 <main role="main" id="main-content" class="cd-container cd-layout-with-sidebar-both">
     <div class="cd-layout-content-wrapper">
 	    <?php if ( is_active_sidebar( 'sidebar-first' ) ) : ?>
-            <?php get_sidebar( 'first'); ?>
+            <?php get_sidebar( 'first' ); ?>
 	    <?php endif; ?>
         <div class="cd-layout-content [ cd-flow ]">
 			<?php if ( have_posts() ) : ?>
@@ -28,7 +28,7 @@
 			<?php endif; ?>
         </div>
 	    <?php if ( is_active_sidebar( 'sidebar-second' ) ) : ?>
-            <?php get_sidebar( 'second'); ?>
+            <?php get_sidebar( 'second' ); ?>
 	    <?php endif; ?>
     </div>
 </main>

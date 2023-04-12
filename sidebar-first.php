@@ -8,5 +8,7 @@
 
 
 <aside class="cd-layout-sidebar-first" role="complementary">
-  <?php dynamic_sidebar('Sidebar First'); ?>
+  <ul class="cd-gutenberg-blocks">
+    <?php dynamic_sidebar( 'Sidebar First' ); ?>
+  </ul>
 </aside>
