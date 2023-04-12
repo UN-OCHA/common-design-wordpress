@@ -19,3 +19,15 @@
   --brand-grey: var(--cd-blue-grey);
   --brand-logo-width: 186px;
 }
+
+/**
+ * Mobile logo
+ *
+ * To customize the mobile logo, uncomment the line below and reference your own
+ * logo file, which should be placed inside the `img/logos` directory.
+ */
+@media (max-width: 767px) {
+  .cd-site-logo {
+    /* background: url(../img/logos/ocha-logo-blue.svg) center no-repeat; */
+  }
+}
