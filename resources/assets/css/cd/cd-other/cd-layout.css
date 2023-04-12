@@ -262,7 +262,8 @@ body:not(.user-logged-in) {
   }
 }
 
-.cd-layout-two-col .cd-layout-sidebar-first {
+.cd-layout-two-col .cd-layout-sidebar-first,
+.cd-layout-two-col .cd-layout-sidebar-second {
   margin-top: 1rem;
   padding: 1rem;
   background-color: var(--brand-grey);
