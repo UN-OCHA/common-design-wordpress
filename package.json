@@ -11,8 +11,8 @@
     "stylelint-fix": "stylelint 'resources/assets/css/**/*.css' --fix"
   },
   "engines": {
-    "node": "^16.13.2",
-    "npm": "^8.1.2"
+    "node": "^16.19.0",
+    "npm": "^8.19.3"
   },
   "devDependencies": {
     "standard-version": "^9.3.2",
