@@ -1,5 +1,9 @@
-/* Common Design overrides */
-/* Style and selector adjustments so CD Header and Footer, and component styles work with Wordpress and Gutenberg blocks */
+/**
+ * Common Design WP Overrides
+ *
+ * Style and selector adjustments so CD Header and Footer, and component styles
+ * work with WordPress and Gutenberg blocks.
+ */
 
 .alignleft {
   float: left;
@@ -71,10 +75,18 @@ a {
   margin-bottom: 2rem;
 }
 
-/* Gutenberg blocks */
-/* Common Design component rules adjusted for WP as we have not added the selectors to the markup but are instead using the selectors and markup that WP outputs. */
+/**
+ * Gutenberg blocks
+ *
+ * CD component rules adjusted for WP as we have not added theselectors to the
+ * markup but are instead using the selectors and markup that WP outputs.
+ */
 
-/* cd-button https://github.com/UN-OCHA/common_design/tree/main/components/cd-button */
+/**
+ * cd-button
+ *
+ * @see https://github.com/UN-OCHA/common_design/tree/main/components/cd-button
+ */
 .is-style-outline > .wp-block-button__link,
 .wp-block-button__link.is-style-outline,
 .wp-block-button__link,
@@ -131,8 +143,13 @@ a {
   margin-left: 1rem;
 }
 
-/* cd-bullet-list https://github.com/UN-OCHA/common_design/blob/main/components/cd-bullet-list */
-/* We use the :not pseudo-class to exclude any ul that has a class, to avoid style conflicts. */
+/**
+ * cd-bullet-list
+ *
+ * @see https://github.com/UN-OCHA/common_design/blob/main/components/cd-bullet-list
+ */
+/* We use the :not pseudo-class to exclude any ul that has a class, to avoid
+style conflicts. */
 .cd-article ul:not([class]),
 ul.wp-block-page-list {
   max-width: var(--cd-max-content-width);
@@ -162,7 +179,11 @@ ul.wp-block-page-list li {
   background-position: 100% 0.75rem;
 }
 
-/* cd-table https://github.com/UN-OCHA/common_design/blob/main/components/cd-table */
+/**
+ * cd-table
+ *
+ * @see https://github.com/UN-OCHA/common_design/blob/main/components/cd-table
+ */
 .cd-article table {
   width: 100%;
   margin: 0 auto 3rem;
@@ -215,7 +236,11 @@ ul.wp-block-page-list li {
   background: var(--cd-grey--light);
 }
 
-/* Horizontal rule https://github.com/UN-OCHA/common_design/blob/main/components/cd-typography/cd-typography.css */
+/**
+ * Horizontal rule
+ *
+ * @see https://github.com/UN-OCHA/common_design/blob/main/components/cd-typography/cd-typography.css
+ */
 .wp-block-separator {
   max-width: var(--cd-max-content-width);
   margin: 3.5rem auto;
@@ -344,7 +369,6 @@ li.widget_block,
   background: var(--cd-blue-grey);
 }
 
-
 /**
  * CD Nav
  *
@@ -376,14 +400,14 @@ li.widget_block,
     max-width: 300px;
     margin: 0;
     padding: 20px 0;
-    box-shadow: 0 1px 8px rgba(var(--cd-rgb-blue-grey--dark), 0.8);
     background: var(--cd-white);
+    box-shadow: 0 1px 8px rgba(var(--cd-rgb-blue-grey--dark), 0.8);
   }
 }
 
 .cd-nav button {
-  height: 48px;
   align-items: center;
+  height: 48px;
 }
 
 .cd-nav button[aria-expanded] .cd-icon--arrow-down {
@@ -411,7 +435,6 @@ li.widget_block,
     margin-inline-end: 32px;
   }
 }
-
 
 /**
  * CD Sidebar resets
@@ -446,5 +469,5 @@ the list style type because browser defaults interpret lists as nested. */
 }
 
 .cd-content--compact .cd-gutenberg-blocks ul li {
-  margin-block-start: .25rem;
+  margin-block-start: 0.25rem;
 }
