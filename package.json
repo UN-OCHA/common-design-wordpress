@@ -7,8 +7,8 @@
   "license": "GPL-2.0",
   "scripts": {
     "release": "standard-version",
-    "stylelint": "stylelint 'resources/assets/css/**/*.css'",
-    "stylelint-fix": "stylelint 'resources/assets/css/**/*.css' --fix"
+    "css:lint": "stylelint 'resources/assets/css/**/*.css'",
+    "css:lint-fix": "stylelint 'resources/assets/css/**/*.css' --fix"
   },
   "engines": {
     "node": "^16.19.0",
