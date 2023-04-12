@@ -1,7 +1,7 @@
 /* Common Design component styles for the Editor form */
 /* Style and selector adjustments so CD component styles work
  with Wordpress and Gutenberg blocks */
-@import 'brand.css';
+@import "brand.css";
 
 /* Headings from cd.css */
 h1 {
