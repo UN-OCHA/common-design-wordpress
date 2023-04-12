@@ -1,4 +1,10 @@
-/* Implementation overrides - custom styles go here. */
+/**
+ * Site-specific styles
+ *
+ * Put all your site-specific styles in this file. It will only receive updates
+ * in very rare cases, and then only to the `:root` selector to change default
+ * branding colors.
+ */
 
 :root {
   /**
