@@ -29,6 +29,17 @@ function cd_get_language_attributes( $doctype = 'html' ) {
     $attributes[] = 'dir="ltr"';
   }
 
+  $lang = get_bloginfo( 'language' );
+  if ( $lang ) {
+    if ( 'text/html' === get_option( 'html_type' ) || 'html' === $doctype ) {
+      $attributes[] = 'lang="' . esc_attr( $lang ) . '"';
+    }
+
+    if ( 'text/html' !== get_option( 'html_type' ) || 'xhtml' === $doctype ) {
+      $attributes[] = 'xml:lang="' . esc_attr( $lang ) . '"';
+    }
+  }
+
   $output = implode( ' ', $attributes );
 
   /**
