@@ -21,7 +21,6 @@
         <?php else : ?>
           <?php while ( have_posts() ) : ?>
             <?php the_post(); ?>
-
             <?php get_template_part( 'resources/templates/content/content', get_post_type() ); ?>
           <?php endwhile; ?>
         <?php endif; ?>

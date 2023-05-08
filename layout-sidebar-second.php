@@ -18,15 +18,14 @@
         <?php else : ?>
           <?php while ( have_posts() ) : ?>
             <?php the_post(); ?>
-
             <?php get_template_part( 'resources/templates/content/content', get_post_type() ); ?>
           <?php endwhile; ?>
         <?php endif; ?>
       <?php endif; ?>
     </div>
-      <?php if ( is_active_sidebar( 'sidebar-second' ) ) : ?>
-        <?php get_sidebar( 'second' ); ?>
-      <?php endif ?>
+    <?php if ( is_active_sidebar( 'sidebar-second' ) ) : ?>
+      <?php get_sidebar( 'second' ); ?>
+    <?php endif ?>
   </div>
 </main>
 
