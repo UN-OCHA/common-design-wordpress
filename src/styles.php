@@ -60,7 +60,8 @@ if ( ! function_exists( 'common_design_register_styles' ) ) {
     wp_enqueue_style ('cd-icon', get_template_directory_uri().'/resources/assets/css/cd/cd-other/cd-icon.css', array(), null, 'all' );
 
     /* LAYOUT: cd-other */
-    wp_enqueue_style ('cd-layout', get_template_directory_uri().'/resources/assets/css/cd/cd-other/cd-layout.css', array(), null, 'all' );
+    wp_enqueue_style ('cd-layout-page', get_template_directory_uri().'/resources/assets/css/cd/cd-other/cd-layout--page.css', array(), null, 'all' );
+    wp_enqueue_style ('cd-layout-content', get_template_directory_uri().'/resources/assets/css/cd/cd-other/cd-layout--content.css', array(), null, 'all' );
 
     /* COMPONENT: cd-header */
     wp_enqueue_style ('cd-header', get_template_directory_uri().'/resources/assets/css/cd/cd-header/cd-header.css', array(), null, 'all' );

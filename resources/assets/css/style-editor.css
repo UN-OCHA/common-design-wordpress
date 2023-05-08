@@ -62,8 +62,8 @@ p:last-child {
 }
 
 /* Reset lists in the main content area and aside element. */
-.cd-layout-content-wrapper ul,
-.cd-layout-content-wrapper li {
+.cd-layout__content ul,
+.cd-layout__content li {
   margin: 0 0 1rem;
   padding: 0;
   list-style: none;

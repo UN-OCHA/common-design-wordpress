@@ -9,9 +9,9 @@
 
 <?php get_header(); ?>
 
-<main role="main" id="main-content" class="cd-container cd-layout-two-col cd-layout-with-sidebar-second cd-content--compact">
-  <div class="cd-layout-content-wrapper">
-    <div class="cd-layout-content [ cd-flow ]">
+<main role="main" id="main-content" class="cd-container cd-content--compact">
+  <div class="cd-layout">
+    <div class="cd-layout__content [ cd-flow ]">
       <?php if ( have_posts() ) : ?>
         <?php if ( is_home() && is_front_page() ) : ?>
           <?php get_template_part( 'resources/templates/content/content' ); ?>

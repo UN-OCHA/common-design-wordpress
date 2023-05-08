@@ -9,12 +9,12 @@
 
 <?php get_header(); ?>
 
-<main role="main" id="main-content" class="cd-container cd-layout-with-sidebar-both">
-    <div class="cd-layout-content-wrapper">
+<main role="main" id="main-content" class="cd-container cd-content--compact">
+    <div class="cd-layout">
 	    <?php if ( is_active_sidebar( 'sidebar-first' ) ) : ?>
             <?php get_sidebar( 'first' ); ?>
 	    <?php endif; ?>
-        <div class="cd-layout-content [ cd-flow ]">
+        <div class="cd-layout__content [ cd-flow ]">
 			<?php if ( have_posts() ) : ?>
 				<?php if ( is_home() && is_front_page() ) : ?>
 					<?php get_template_part( 'resources/templates/content/content' ); ?>

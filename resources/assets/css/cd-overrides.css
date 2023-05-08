@@ -5,6 +5,20 @@
  * work with WordPress and Gutenberg blocks.
  */
 
+/**
+ * WP Sticky footer fix
+ *
+ * WP doesn't have the "off-canvas" element that Drupal uses for a bunch of its
+ * admin UI, so we set the 100vh on <body> instead of the class that normally is
+ * present to receive this setting.
+ */
+body {
+  min-height: 100vh;
+}
+
+/**
+ * Content classes
+ */
 .alignleft {
   float: left;
 }
@@ -36,7 +50,9 @@ a {
   list-style-type: none;
 }
 
-/* Search component in header */
+/**
+ * Search component in header
+ */
 .cd-search__btn {
   position: relative;
   text-decoration: none;
@@ -70,7 +86,9 @@ a {
   background: var(--cd-highlight-red);
 }
 
-/* CD form elements */
+/**
+ * CD form elements
+ */
 .cd-form .cd-form--inline {
   margin-bottom: 2rem;
 }
