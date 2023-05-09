@@ -17,6 +17,17 @@ body {
 }
 
 /**
+ * WP theme Customizer band-aids
+ *
+ * We should probably be setting this anyway in our main theme, but for the time
+ * being we are adding the background-color to ensure it displays properly while
+ * customizing the theme.
+ */
+.cd-page-layout-container {
+  background: var(--cd-white);
+}
+
+/**
  * Content classes
  */
 .alignleft {
