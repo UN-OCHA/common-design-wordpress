@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Layout Sidebar Both
- * Layout with a sidebar before and after the content area.
+ * Template Name: Layout Sidebar Second Wide
+ * Layout with a sidebar after the content area.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
@@ -11,13 +11,6 @@
 
 <main role="main" id="main-content" class="cd-container">
   <div class="cd-layout">
-    <?php if ( is_active_sidebar( 'sidebar-first' ) ) : ?>
-      <aside class="cd-layout__sidebar cd-layout__sidebar--first cd-content--compact" role="complementary">
-        <ul class="cd-gutenberg-blocks">
-          <?php get_sidebar( 'first' ); ?>
-        </ul>
-      </aside>
-    <?php endif; ?>
     <div class="cd-layout__content [ cd-flow ]">
       <?php if ( have_posts() ) : ?>
         <?php if ( is_home() && is_front_page() ) : ?>
@@ -31,7 +24,7 @@
       <?php endif; ?>
     </div>
     <?php if ( is_active_sidebar( 'sidebar-second' ) ) : ?>
-      <aside class="cd-layout__sidebar cd-layout__sidebar--second cd-content--compact" role="complementary">
+      <aside class="cd-layout__sidebar cd-layout__sidebar--second cd-layout__sidebar--wide" role="complementary">
         <ul class="cd-gutenberg-blocks">
           <?php get_sidebar( 'second' ); ?>
         </ul>

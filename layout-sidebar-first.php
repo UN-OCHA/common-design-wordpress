@@ -12,7 +12,11 @@
 <main role="main" id="main-content" class="cd-container cd-content--compact">
   <div class="cd-layout">
     <?php if ( is_active_sidebar( 'sidebar-first' ) ) : ?>
-      <?php get_sidebar( 'first' ); ?>
+      <aside class="cd-layout__sidebar cd-layout__sidebar--first cd-content--compact" role="complementary">
+        <ul class="cd-gutenberg-blocks">
+          <?php get_sidebar( 'first' ); ?>
+        </ul>
+      </aside>
     <?php endif; ?>
     <div class="cd-layout__content [ cd-flow ]">
       <?php if ( have_posts() ) : ?>

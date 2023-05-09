@@ -24,8 +24,12 @@
       <?php endif; ?>
     </div>
     <?php if ( is_active_sidebar( 'sidebar-second' ) ) : ?>
-      <?php get_sidebar( 'second' ); ?>
-    <?php endif ?>
+      <aside class="cd-layout__sidebar cd-layout__sidebar--second cd-content--compact" role="complementary">
+        <ul class="cd-gutenberg-blocks">
+          <?php get_sidebar( 'second' ); ?>
+        </ul>
+      </aside>
+    <?php endif; ?>
   </div>
 </main>
 
