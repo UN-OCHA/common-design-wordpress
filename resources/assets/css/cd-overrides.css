@@ -501,6 +501,21 @@ the list style type because browser defaults interpret lists as nested. */
 }
 
 /**
+ * CD Sidebar: Normal
+ */
+.cd-layout__sidebar h2 {
+  margin: 1rem 0;
+  letter-spacing: 0.5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.cd-layout__sidebar .cd-gutenberg-blocks .widget:first-child h2 {
+  margin-top: 0;
+}
+
+/**
  * CD Sidebar: Compact
  */
 .cd-content--compact h2 {
