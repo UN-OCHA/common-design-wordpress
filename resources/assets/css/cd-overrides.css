@@ -28,6 +28,21 @@ body {
 }
 
 /**
+ * CD Content Layout modifications
+ *
+ * Our Support Demo sidebar contains a Twitter feed by defaut and it pushes the
+ * sidebar to a large width unless extra care is taken to override the feed.
+ */
+.cd-layout__sidebar {
+  max-width: 285px;
+}
+
+.cd-layout__sidebar--wide {
+  max-width: 400px;
+}
+
+
+/**
  * Content classes
  */
 .alignleft {
@@ -468,12 +483,12 @@ li.widget_block,
 /**
  * CD Sidebar resets
  */
-ul.cd-gutenberg-blocks {
+.cd-layout__sidebar ul.cd-gutenberg-blocks {
   margin: 0;
   padding: 0;
 }
 
-.cd-gutenberg-blocks > li {
+.cd-layout__sidebar ul.cd-gutenberg-blocks > li {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -481,7 +496,7 @@ ul.cd-gutenberg-blocks {
 
 /* Since Gutenberg outputs <li> around each block (really??) we have to reset
 the list style type because browser defaults interpret lists as nested. */
-.cd-gutenberg-blocks ul > li {
+.cd-layout__sidebar ul.cd-gutenberg-blocks ul > li {
   list-style-type: disc;
 }
 

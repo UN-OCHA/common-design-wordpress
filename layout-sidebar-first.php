@@ -13,7 +13,7 @@
   <div class="cd-layout">
     <?php if ( is_active_sidebar( 'sidebar-first' ) ) : ?>
       <aside class="cd-layout__sidebar cd-layout__sidebar--first cd-content--compact" role="complementary">
-        <ul class="cd-gutenberg-blocks">
+        <ul class="cd-gutenberg-blocks cd-flow">
           <?php get_sidebar( 'first' ); ?>
         </ul>
       </aside>
