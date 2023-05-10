@@ -29,6 +29,7 @@ function common_design_allowed_block_types( $allowed_blocks, $post ) {
     'core/paragraph',
     'core/heading',
     'core/list',
+    'core/list-item',
     'core/page-list',
     'core/latest-posts',
     'core/table',
