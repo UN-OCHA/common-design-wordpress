@@ -21,38 +21,6 @@
   padding: 0 2rem;
 }
 
-/* Headings from cd.css */
-h1 {
-  color: var(--cd-default-text-color);
-  font-size: var(--cd-font-size--2xmedium);
-  font-weight: 700;
-}
-
-@media (min-width: 1024px) {
-  h1 { font-size: var(--cd-font-size--2xlarge); }
-}
-ol,
-dl { margin-bottom: 1rem; }
-
-@media (min-width: 768px) {
-  ol,
-  dl { margin-bottom: 1.5rem; }
-}
-h2 { font-size: var(--cd-font-size--2xbase); }
-
-@media (min-width: 1024px) { h2 { font-size: var(--cd-font-size--2xmedium); } }
-h3 { font-size: var(--cd-font-size--large); }
-
-@media (min-width: 1024px) { h3 { font-size: var(--cd-font-size--2xbase); } }
-h4 { font-size: var(--cd-font-size--medium); }
-
-@media (min-width: 1024px) { h4 { font-size: var(--cd-font-size--large); } }
-h5 { font-size: var(--cd-font-size--base); }
-
-@media (min-width: 1024px) { h5 { font-size: var(--cd-font-size--medium); } }
-h6 { font-size: 1rem; }
-
-@media (min-width: 1024px) { h6 { font-size: var(--cd-font-size--base); } }
 a { color: var(--cd-blue--dark); }
 a:hover,
 a:focus {
