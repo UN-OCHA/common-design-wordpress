@@ -409,7 +409,10 @@ li.widget_block,
 
 /* Pull quote Gutenberg block */
 .wp-block-pullquote.is-style-solid-color {
-  background: var(--cd-blue-grey);
+  background: var(--brand-grey);
+}
+.wp-block-pullquote.is-style-solid-color blockquote p {
+  font-size: 2rem;
 }
 
 /**
