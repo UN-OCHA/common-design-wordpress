@@ -17,8 +17,8 @@
  * Global editor styles
  */
 .block-editor-block-list__layout {
-  padding: 0 2rem;
   max-width: var(--cd-max-content-width);
+  padding: 0 2rem;
 }
 
 /* Headings from cd.css */
