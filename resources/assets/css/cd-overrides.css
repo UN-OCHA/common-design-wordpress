@@ -499,6 +499,12 @@ the list style type because browser defaults interpret lists as nested. */
   list-style-type: disc;
 }
 
+/* Override an override for p:first-child/p:last-child found elsewhere in this
+overrides file. Look in "Content classes" section. */
+.cd-layout__sidebar ul.cd-gutenberg-blocks p {
+  margin: 1em 0;
+}
+
 /**
  * CD Sidebar: Normal
  */
@@ -506,12 +512,13 @@ the list style type because browser defaults interpret lists as nested. */
   margin: 1rem 0;
   letter-spacing: 0.5px;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.3;
 }
 
 .cd-layout__sidebar .cd-gutenberg-blocks .widget:first-child h2 {
   margin-top: 0;
+  font-weight: 700;
 }
 
 /**
