@@ -1,7 +1,25 @@
-/* Common Design component styles for the Editor form */
-/* Style and selector adjustments so CD component styles work
- with Wordpress and Gutenberg blocks */
-@import "brand.css";
+/**
+ * Common Design branding for Gutenberg editor
+ */
+
+/**
+ * CD Imports
+ *
+ * Since the assets are no longer compiled to a single CSS file, we import a few
+ * vital CSS files for the editor.
+ */
+@import "/wp-content/themes/common-design-wordpress/resources/assets/css/brand.css";
+@import "/wp-content/themes/common-design-wordpress/resources/assets/css/cd/cd-resets/cd-resets.css";
+@import "/wp-content/themes/common-design-wordpress/resources/assets/css/cd/cd-resets/cd-typography.css";
+@import "/wp-content/themes/common-design-wordpress/resources/assets/css/cd-typography/cd-typography.css";
+
+/**
+ * Global editor styles
+ */
+.block-editor-block-list__layout {
+  padding: 0 2rem;
+  max-width: var(--cd-max-content-width);
+}
 
 /* Headings from cd.css */
 h1 {
