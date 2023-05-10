@@ -92,18 +92,18 @@ if ( ! function_exists( 'common_design_register_styles' ) ) {
     /**
      * CD Design System components
      */
-    wp_enqueue_style ('cd-button', get_template_directory_uri().'/resources/assets/css/cd-button/cd-button.css', array(), null, 'all' );
-    wp_enqueue_style ('cd-flow', get_template_directory_uri().'/resources/assets/css/cd-flow/cd-flow.css', array(), null, 'all' );
-    wp_enqueue_style ('cd-utilities', get_template_directory_uri().'/resources/assets/css/cd-utilities/cd-utilities.css', array(), null, 'all' );
-    wp_enqueue_style ('cd-article', get_template_directory_uri().'/resources/assets/css/cd-article/cd-article.css', array(), null, 'all' );
-    wp_enqueue_style ('cd-banner', get_template_directory_uri().'/resources/assets/css/cd-banner/cd-banner.css', array(), null, 'all' );
-    wp_enqueue_style ('cd-caption', get_template_directory_uri().'/resources/assets/css/cd-caption/cd-caption.css', array(), null, 'all' );
-    wp_enqueue_style ('cd-form', get_template_directory_uri().'/resources/assets/css/cd-form/cd-form.css', array(), null, 'all' );
-    wp_enqueue_style ('cd-hero', get_template_directory_uri().'/resources/assets/css/cd-hero/cd-hero.css', array(), null, 'all' );
-    wp_enqueue_style ('cd-hero--style-one', get_template_directory_uri().'/resources/assets/css/cd-hero/cd-hero--style-one.css', array(), null, 'all' );
-    wp_enqueue_style ('cd-page-title', get_template_directory_uri().'/resources/assets/css/cd-page-title/cd-page-title.css', array(), null, 'all' );
-    wp_enqueue_style ('cd-teaser', get_template_directory_uri().'/resources/assets/css/cd-teaser/cd-teaser.css', array(), null, 'all' );
-    wp_enqueue_style ('cd-typography', get_template_directory_uri().'/resources/assets/css/cd-typography/cd-typography.css', array(), null, 'all' );
+    wp_enqueue_style ('component-cd-button', get_template_directory_uri().'/resources/assets/css/cd-button/cd-button.css', array(), null, 'all' );
+    wp_enqueue_style ('component-cd-flow', get_template_directory_uri().'/resources/assets/css/cd-flow/cd-flow.css', array(), null, 'all' );
+    wp_enqueue_style ('component-cd-utilities', get_template_directory_uri().'/resources/assets/css/cd-utilities/cd-utilities.css', array(), null, 'all' );
+    wp_enqueue_style ('component-cd-article', get_template_directory_uri().'/resources/assets/css/cd-article/cd-article.css', array(), null, 'all' );
+    wp_enqueue_style ('component-cd-banner', get_template_directory_uri().'/resources/assets/css/cd-banner/cd-banner.css', array(), null, 'all' );
+    wp_enqueue_style ('component-cd-caption', get_template_directory_uri().'/resources/assets/css/cd-caption/cd-caption.css', array(), null, 'all' );
+    wp_enqueue_style ('component-cd-form', get_template_directory_uri().'/resources/assets/css/cd-form/cd-form.css', array(), null, 'all' );
+    wp_enqueue_style ('component-cd-hero', get_template_directory_uri().'/resources/assets/css/cd-hero/cd-hero.css', array(), null, 'all' );
+    wp_enqueue_style ('component-cd-hero--style-one', get_template_directory_uri().'/resources/assets/css/cd-hero/cd-hero--style-one.css', array(), null, 'all' );
+    wp_enqueue_style ('component-cd-page-title', get_template_directory_uri().'/resources/assets/css/cd-page-title/cd-page-title.css', array(), null, 'all' );
+    wp_enqueue_style ('component-cd-teaser', get_template_directory_uri().'/resources/assets/css/cd-teaser/cd-teaser.css', array(), null, 'all' );
+    wp_enqueue_style ('component-cd-typography', get_template_directory_uri().'/resources/assets/css/cd-typography/cd-typography.css', array(), null, 'all' );
     wp_enqueue_style ('cd-overrides', get_template_directory_uri().'/resources/assets/css/cd-overrides.css', array(), null, 'all' );
     wp_enqueue_style ('implementation-overrides', get_template_directory_uri().'/resources/assets/css/styles.css', array(), null, 'all' );
 
