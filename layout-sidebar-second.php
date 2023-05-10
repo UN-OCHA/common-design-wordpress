@@ -9,7 +9,7 @@
 
 <?php get_header(); ?>
 
-<main role="main" id="main-content" class="cd-container cd-content--compact">
+<main role="main" id="main-content" class="cd-container">
   <div class="cd-layout">
     <div class="cd-layout__content [ cd-flow ]">
       <?php if ( have_posts() ) : ?>

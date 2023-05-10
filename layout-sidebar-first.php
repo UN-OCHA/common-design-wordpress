@@ -9,7 +9,7 @@
 
 <?php get_header(); ?>
 
-<main role="main" id="main-content" class="cd-container cd-content--compact">
+<main role="main" id="main-content" class="cd-container">
   <div class="cd-layout">
     <?php if ( is_active_sidebar( 'sidebar-first' ) ) : ?>
       <aside class="cd-layout__sidebar cd-layout__sidebar--first cd-content--compact" role="complementary">
