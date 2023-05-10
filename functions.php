@@ -8,6 +8,7 @@
  * across separate files in the `/src` directory.
  */
 
+require_once 'src/head.php';
 require_once 'src/gutenberg.php';
 require_once 'src/navs.php';
 require_once 'src/scripts.php';
