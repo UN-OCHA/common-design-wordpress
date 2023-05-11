@@ -1,4 +1,10 @@
-/* Implementation overrides - custom styles go here. */
+/**
+ * Site-specific styles
+ *
+ * Put all your site-specific styles in this file. It will only receive updates
+ * in very rare cases, and then only to the `:root` selector to change default
+ * branding colors.
+ */
 
 :root {
   /**
@@ -7,7 +13,7 @@
    * Set these variables and the CD Header/Footer will re-color to your brand.
    */
   --brand-primary: var(--cd-ocha-blue);
-  --brand-primary--light: var(--cd-blue--brighter);
+  --brand-primary--light: var(--cd-blue--bright);
   --brand-primary--dark: var(--cd-blue--dark);
   --brand-highlight: var(--cd-highlight-red);
   --brand-grey: var(--cd-blue-grey);
@@ -16,9 +22,12 @@
 
 /**
  * Mobile logo
+ *
+ * To customize the mobile logo, uncomment the line below and reference your own
+ * logo file, which should be placed inside the `img/logos` directory.
  */
 @media (max-width: 767px) {
   .cd-site-logo {
-    background: url(../images/logos/ocha-logo-blue.svg) center no-repeat;
+    /* background: url(../img/logos/ocha-logo-blue.svg) center no-repeat; */
   }
 }

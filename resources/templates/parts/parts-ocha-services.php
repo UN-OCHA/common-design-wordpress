@@ -28,7 +28,7 @@
           <li class="cd-ocha-dropdown__link"><a href="https://fts.unocha.org/">Financial Tracking Service</a></li>
           <li class="cd-ocha-dropdown__link"><a href="https://data.humdata.org/">Humanitarian Data Exchange</a></li>
           <li class="cd-ocha-dropdown__link"><a href="https://humanitarian.id/">Humanitarian ID</a></li>
-          <li class="cd-ocha-dropdown__link"><a href="https://humanitarianresponse.info/">Humanitarian Response</a></li>
+          <li class="cd-ocha-dropdown__link"><a href="https://response.reliefweb.int/">ReliefWeb Response</a></li>
         </ul>
       </div>
       <div class="cd-ocha-dropdown__section">

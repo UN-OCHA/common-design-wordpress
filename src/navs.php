@@ -80,14 +80,15 @@ add_filter( 'nav_menu_submenu_css_class', 'cd_nav_menu_submenu_css_class' );
 /**
  * Add an ID attribute and value to nav menu links.
  */
-add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
-  $atts['id'] = 'cd-main-menu-item-' . $item->ID;
-  return $atts;
+add_filter( 'nav_menu_link_attributes', function ( $attrs, $item, $args ) {
+  $attrs['id'] = 'cd-main-menu-item-' . $item->ID;
+  return $attrs;
 }, 10, 3 );
 
 
 /**
- * Custom walker class.
+ * CD Main Nav custom walker class.
+ *
  * This outputs the Main Menu markup needed for the cd-dropdown.js to work when menu items that have children.
  * It adds ids, classes and custom data attributes to the menu, menu items and menu item links.
  */
@@ -99,33 +100,32 @@ class cd_MainNav_Walker extends Walker_Nav_Menu {
    * Adds classes to the unordered list sub-menus.
    *
    * @param string $output Passed by reference. Used to append additional content.
-   * @param int    $depth  Depth of menu item. Used for padding.
+   * @param int    $depth  Depth of menu item. Used for padding and classes.
    * @param array  $args   An array of arguments. @see wp_nav_menu()
    */
   function start_lvl( &$output, $depth = 0, $args = array() ) {
     // Depth-dependent classes.
     $indent = ( $depth > 0  ? str_repeat( "\t", $depth ) : '' ); // code indent
-    $display_depth = ( $depth + 1); // because it counts the first submenu as 0
-    $classes = array(
+    $display_depth = ( $depth + 1 ); // it counts the first submenu as 0
+    $classes = [
       'menu',
+      'cd-nav__menu--level-' . $display_depth,
       'cd-main-menu__dropdown',
-      ( $display_depth % 2  ? 'menu-odd' : 'menu-even' ),
-      ( $display_depth >=2 ? 'sub-sub-menu' : '' ),
-      'menu-depth-' . $display_depth
-    );
+    ];
     $class_names = implode( ' ', $classes );
 
     // Get the ID of the
-    // var_dump($this->curItem );
+    // var_dump( $this->curItem );
     $curItemID = $this->curItem->ID;
     $curItemTitle = $this->curItem->title;
 
-    $atts           = array();
-    $atts['data-cd-icon'] = 'arrow-down';
-    $atts['data-cd-component'] = 'cd-main-menu';
+    $attrs = array();
+    $attrs['data-cd-icon'] = 'arrow-down';
+    $attrs['data-cd-component'] = 'cd-main-menu';
+    $attrs['role'] = 'list';
 
     $attributes = '';
-    foreach ( $atts as $attr => $value ) {
+    foreach ( $attrs as $attr => $value ) {
       if ( is_scalar( $value ) && '' !== $value && false !== $value ) {
         $value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
         $attributes .= ' ' . $attr . '="' . $value . '"';
@@ -145,11 +145,13 @@ class cd_MainNav_Walker extends Walker_Nav_Menu {
     $this->curItem = $item;
 
     $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+    $display_depth = $depth + 1;
 
     $class_names = $value = '';
 
     $classes = empty( $item->classes ) ? array() : (array) $item->classes;
     $classes[] = 'menu-item-' . $item->ID;
+    $classes[] = 'cd-nav__menu-item--level-' . $display_depth;
 
     $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
     $class_names = ' class="' . esc_attr( $class_names ) . '"';

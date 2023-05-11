@@ -1,5 +1,5 @@
 /**
- * CD Form component
+ * CD Form
  *
  * Some classes are sourced from Drupal 9 core. If you're not using Drupal, try
  * either adding the classes to the markup using the CD Demo as your reference,
@@ -79,8 +79,6 @@ select.error {
 input:focus,
 select:focus,
 textarea:focus {
-  position: relative;
-  z-index: 10;
   outline: 3px solid var(--brand-primary);
   outline-offset: -2px;
 }

@@ -2,6 +2,51 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/UN-OCHA/common-design-wordpress/compare/v2.0.0...v3.0.0) (2023-05-11)
+
+### ⚠ BREAKING CHANGES
+
+* Upgraded to CD v8
+* The npm commands have been renamed from `stylelint` and `stylelint-fix` to `css:lint` and `css:lint-fix` respectively.
+
+### Bug Fixes
+
+* **a11y:** Lighthouse is offended by maximum-scale less than 5 ([c4771e5](https://github.com/UN-OCHA/common-design-wordpress/commit/c4771e50af07cb3731f899923ecd7bdd21147325))
+* **a11y:** restore <html> lang attribute ([d90c96d](https://github.com/UN-OCHA/common-design-wordpress/commit/d90c96dae843234500a6fbcbae2057db1222ae83))
+* **admin:** Gutenberg Editor now loads basic CD styles ([e9839ec](https://github.com/UN-OCHA/common-design-wordpress/commit/e9839eca528e2f5f80e657de8c8687fcee3bb935))
+* **admin:** allow more than one item per list in Gutenberg ([0ab5235](https://github.com/UN-OCHA/common-design-wordpress/commit/0ab5235767929252fdcfebc7f39301e826d2cc76)), closes [/wordpress.org/support/topic/unable-to-make-more-than-one-list-item-per-list/#post-16180353](https://github.com/UN-OCHA//wordpress.org/support/topic/unable-to-make-more-than-one-list-item-per-list//issues/post-16180353)
+* **type:** adjust pullquote size/color ([fafdd62](https://github.com/UN-OCHA/common-design-wordpress/commit/fafdd62970f86d470f1f53a9f362433c66ab11b9))
+* **theme:** another try at sticky footer in WP ([ba1da76](https://github.com/UN-OCHA/common-design-wordpress/commit/ba1da76a5b75d4ccca15292acc9f0b913c742c05))
+* **theme:** apply bg-color to second sidebar ([6ee0434](https://github.com/UN-OCHA/common-design-wordpress/commit/6ee0434f6d9c757c145e9dbf7b4e22ace9760349))
+* **theme:** avoid name clashes in WP style queue ([b8bb34e](https://github.com/UN-OCHA/common-design-wordpress/commit/b8bb34ef773ed273596aa33b5a450c75da421c2c))
+* **theme:** CD footer menu ([0a1764d](https://github.com/UN-OCHA/common-design-wordpress/commit/0a1764dfa5e76f617344eeb1e8751e94a87c5a38))
+* **theme:** CD Mandate cleanup ([693a2f5](https://github.com/UN-OCHA/common-design-wordpress/commit/693a2f57c4c10694918b6f10842ff1440cbae7e7))
+* **theme:** CD Nav on desktop ([8644de4](https://github.com/UN-OCHA/common-design-wordpress/commit/8644de44a9bed02691dfd5efd889dc965aa5af49))
+* **theme:** CD Nav on mobile ([5f92ec4](https://github.com/UN-OCHA/common-design-wordpress/commit/5f92ec4f0724a3f0496de88b689a4530b6875018))
+* **theme:** Enqueue CD Core using WP instead of CSS imports ([62476c6](https://github.com/UN-OCHA/common-design-wordpress/commit/62476c607ed02729228956e456b6eb0deb165095))
+* **theme:** HR.info -> RWR ([7461b9e](https://github.com/UN-OCHA/common-design-wordpress/commit/7461b9ea9231cee9e4f21e334fb5c94f56005a41))
+* **theme:** match focus color on web.brand ([a2bf201](https://github.com/UN-OCHA/common-design-wordpress/commit/a2bf201ae034021b08c1f3dcfadeefebe4ae661f))
+* **theme:** prevent search overflow on iPhone ([9426cdf](https://github.com/UN-OCHA/common-design-wordpress/commit/9426cdf9ff5957ef7a8485697fe0ab0664c468e7))
+* **theme:** proper bgcolor while customizing theme ([2e71f35](https://github.com/UN-OCHA/common-design-wordpress/commit/2e71f35a890f30dd19fa5519507f79361a8e78e5))
+* **theme:** provide default social URLs ([5a70e92](https://github.com/UN-OCHA/common-design-wordpress/commit/5a70e92d2d6d8ef98f8ac248076b3598da4352a1))
+* **theme:** reconfigure sidebars to be compact by default ([cb8f6ae](https://github.com/UN-OCHA/common-design-wordpress/commit/cb8f6ae89b20af181b3bc9aa72a9eeb39439bc39))
+* **theme:** remember to load Google Fonts ([d5fd794](https://github.com/UN-OCHA/common-design-wordpress/commit/d5fd794929c1a5b54fb4064b69af073715780ece))
+* **theme:** remove duplicate <title> tag ([670d4b3](https://github.com/UN-OCHA/common-design-wordpress/commit/670d4b33b21490bfa47f7ebab10871e4a2d24836))
+* **theme:** remove old bullet style ([6f13694](https://github.com/UN-OCHA/common-design-wordpress/commit/6f13694719938bc5dd2693c4252922d1913789b6))
+* **theme:** remove straggler classes for compact sidebars ([f830fd5](https://github.com/UN-OCHA/common-design-wordpress/commit/f830fd51229f85114324c5607f6f05b4dcd6f64b))
+* **theme:** restore boilerplate for mobile logo ([914bdda](https://github.com/UN-OCHA/common-design-wordpress/commit/914bdda2aa6f38668802d61f5b46b0e5d00aecc0))
+* **theme:** restrict container padding to root container ([554553d](https://github.com/UN-OCHA/common-design-wordpress/commit/554553dbe45d5b4c7df764259145ea4b34262ab3))
+* **theme:** tweaks to accomodate existing Support Demo sidebar content ([85d902d](https://github.com/UN-OCHA/common-design-wordpress/commit/85d902df7db01ac9745c90bea5c85eb846dd97f1))
+* **theme:** typographic defaults for normal sidebar headings ([384e4b1](https://github.com/UN-OCHA/common-design-wordpress/commit/384e4b191ff5918aa577b9f829acaa22ae99a529))
+* **theme:** update markup for CD Header search ([f471a35](https://github.com/UN-OCHA/common-design-wordpress/commit/f471a35112706515c8df79eb51cccb621001aef2))
+* **theme:** upgrade social links in footer ([a7540b0](https://github.com/UN-OCHA/common-design-wordpress/commit/a7540b0b64e9c78e9334609c0cebd81d7d7e1830))
+* **theme:** use more specific grid selector, and use --brand colors ([31c9490](https://github.com/UN-OCHA/common-design-wordpress/commit/31c949030be20ddd4bdfd48823da6b6fa977be0d))
+* **theme:** WP overrides for sidebars ([5420933](https://github.com/UN-OCHA/common-design-wordpress/commit/54209330b564fbe1b7936a7301f9aba00f28d3f2))
+* **theme:** WP sidebars look identical to Drupal now ([43c12b7](https://github.com/UN-OCHA/common-design-wordpress/commit/43c12b75a1b69494431fa24707b8cffa53623c3f))
+* **theme:** bump CD to v8.0.1 ([acf40d2](https://github.com/UN-OCHA/common-design-wordpress/commit/acf40d2b4cab21eeed8beba2ad39a04290477b3f))
+* **theme:** rename linting commands ([6a4062e](https://github.com/UN-OCHA/common-design-wordpress/commit/6a4062e5506e3ee084abbb0d4bc04f19a980a6d2))
+
+
 ## [2.0.0](https://github.com/UN-OCHA/common-design-wordpress/compare/v1.1.1...v2.0.0) (2022-08-01)
 
 

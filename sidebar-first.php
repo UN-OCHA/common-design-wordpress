@@ -6,7 +6,4 @@
  */
 ?>
 
-
-<aside class="cd-layout-sidebar-first" role="complementary">
-	<?php dynamic_sidebar('Sidebar First'); ?>
-</aside>
+<?php dynamic_sidebar( 'Sidebar First' ); ?>

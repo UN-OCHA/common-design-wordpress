@@ -6,6 +6,4 @@
  */
 ?>
 
-<aside class="cd-layout-sidebar-second" role="complementary">
-	<?php dynamic_sidebar('Sidebar Second'); ?>
-</aside>
+<?php dynamic_sidebar( 'Sidebar Second' ); ?>

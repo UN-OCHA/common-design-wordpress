@@ -1,109 +1,26 @@
-/* Common Design component styles for the Editor form */
-/* Style and selector adjustments so CD component styles work
- with Wordpress and Gutenberg blocks */
+/**
+ * Common Design branding for Gutenberg editor
+ */
 
-:root {
-  /* Color palette */
-  /* OCHA blue is one colour ramp darker than brand blue */
-  --cd-ocha-blue: #1f69b3;
-  /* Dark blue is two colour ramps darker than brand blue */
-  --cd-blue--dark: #144372;
-  /* Bright blue is one colour ramp lighter than brand blue */
-  --cd-blue--bright: #82b5e9;
-  --cd-blue--light: #d4e5f7;
-  --cd-highlight-red: #e56a54;
-  --cd-contrast-red: #e00000;
-  --cd-white: #fff;
-  --cd-grey--light: #f2f2f2;
-  --cd-grey--mid: #595959;
-  --cd-grey--dark: #4a4a4a;
-  --cd-default-text-color: var(--cd-grey--dark);
-  --cd-black: #000;
-  --cd-blue-grey: #e6ecf1;
-  --cd-blue-grey--dark: #d3dde5;
-  --cd-blue-grey--light: #ebf0f4;
-  --cd-rgb-ocha-blue: 2, 108, 182;
-  --cd-rgb-grey--mid: 89, 89, 89;
-  --cd-rgb-grey--dark: 74, 74, 74;
-  --cd-rgb-highlight-red: 229, 106, 84;
-  --cd-rgb-blue-grey--dark: 211, 221, 229;
+/**
+ * CD Imports
+ *
+ * Since the assets are no longer compiled to a single CSS file, we import a few
+ * vital CSS files for the editor.
+ */
+@import "/wp-content/themes/common-design-wordpress/resources/assets/css/brand.css";
+@import "/wp-content/themes/common-design-wordpress/resources/assets/css/cd/cd-resets/cd-resets.css";
+@import "/wp-content/themes/common-design-wordpress/resources/assets/css/cd/cd-resets/cd-typography.css";
+@import "/wp-content/themes/common-design-wordpress/resources/assets/css/cd-typography/cd-typography.css";
 
-  /* Measurements */
-  --cd-max-content-width: 820px;
-
-  /* Vertical Rhythm */
-  --cd-flow-space: 1rem;
-  --cd-bumper-space: 1rem;
-  --cd-red: #cd3a1f;
-  --cd-red--light: #f8d8d3;
-  --cd-orange: #db7b18;
-  --cd-orange--light: #fae6d1;
-  --cd-yellow: #d5de26;
-  --cd-yellow--light: #f7f8d3;
-  --cd-green: #7fb92f;
-  --cd-green--light: #e8f5d6;
-
-  /* Fonts sizes in REMs */
-  --cd-font-size--tiny: 0.75rem;      /* 12px */
-  --cd-font-size--small: 0.875rem;    /* 14px */
-  --cd-font-size--base: 1.125rem;     /* 18px */
-  --cd-font-size--medium: 1.375rem;   /* 22px */
-  --cd-font-size--large: 1.625rem;    /* 26px */
-  --cd-font-size--2xbase: 1.875rem;   /* 30px */
-  --cd-font-size--2xmedium: 2.375rem; /* 38px */
-  --cd-font-size--2xlarge: 2.875rem;  /* 46px */
-
-  /* Fonts */
-  --cd-font: helvetica, arial, sans-serif;
-  --cd-font--system: system-ui;
-  --cd-font--roboto: "Roboto", helvetica, arial, sans-serif;
-
-  /* CD buttons */
-  --cd-primary-color-h: 210;
-  --cd-primary-color-s: 70%;
-  --cd-primary-color-l: 41%;
-  --cd-primary-color: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), var(--cd-primary-color-l));
-  /* lighten */
-  --cd-primary-color--light: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) + 30%));
-  /* darken */
-  --cd-primary-color--dark: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) - 26%));
-  /* For cd-button--light */
-  /* Change the lightness. Other values remain the same */
-  --cd-primary-color--lighter: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) + 39%));
+/**
+ * Global editor styles
+ */
+.is-root-container.block-editor-block-list__layout {
+  max-width: var(--cd-max-content-width);
+  padding: 0 2rem;
 }
 
-/* Headings from cd.css */
-h1 {
-  color: var(--cd-default-text-color);
-  font-size: var(--cd-font-size--2xmedium);
-  font-weight: 700;
-}
-
-@media (min-width: 1024px) {
-  h1 { font-size: var(--cd-font-size--2xlarge); }
-}
-ol,
-dl { margin-bottom: 1rem; }
-
-@media (min-width: 768px) {
-  ol,
-  dl { margin-bottom: 1.5rem; }
-}
-h2 { font-size: var(--cd-font-size--2xbase); }
-
-@media (min-width: 1024px) { h2 { font-size: var(--cd-font-size--2xmedium); } }
-h3 { font-size: var(--cd-font-size--large); }
-
-@media (min-width: 1024px) { h3 { font-size: var(--cd-font-size--2xbase); } }
-h4 { font-size: var(--cd-font-size--medium); }
-
-@media (min-width: 1024px) { h4 { font-size: var(--cd-font-size--large); } }
-h5 { font-size: var(--cd-font-size--base); }
-
-@media (min-width: 1024px) { h5 { font-size: var(--cd-font-size--medium); } }
-h6 { font-size: 1rem; }
-
-@media (min-width: 1024px) { h6 { font-size: var(--cd-font-size--base); } }
 a { color: var(--cd-blue--dark); }
 a:hover,
 a:focus {
@@ -131,8 +48,8 @@ p:last-child {
 }
 
 /* Reset lists in the main content area and aside element. */
-.cd-layout-content-wrapper ul,
-.cd-layout-content-wrapper li {
+.cd-layout__content ul,
+.cd-layout__content li {
   margin: 0 0 1rem;
   padding: 0;
   list-style: none;
