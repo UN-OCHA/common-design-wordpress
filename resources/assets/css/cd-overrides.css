@@ -69,6 +69,11 @@ a {
   word-break: break-word;
 }
 
+/* lists should not exceed content width */
+ul, ol {
+  max-width: var(--cd-max-content-width);
+}
+
 /* Social Media menu */
 .wp_social_media_menu_icon {
   list-style-type: none;
