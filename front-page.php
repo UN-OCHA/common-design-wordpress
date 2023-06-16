@@ -29,7 +29,7 @@
   <?php endif; ?>
 <?php endif; ?>
 
-<main role="main" id="main-content" class="cd-container">
+<main id="main-content" class="cd-container" aria-label="Page content">
   <?php if ( !is_page_template('layout-landing-page.php')) : ?>
     <h1 class="cd-page-title visually-hidden">
       <?php echo get_bloginfo('name'); ?>

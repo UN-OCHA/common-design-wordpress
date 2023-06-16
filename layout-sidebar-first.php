@@ -9,10 +9,10 @@
 
 <?php get_header(); ?>
 
-<main role="main" id="main-content" class="cd-container">
+<main id="main-content" class="cd-container" aria-label="Page content">
   <div class="cd-layout">
     <?php if ( is_active_sidebar( 'sidebar-first' ) ) : ?>
-      <aside class="cd-layout__sidebar cd-layout__sidebar--first cd-content--compact" role="complementary">
+      <aside class="cd-layout__sidebar cd-layout__sidebar--first cd-content--compact" aria-label="Sidebar">
         <ul class="cd-gutenberg-blocks cd-flow">
           <?php get_sidebar( 'first' ); ?>
         </ul>

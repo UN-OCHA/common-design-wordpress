@@ -6,15 +6,14 @@
  */
 ?>
 
-<header class="cd-header">
+<header class="cd-header" aria-label="Site header">
   <div class="cd-global-header">
     <div class="cd-container cd-global-header__inner">
       <div class="region region-header-top cd-global-header__actions" id="cd-global-header__actions">
-        <!-- language changer can go here -->
+        <!-- language switcher goes here -->
       </div>
 
       <?php get_template_part( 'resources/templates/parts/parts', 'ocha-services' ); ?>
-
     </div>
   </div>
 
@@ -22,7 +21,7 @@
     <div class="cd-container cd-site-header__inner">
 
       <div class="region region-header-logo">
-        <?php the_Custom_logo(); ?>
+        <?php the_custom_logo(); ?>
       </div>
 
       <div class="cd-site-header__actions">

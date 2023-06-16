@@ -7,8 +7,7 @@
  */
 ?>
 
-<nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer">
-  <h2 id="block-footer-menu" class="visually-hidden">Footer</h2>
+<nav aria-label="Footer" id="block-footer">
   <?php
     wp_nav_menu([
       'theme_location' => 'bottom',

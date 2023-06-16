@@ -8,7 +8,7 @@
 
 <?php get_header(); ?>
 
-<main role="main" id="main-content" class="cd-container">
+<main id="main-content" class="cd-container" aria-label="Page content">
   <?php if ( have_posts() ) : ?>
     <?php if ( is_category() or is_tag() ) : ?>
       <h1 class="cd-page-title">

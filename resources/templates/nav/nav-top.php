@@ -7,15 +7,14 @@
  */
 ?>
 
-<nav role="navigation"
+<nav
   id="block-mainnavigation"
-  aria-labelledby="block-mainnavigation-menu"
+  aria-label="Main"
   data-cd-toggable="Menu"
   data-cd-component="cd-nav-level-0"
   data-cd-icon="arrow-down"
   class="block block-menu navigation menu--main cd-nav cd-site-header__nav"
 >
-  <h2 id="block-mainnavigation-menu" class="visually-hidden">Main navigation</h2>
   <?php
     wp_nav_menu( array(
       'container' => 'ul',
