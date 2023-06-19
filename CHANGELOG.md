@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.1](https://github.com/UN-OCHA/common-design-wordpress/compare/v3.0.0...v3.0.1) (2023-06-19)
+
+### Bug Fixes
+
+* **admin:** further improvements to Gutenberg UX ([08871dd](https://github.com/UN-OCHA/common-design-wordpress/commit/08871dd4da9fca6847a95cd4dc9a25861cb04a83))
+* **admin:** improve Gutenberg WYSIWYG ([0ac042d](https://github.com/UN-OCHA/common-design-wordpress/commit/0ac042d7edd5aa76c5f8067ec1a8b1dcb3935c01))
+* allow mobile logo to be set via CSS Var ([bc7286d](https://github.com/UN-OCHA/common-design-wordpress/commit/bc7286defc55d09a64888d0e795feb113261c824))
+* remove trailing slash from Google Font markup ([85f4f82](https://github.com/UN-OCHA/common-design-wordpress/commit/85f4f82020f2680f25fb7edd164fbf2bf859ca39))
+* ul/ol should be capped to --cd-max-content-width ([98f26ef](https://github.com/UN-OCHA/common-design-wordpress/commit/98f26ef93bf8419bc22ef0d3cc66cf5290333882))
+
+
 ## [3.0.0](https://github.com/UN-OCHA/common-design-wordpress/compare/v2.0.0...v3.0.0) (2023-05-11)
 
 ### ⚠ BREAKING CHANGES
