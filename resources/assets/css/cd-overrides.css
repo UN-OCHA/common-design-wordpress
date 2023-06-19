@@ -70,7 +70,8 @@ a {
 }
 
 /* lists should not exceed content width */
-ul, ol {
+ul,
+ol {
   max-width: var(--cd-max-content-width);
 }
 
