@@ -123,11 +123,11 @@
   /**
    * Site-specific brand defaults
    *
-   * You can override these defaults in the SUB-THEME. We provide default values
+   * You can override these defaults in styles.css. We provide default values
    * here so that the base theme can be used out of the box, for times when you
    * don't even set up a sub-theme.
    *
-   * @see common_design_subtheme/css/brand.css
+   * @see resources/assets/css/styles.css
    */
   --brand-primary: var(--cd-ocha-blue);
   --brand-primary--light: var(--cd-blue--bright);
@@ -138,8 +138,9 @@
   /**
    * Site logos
    *
-   * Specify the logo paths/dimentions here. The URL is relative to
-   * common_design/components/cd/cd-header/cd-logo.css
+   * Specify the logo paths/dimentions here. The URL is relative to:
+   *
+   * @see resources/assets/css/cd/cd-header/cd-logo.css
    */
   --brand-logo-mobile-url: url("../../../img/logos/ocha-logo-blue.svg");
   --brand-logo-mobile-width: 52px;

@@ -26,6 +26,7 @@ function common_design_theme_editor_styles() {
   add_editor_style( 'resources/assets/css/style-editor.css' );
 
   // Site-specific Gutenberg overrides go here.
+  add_editor_style( 'resources/assets/css/styles.css' );
   add_editor_style( 'resources/assets/css/style-editor--site.css' );
 }
 add_action( 'after_setup_theme', 'common_design_theme_editor_styles' );
