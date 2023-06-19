@@ -1,21 +1,12 @@
 /**
  * Common Design branding for Gutenberg editor
- */
-
-/**
- * CD Imports
  *
- * Since the assets are no longer compiled to a single CSS file, we import a few
- * vital CSS files for the editor.
+ * Please do NOT nodify this file! For site-specific customizations, there is a
+ * another file in this directory for you to edit:
+ *
+ * @see resources/assets/css/style-editor--site.css
  */
-@import "/wp-content/themes/common-design-wordpress/resources/assets/css/brand.css";
-@import "/wp-content/themes/common-design-wordpress/resources/assets/css/cd/cd-resets/cd-resets.css";
-@import "/wp-content/themes/common-design-wordpress/resources/assets/css/cd/cd-resets/cd-typography.css";
-@import "/wp-content/themes/common-design-wordpress/resources/assets/css/cd-typography/cd-typography.css";
 
-/**
- * Global editor styles
- */
 .is-root-container.block-editor-block-list__layout {
   max-width: var(--cd-max-content-width);
   padding: 0 2rem;
@@ -28,8 +19,7 @@ a:focus {
   color: var(--cd-ocha-blue);
 }
 
-body,
-.editor-styles-wrapper {
+body {
   color: var(--cd-grey--dark);
   font-family: var(--cd-font--roboto);
   font-size: 1rem;
@@ -37,8 +27,7 @@ body,
 }
 
 @media (min-width: 1024px) {
-  body,
-  .editor-styles-wrapper {
+  body {
     font-size: var(--cd-font-size--base);
   }
 }

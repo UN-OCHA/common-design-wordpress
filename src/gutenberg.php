@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Gutenberg configuration and editor styles.
+ */
+
 add_action('enqueue_block_editor_assets', function() {
   wp_enqueue_script('common-design-gutenberg-filters', get_template_directory_uri() . '/resources/assets/js/gutenberg-filters.js', ['wp-edit-post']);
 });
@@ -7,10 +12,21 @@ add_action('enqueue_block_editor_assets', function() {
 /**
  * Add Common Design styles to the Gutenburg blocks on the Edit page
  */
-function common_design_theme_editor_styles(){
-  add_theme_support( 'editor-styles' );
+function common_design_theme_editor_styles() {
+  // Google Fonts for CD
   add_editor_style( 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,700&amp;display=swap' );
+
+  // Add CD files to style editor.
+  add_editor_style( 'resources/assets/css/brand.css' );
+  add_editor_style( 'resources/assets/css/cd/cd-resets/cd-resets.css' );
+  add_editor_style( 'resources/assets/css/cd/cd-resets/cd-typography.css' );
+  add_editor_style( 'resources/assets/css/cd-typography/cd-typography.css' );
+
+  // Our standard CD overrides for Gutenberg blocks
   add_editor_style( 'resources/assets/css/style-editor.css' );
+
+  // Site-specific Gutenberg overrides go here.
+  add_editor_style( 'resources/assets/css/style-editor--site.css' );
 }
 add_action( 'after_setup_theme', 'common_design_theme_editor_styles' );
 
