@@ -8,7 +8,7 @@
 
 <?php get_header(); ?>
 
-<main role="main" id="main-content" class="cd-container">
+<main id="main-content" class="cd-container" aria-label="Page content">
   <h1 class="cd-page-title">
     <?php echo esc_html( 'Page not found' ); ?>
   </h1>

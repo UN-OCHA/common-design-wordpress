@@ -1,6 +1,6 @@
 /*
-This file is responsible only for providing theme information that are displayed
-in `Appearance > Themes`. Do not write in here any CSS declarations.
+This file provides theme information displayed in `Appearance > Themes`.
+Do NOT write any CSS in here.
 Theme Name: Common Design
 Theme URI: https://github.com/UN-OCHA/common-design-wordpress
 Description: Common Design WP starter theme.
@@ -11,5 +11,5 @@ License: GPLv2 License
 License URI: https://wordpress.org/about/gpl/
 */
 /*
-CD v8.1.0
+CD v8.2.0
 */

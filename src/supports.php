@@ -10,10 +10,7 @@
 
 if ( ! function_exists( 'common_design_add_theme_supports' ) ) {
   /**
-   * Adds a recommended theme supports.
-   *
-   * @todo Change function prefix to your textdomain.
-   * @todo Update prefix in the hook function and if statement.
+   * Declares what features of WP this theme supports.
    *
    * @return void
    */
@@ -45,6 +42,13 @@ if ( ! function_exists( 'common_design_add_theme_supports' ) ) {
     add_theme_support( 'post-thumbnails' );
 
     /**
+     * Enable support for Gutenberg editor styles
+     *
+     * @see src/gutenberg.php
+     */
+    add_theme_support( 'editor-styles' );
+
+    /**
      * Switch default core markup for search forms, comment forms, comment
      * lists, gallery, and captions to output valid HTML5 markup.
      *
@@ -67,10 +71,6 @@ add_action( 'after_setup_theme', 'common_design_add_theme_supports' );
 if ( ! function_exists( 'common_design_load_textdomain' ) ) {
   /**
    * Loads theme's textdomain language files.
-   *
-   * @todo Change function prefix to your textdomain.
-   * @todo Update prefix in the hook function and if statement.
-   * @todo Change first argument of `load_theme_textdomain` function to your textdomain.
    *
    * @return void
    */

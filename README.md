@@ -47,16 +47,20 @@ For the Hero, Banner and Thumbnail images, dimensions and crop options are set i
 
 ## Page Assembly
 
-We recommend installing the [Gutenberg plugin][gutenberg] to avail of the content blocks for creating interesting content pages. To reduce the complexity many Gutenberg blocks are not available. Look for `function common_design_allowed_block_types` in `src/gutenberg.php` for a list of currently allowed blocks, and adjust accordingly.
+We recommend using [Gutenberg][gutenberg] (built-in to WordPress 5.0+) to avail of the content blocks for creating interesting content pages. To reduce the complexity many Gutenberg blocks are not available. Look for `function common_design_allowed_block_types` in `src/gutenberg.php` for a list of currently allowed blocks, and adjust accordingly.
 
 To adhere to the Common Design, many Gutenberg block style settings are disabled, and CD styles are applied to the Gutenberg blocks. Refer to `cd-overrides.css`.
 
-  [gutenberg]: https://wordpress.org/plugins/gutenberg/
+  [gutenberg]: https://wordpress.org/gutenberg/
 
 
 ## Editor styles
 
 There is a stylesheet `style-editor.css` which contains duplicate rules with some adjustments to the selectors, for the Gutenberg blocks and CD components and `brand.css` to ensure the Content Editors see the styles as they will appear on published pages, while editing content.
+
+⛔ **Do NOT edit `style-editor.css`** because the file contents will be replaced during CD upgrades.
+
+✅ **DO edit `style-editor--site.css`** for site-specific Gutenberg editor styles. It won't be overwritten.
 
 
 ## Common Header / Footer optional elements

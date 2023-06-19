@@ -26,7 +26,7 @@
 	<?php endif; ?>
 <?php endif; ?>
 
-<main role="main" id="main-content" class="cd-container">
+<main id="main-content" class="cd-container" aria-label="Page content">
   <div class="cd-layout">
     <div class="cd-layout__content [ cd-flow ]">
       <?php get_template_part( 'resources/templates/common/common', 'article--landing' ); ?>

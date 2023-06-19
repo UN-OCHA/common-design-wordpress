@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 ?>
-<footer class="cd-footer" role="contentinfo">
+<footer class="cd-footer" aria-label="Site footer">
   <div class="cd-container cd-footer__inner">
 
     <div class="cd-footer__section cd-footer__section--menu">

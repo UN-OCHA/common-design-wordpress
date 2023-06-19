@@ -69,6 +69,12 @@ a {
   word-break: break-word;
 }
 
+/* lists should not exceed content width */
+ul,
+ol {
+  max-width: var(--cd-max-content-width);
+}
+
 /* Social Media menu */
 .wp_social_media_menu_icon {
   list-style-type: none;
@@ -124,8 +130,8 @@ a {
 /**
  * Gutenberg blocks
  *
- * CD component rules adjusted for WP as we have not added theselectors to the
- * markup but are instead using the selectors and markup that WP outputs.
+ * CD component rules adjusted for WP as we have not added these selectors to
+ * the markup but are instead using the selectors and markup that WP outputs.
  */
 
 /**

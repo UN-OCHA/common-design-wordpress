@@ -9,7 +9,7 @@
 
 <?php get_header(); ?>
 
-<main role="main" id="main-content" class="cd-container">
+<main id="main-content" class="cd-container" aria-label="Page content">
   <div class="cd-layout">
     <div class="cd-layout__content [ cd-flow ]">
       <?php if ( have_posts() ) : ?>
@@ -24,7 +24,7 @@
       <?php endif; ?>
     </div>
     <?php if ( is_active_sidebar( 'sidebar-second' ) ) : ?>
-      <aside class="cd-layout__sidebar cd-layout__sidebar--second cd-layout__sidebar--wide" role="complementary">
+      <aside class="cd-layout__sidebar cd-layout__sidebar--second cd-layout__sidebar--wide" aria-label="Sidebar">
         <ul class="cd-gutenberg-blocks cd-flow">
           <?php get_sidebar( 'second' ); ?>
         </ul>
