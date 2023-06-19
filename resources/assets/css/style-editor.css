@@ -7,16 +7,19 @@
  * @see resources/assets/css/style-editor--site.css
  */
 
-.is-root-container.block-editor-block-list__layout {
-  max-width: var(--cd-max-content-width);
-  padding: 0 2rem;
+:root {
+  --cd-gutenberg-padding: 2rem;
 }
 
-a { color: var(--cd-blue--dark); }
-a:hover,
-a:focus {
-  text-decoration: none;
-  color: var(--cd-ocha-blue);
+/* Emulate --cd-max-content-width in Gutenberg */
+.is-root-container.block-editor-block-list__layout {
+  max-width: var(--cd-max-content-width);
+  padding: 0 var(--cd-gutenberg-padding);
+}
+
+/* Emulate CD Flow in Gutenberg */
+.is-root-container.block-editor-block-list__layout > * + * {
+  margin-block-start: var(--cd-flow-space, 1rem);
 }
 
 body {
@@ -32,16 +35,22 @@ body {
   }
 }
 
-p:last-child {
-  margin-bottom: 0;
+a { color: var(--cd-blue--dark); }
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: var(--cd-ocha-blue);
 }
 
-/* Reset lists in the main content area and aside element. */
-.cd-layout__content ul,
-.cd-layout__content li {
-  margin: 0 0 1rem;
-  padding: 0;
-  list-style: none;
+/* cd-page-title */
+.wp-block-post-title {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--brand-grey);
+
+  /* align with blocks inside Gutenberg editor */
+  margin-inline: var(--cd-gutenberg-padding);
 }
 
 /* cd-button https://github.com/UN-OCHA/common_design/tree/main/components/cd-button */
