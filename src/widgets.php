@@ -1,15 +1,9 @@
 <?php
 /**
- * Enable theme support for Widgets
- *
- * TODO: why is this not inside supports.php?
+ * @file
+ * Register sidebars for CD WP theme.
  */
-add_theme_support( 'widgets' );
-
-/**
- * Register sidebars.
- */
-function my_sidebars() {
+function common_design_sidebars() {
   register_sidebar(
     array(
       'name' => 'Sidebar First',
@@ -29,4 +23,4 @@ function my_sidebars() {
   );
 }
 
-add_action( 'widgets_init', 'my_sidebars' );
+add_action( 'widgets_init', 'common_design_sidebars' );
