@@ -1,5 +1,6 @@
 <?php
 /**
+ * @file
  * Related Platforms section in the OCHA Services menu.
  */
 ?>

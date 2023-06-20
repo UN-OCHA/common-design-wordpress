@@ -1,5 +1,6 @@
 <?php
 /**
+ * @file
  * OCHA Services menu
  */
 ?>
