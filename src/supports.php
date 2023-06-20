@@ -42,6 +42,11 @@ if ( ! function_exists( 'common_design_add_theme_supports' ) ) {
     add_theme_support( 'post-thumbnails' );
 
     /**
+     * Enable theme support for Widgets
+     */
+    add_theme_support( 'widgets' );
+
+    /**
      * Enable support for Gutenberg editor styles
      *
      * @see src/gutenberg.php

@@ -21,9 +21,9 @@
         <span class="cd-mandate__heading">Service provided by</span>
         <span class="cd-mandate__logo">
           <span class="visually-hidden">United Nations Office for the Coordination of Humanitarian Affairs</span>
-          <svg width="149px" height="37px" viewBox="0 0 149 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <title>Artboard</title>
-            <desc>Created with Sketch.</desc>
+          <svg aria-hidden="true" width="149px" height="37px" viewBox="0 0 149 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>United Nations Office for the Coordination of Humanitarian Affairs</title>
+            <desc></desc>
             <defs></defs>
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="Artboard" fill-rule="nonzero" fill="#FFFFFF">

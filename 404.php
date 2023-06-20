@@ -9,12 +9,12 @@
 <?php get_header(); ?>
 
 <main id="main-content" class="cd-container" aria-label="Page content">
-  <h1 class="cd-page-title">
-    <?php echo esc_html( 'Page not found' ); ?>
-  </h1>
-
   <div class="cd-layout">
-    <div class="cd-layout-content">
+    <div class="cd-layout__content">
+      <h1 class="cd-page-title">
+        <?php echo esc_html( 'Page not found' ); ?>
+      </h1>
+
       <h2>
         <a href="<?php echo esc_attr( home_url() ); ?>">
           <?php echo esc_html( 'Homepage' ); ?>
