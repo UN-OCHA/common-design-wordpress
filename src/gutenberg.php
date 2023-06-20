@@ -36,6 +36,11 @@ add_action( 'after_setup_theme', 'common_design_theme_editor_styles' );
  * Disable Gutenberg block types we don't need
  *
  * @see https://rudrastyh.com/gutenberg/remove-default-blocks.html
+ *
+ * If we ever wanted to remove H1 as an option there is a way, but we have to
+ * maintain our own Heading block.
+ *
+ * @see https://stackoverflow.com/a/68501101/175551
  */
 add_filter( 'allowed_block_types', 'common_design_allowed_block_types', 10, 2 );
 
