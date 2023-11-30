@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.1](https://github.com/UN-OCHA/common-design-wordpress/compare/v3.1.0...v3.1.1) (2023-11-30)
+
 ### [3.0.2](https://github.com/UN-OCHA/common-design-wordpress/compare/v3.0.1...v3.0.2) (2023-06-20)
 
 
