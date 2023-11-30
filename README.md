@@ -92,9 +92,9 @@ Uncomment the include statement in `resources/templates/parts/parts-ocha-service
 
 ### Social media icons
 
-Uncomment the include statement in `resources/templates/parts/parts-footer.php` to include the social media block. Update the link `href` in `resources/templates/parts/parts-social-media.php`.
+There is an include statement in `resources/templates/parts/parts-footer.php` for the social media block. Update the link `href` in `resources/templates/parts/parts-social-media.php`.
 
-Comment out or delete the markup for the icons that are not needed.
+Comment out or delete the markup for the icons that are not needed. Or comment out the include statement to omit all social media links.
 
 
 ## Releases
