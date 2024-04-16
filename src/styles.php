@@ -66,7 +66,6 @@ if ( ! function_exists( 'common_design_register_styles' ) ) {
     /* COMPONENT: cd-header */
     wp_enqueue_style ('cd-header', get_template_directory_uri().'/resources/assets/css/cd/cd-header/cd-header.css', array(), null, 'all' );
     wp_enqueue_style ('cd-global-header', get_template_directory_uri().'/resources/assets/css/cd/cd-header/cd-global-header.css', array(), null, 'all' );
-    wp_enqueue_style ('cd-ocha', get_template_directory_uri().'/resources/assets/css/cd/cd-header/cd-ocha.css', array(), null, 'all' );
     wp_enqueue_style ('cd-language-switcher', get_template_directory_uri().'/resources/assets/css/cd/cd-header/cd-language-switcher.css', array(), null, 'all' );
     wp_enqueue_style ('cd-user-menu', get_template_directory_uri().'/resources/assets/css/cd/cd-header/cd-user-menu.css', array(), null, 'all' );
     wp_enqueue_style ('cd-site-header', get_template_directory_uri().'/resources/assets/css/cd/cd-header/cd-site-header.css', array(), null, 'all' );
@@ -82,6 +81,7 @@ if ( ! function_exists( 'common_design_register_styles' ) ) {
     wp_enqueue_style ('cd-footer-mandate', get_template_directory_uri().'/resources/assets/css/cd/cd-footer/cd-footer-mandate.css', array(), null, 'all' );
     wp_enqueue_style ('cd-footer-social', get_template_directory_uri().'/resources/assets/css/cd/cd-footer/cd-footer-social.css', array(), null, 'all' );
     wp_enqueue_style ('cd-footer-soft', get_template_directory_uri().'/resources/assets/css/cd/cd-footer/cd-footer-soft.css', array(), null, 'all' );
+    wp_enqueue_style ('cd-ocha', get_template_directory_uri().'/resources/assets/css/cd/cd-footer/cd-ocha.css', array(), null, 'all' );
 
     /* COMPONENT: cd-other */
     wp_enqueue_style ('cd-skip-link', get_template_directory_uri().'/resources/assets/css/cd/cd-other/cd-skip-link.css', array(), null, 'all' );

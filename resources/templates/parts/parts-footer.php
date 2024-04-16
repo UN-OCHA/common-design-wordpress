@@ -15,6 +15,7 @@
     </div>
 
     <?php get_template_part( 'resources/templates/parts/parts', 'social-media' ); ?>
+    <?php get_template_part( 'resources/templates/parts/parts', 'ocha-services' ); ?>
 
     <div class="cd-footer__section cd-footer__section--mandate">
       <div class="cd-mandate">
