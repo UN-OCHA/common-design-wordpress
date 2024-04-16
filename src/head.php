@@ -19,7 +19,7 @@ if ( ! function_exists( 'cd_google_fonts_head' ) ) {
   function cd_google_fonts_head() {
     echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
     echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
-    echo '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,700&amp;display=swap">';
+    echo '<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300%3B0,400%3B0,500%3B0,700%3B0,900%3B1,400%3B1,700&amp;display=swap" as="style" onload="this.onload=null;this.setAttribute(`rel`, `stylesheet`);">';
   }
 }
 
