@@ -16,7 +16,7 @@ Clone the `common-design-wordpress` theme repo and make a pull request against `
 | :---------- |
 | Maintainers |
 
-Here is the **minimum** set of files that need to be copied over when updating the WordPress Starterkit to a newer version of CD. There are individual sections below for each file in this table:
+Here is the **minimum** set of files that need to be copied over when updating the WordPress Starterkit to a newer version of CD. It is likely that template changes will need to be copied over as well. There are individual sections below for each file in this table:
 
 | Source                                               | Destination                 |
 | :--------------------------------------------------- | :-------------------------- |
@@ -34,16 +34,11 @@ Here is the **minimum** set of files that need to be copied over when updating t
 
 **Style Editor:** Another WP-specific file which will also benefit from manual inspection and updates. This file allows the Gutenberg editor to appear much more WYSIWYG, helping authors create well-formatted, good-looking content. For upgrades to CD you SHOULD modify `style-editor.css`. Do NOT modify the companion file `style-editor--site.css` which is for site-specific customizations. It should be left blank for individual websites to use, and should NOT be overwritten when updating a theme.
 
-## CSS
+### Updating CSS/JS
 
 After copying the files into their respective homes, review the contents of the following WP files to make sure they still reflect the file structure:
 
 - `src/styles.php`
-
-## JS
-
-Same as CSS, look in the file that enqueues JS after copying them over to make sure it still reflects the file structure:
-
 - `src/scripts.php`
 
 Additionally, JS files need manual modification when being copied from the Drupal theme. Don't sweat it, the bulk of the file doesn't need to change! With a few simple steps you can use the original Drupal JS files:
