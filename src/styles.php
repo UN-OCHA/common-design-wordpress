@@ -104,11 +104,12 @@ if ( ! function_exists( 'common_design_register_styles' ) ) {
     wp_enqueue_style ('component-cd-page-title', get_template_directory_uri().'/resources/assets/css/cd-page-title/cd-page-title.css', array(), null, 'all' );
     wp_enqueue_style ('component-cd-teaser', get_template_directory_uri().'/resources/assets/css/cd-teaser/cd-teaser.css', array(), null, 'all' );
     wp_enqueue_style ('component-cd-typography', get_template_directory_uri().'/resources/assets/css/cd-typography/cd-typography.css', array(), null, 'all' );
-    wp_enqueue_style ('cd-overrides', get_template_directory_uri().'/resources/assets/css/cd-overrides.css', array(), null, 'all' );
-    wp_enqueue_style ('implementation-overrides', get_template_directory_uri().'/resources/assets/css/styles.css', array(), null, 'all' );
 
     /* WP Overrides */
-    wp_enqueue_style ('cd-styles', get_template_directory_uri().'/resources/assets/css/styles.css', array(), null, 'all' );
+    wp_enqueue_style ('cd-overrides', get_template_directory_uri().'/resources/assets/css/cd-overrides.css', array(), null, 'all' );
+
+    /* Site-specific styles */
+    wp_enqueue_style ('implementation-overrides', get_template_directory_uri().'/resources/assets/css/styles.css', array(), null, 'all' );
   }
 }
 
