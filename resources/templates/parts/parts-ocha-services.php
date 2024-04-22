@@ -5,7 +5,7 @@
  */
 ?>
 
-<section id="cd-ocha-services" class="cd-ocha-services cd-footer__section cd-footer__section--ocha-services" aria-label="OCHA Services">
+<nav aria-label="OCHA Services" id="cd-ocha-services" class="cd-ocha-services cd-footer__section cd-footer__section--ocha-services">
   <h2 id="cd-ocha-services-title">OCHA Services</h2>
 
   <div class="cd-ocha-services__content">
@@ -47,4 +47,4 @@
       </div>
     </div>
   </div>
-</section>
+</nav>
