@@ -2,10 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.2](https://github.com/UN-OCHA/common-design-wordpress/compare/v3.1.1...v3.1.2) (2024-04-23)
+
+### Features
+
+* **CD:** upgrade to CD v9.4.0
+
+### Bug Fixes
+
+* **a11y:** more SR improvements ([fa799bc](https://github.com/UN-OCHA/common-design-wordpress/commit/fa799bc6b24d80245b97ee1e3a7c95793279b407))
+* **perf:** load Google Fonts async ([8556726](https://github.com/UN-OCHA/common-design-wordpress/commit/855672680f64f0398537c2abfaa1c364add6a06c))
+* remove duplicate CSS enqueue statement ([880e727](https://github.com/UN-OCHA/common-design-wordpress/commit/880e72730d98aacf4ccdbd7d0561e5f8c8e0dd8d))
+
 ### [3.1.1](https://github.com/UN-OCHA/common-design-wordpress/compare/v3.1.0...v3.1.1) (2023-11-30)
 
-### [3.0.2](https://github.com/UN-OCHA/common-design-wordpress/compare/v3.0.1...v3.0.2) (2023-06-20)
+No commits were created with the correct convention to appear here.
 
+### [3.0.2](https://github.com/UN-OCHA/common-design-wordpress/compare/v3.0.1...v3.0.2) (2023-06-20)
 
 ### Bug Fixes
 
