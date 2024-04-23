@@ -1,6 +1,6 @@
 {
   "name": "common-design-wordpress",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "OCHA Common Design base theme for Wordpress",
   "repository": "git@github.com:UN-OCHA/common-design-wordpress.git",
   "author": "UN OCHA",
@@ -11,8 +11,8 @@
     "css:lint-fix": "stylelint 'resources/assets/css/**/*.css' --fix"
   },
   "engines": {
-    "node": "^16.19.0",
-    "npm": "^8.19.3"
+    "node": "^20.12.2",
+    "npm": "^10.5.0"
   },
   "devDependencies": {
     "standard-version": "^9.3.2",

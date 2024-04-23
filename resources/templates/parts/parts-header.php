@@ -12,8 +12,6 @@
       <div class="region region-header-top cd-global-header__actions" id="cd-global-header__actions">
         <!-- language switcher goes here -->
       </div>
-
-      <?php get_template_part( 'resources/templates/parts/parts', 'ocha-services' ); ?>
     </div>
   </div>
 

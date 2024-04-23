@@ -127,7 +127,7 @@
    * here so that the base theme can be used out of the box, for times when you
    * don't even set up a sub-theme.
    *
-   * @see resources/assets/css/styles.css
+   * @see common_design_subtheme/css/brand.css
    */
   --brand-primary: var(--cd-ocha-blue);
   --brand-primary--light: var(--cd-blue--bright);
@@ -138,11 +138,9 @@
   /**
    * Site logos
    *
-   * Specify the logo paths/dimentions here. The URL is relative to:
-   *
+   * Specify the logo paths/dimensions here. The URL is relative to:
    * @see resources/assets/css/cd/cd-header/cd-logo.css
    */
-  --brand-logo-mobile-url: url("../../../img/logos/ocha-logo-blue.svg");
   --brand-logo-mobile-width: 52px;
   --brand-logo-desktop-width: 186px;
 

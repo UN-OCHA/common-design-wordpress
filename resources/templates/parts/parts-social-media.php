@@ -4,7 +4,7 @@
  */
 ?>
 
-<div class="cd-footer__section cd-footer__section--social cd-footer-social">
+<nav aria-label="Social" class="cd-footer__section cd-footer__section--social cd-footer-social">
   <ul class="cd-footer-social__list" role="list">
     <li class="cd-footer-social__item">
       <a href="https://www.facebook.com/UNOCHA" class="cd-footer-social__link">
@@ -74,4 +74,4 @@
       </a>
     </li>
   </ul>
-</div>
+</nav>
