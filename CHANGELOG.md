@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.3](https://github.com/UN-OCHA/common-design-wordpress/compare/v3.1.2...v3.1.3) (2024-05-03)
+
+
+### Bug Fixes
+
+* **style:** Latest Posts block should fill container ([e0881e9](https://github.com/UN-OCHA/common-design-wordpress/commit/e0881e91675b4ca8261ef189d881d7d73cf81398))
+* **style:** OCHA Services separator inherits text color ([0ec2e06](https://github.com/UN-OCHA/common-design-wordpress/commit/0ec2e0600751cac3e89c2db352c52d9b888d3b53))
+* **style:** pixel pushing Mandate logo ([8efe3e1](https://github.com/UN-OCHA/common-design-wordpress/commit/8efe3e128b25d5985e5303d4d227cd568d420f10))
+
 ### [3.1.2](https://github.com/UN-OCHA/common-design-wordpress/compare/v3.1.1...v3.1.2) (2024-04-23)
 
 ### Features
