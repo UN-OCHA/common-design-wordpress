@@ -265,11 +265,16 @@ ol {
 }
 
 /* Latest Posts Gutenberg block styles */
+.wp-block-latest-posts__list {
+  max-width: none;
+}
+
 .wp-block-latest-posts__list li:after {
   display: table;
   clear: both;
   content: "";
 }
+
 .wp-block-latest-posts__list li {
   max-width: var(--cd-max-content-width);
   margin-bottom: 1rem;
